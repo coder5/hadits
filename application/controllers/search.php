@@ -36,7 +36,7 @@ class Search extends CI_Controller {
         $search_like_arab = $this->input->post('search_like_arab');
         $search_like_exact = $this->input->post('search_like_exact');
         $search_like_exact_arab = $this->input->post('search_like_exact_arab');
-        print_r($post);//exit;
+        //print_r($post);//exit;
         if (!empty($post)) {
             // If Indonesia
             if ($post['search'] == 'Submit') {
