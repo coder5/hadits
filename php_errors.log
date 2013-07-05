@@ -1,0 +1,432 @@
+[05-Jul-2013 03:43:29 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:43:29 UTC] PHP Stack trace:
+[05-Jul-2013 03:43:29 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:43:29 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:43:29 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:43:29 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:43:29 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:43:29 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:43:29 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:11 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:11 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:11 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:11 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:11 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:11 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:11 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:11 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:11 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:39 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:39 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:39 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:39 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:39 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:39 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:39 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:39 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:39 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:40 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:40 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:40 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:40 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:40 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:40 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:40 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:40 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:40 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:40 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:40 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:40 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:40 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:40 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:40 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:40 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:40 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:40 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:40 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:40 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:40 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:40 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:44:43 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:44:43 UTC] PHP Stack trace:
+[05-Jul-2013 03:44:43 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:44:43 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:44:43 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:44:43 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:44:43 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:44:43 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:44:43 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:45:53 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:45:53 UTC] PHP Stack trace:
+[05-Jul-2013 03:45:53 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:45:53 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:45:53 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:45:53 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:45:53 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:45:53 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:45:53 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:45:58 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:45:58 UTC] PHP Stack trace:
+[05-Jul-2013 03:45:58 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:45:58 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:45:58 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:45:58 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:45:58 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:45:58 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:45:58 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:23 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:23 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:23 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:23 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:23 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:23 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:23 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:23 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:23 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:23 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:23 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:23 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:23 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:23 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:23 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:23 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:23 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:23 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:24 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:24 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:24 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:24 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:24 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:24 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:24 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:24 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:24 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:24 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:24 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:24 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:24 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:24 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:24 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:24 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:24 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:24 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:24 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:24 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:24 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:24 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:24 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:24 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:24 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:24 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:24 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:24 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:24 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:24 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:24 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:24 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:25 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:25 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:25 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:25 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:25 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:25 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:25 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:25 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:25 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:25 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:25 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:25 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:25 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:25 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:25 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:25 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:25 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:25 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:25 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:25 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:46:25 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:25 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:46:52 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:46:52 UTC] PHP Stack trace:
+[05-Jul-2013 03:46:52 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:46:52 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:46:52 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:46:52 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:46:52 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:46:52 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:46:52 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:04 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:04 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:04 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:04 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:04 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:04 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:04 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:04 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:04 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:22 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:22 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:22 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:22 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:22 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:22 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:22 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:22 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:22 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:23 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:23 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:23 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:23 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:23 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:23 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:23 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:23 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:23 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:23 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:23 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:23 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:23 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:23 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:23 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:23 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:23 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:23 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:23 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:23 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:23 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:23 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:47:32 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:47:32 UTC] PHP Stack trace:
+[05-Jul-2013 03:47:32 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:47:32 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:47:32 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:47:32 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:47:32 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:47:32 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:47:32 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:05 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:05 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:05 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:05 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:05 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:05 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:05 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:50:05 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:05 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:06 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:06 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:06 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:06 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:06 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:50:06 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:06 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:06 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:06 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:06 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:06 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:06 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:50:06 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:06 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:06 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:06 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:06 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:06 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:06 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:06 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:50:06 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:06 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:11 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:11 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:11 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:11 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:11 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:11 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:11 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:118
+[05-Jul-2013 03:50:11 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:11 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:52 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:52 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:52 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:52 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:52 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:52 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:52 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:50:52 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:52 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:53 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:53 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:53 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:53 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:53 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:53 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:53 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:50:53 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:53 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:53 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:53 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:53 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:53 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:53 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:53 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:53 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:50:53 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:53 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:50:54 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:50:54 UTC] PHP Stack trace:
+[05-Jul-2013 03:50:54 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:50:54 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:50:54 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:50:54 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:50:54 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:50:54 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:50:54 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:51:36 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:51:36 UTC] PHP Stack trace:
+[05-Jul-2013 03:51:36 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:51:36 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:51:36 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:51:36 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:51:36 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:51:36 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:51:36 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:51:37 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:51:37 UTC] PHP Stack trace:
+[05-Jul-2013 03:51:37 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:51:37 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:51:37 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:51:37 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:51:37 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:51:37 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:51:37 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:51:46 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:51:46 UTC] PHP Stack trace:
+[05-Jul-2013 03:51:46 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:51:46 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:51:46 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:51:46 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:51:46 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:51:46 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:51:46 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:00 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:00 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:00 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:00 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:00 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:00 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:00 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:00 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:00 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:00 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:00 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:00 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:00 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:00 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:00 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:00 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:00 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:00 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:13 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:13 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:13 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:13 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:13 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:13 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:13 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:13 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:13 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:14 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:14 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:14 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:14 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:14 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:14 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:14 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:14 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:14 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:14 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:14 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:14 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:14 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:14 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:14 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:14 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:14 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:14 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:14 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:14 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:14 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:14 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:14 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:14 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:14 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:14 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:14 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:14 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:14 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:15 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:15 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:15 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:15 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:15 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:15 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:15 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:15 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:15 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:52:18 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:52:18 UTC] PHP Stack trace:
+[05-Jul-2013 03:52:18 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:52:18 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:52:18 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:52:18 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:52:18 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:52:18 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:52:18 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[05-Jul-2013 03:57:18 UTC] PHP Fatal error:  Call to a member function num_rows() on a non-object in /home/haidar/public_html/hadits/application/views/search_result.php on line 7
+[05-Jul-2013 03:57:18 UTC] PHP Stack trace:
+[05-Jul-2013 03:57:18 UTC] PHP   1. {main}() /home/haidar/public_html/hadits/index.php:0
+[05-Jul-2013 03:57:18 UTC] PHP   2. require_once() /home/haidar/public_html/hadits/index.php:202
+[05-Jul-2013 03:57:18 UTC] PHP   3. call_user_func_array() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:359
+[05-Jul-2013 03:57:18 UTC] PHP   4. Search->result() /home/haidar/public_html/hadits/system/core/CodeIgniter.php:0
+[05-Jul-2013 03:57:18 UTC] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:117
+[05-Jul-2013 03:57:18 UTC] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
+[05-Jul-2013 03:57:18 UTC] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
