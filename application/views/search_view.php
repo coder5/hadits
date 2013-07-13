@@ -1,8 +1,8 @@
 <div class="span10">
 	<div class="hero-unit">
 		<h1>Pencarian Hadits</h1>
-		<p>This is a template for a simple marketing or informational website.
-			It includes a large callout called the hero unit and three supporting
+		<p>This is a ganti for a simple marketing or informational website.
+			It includes a large ganti called the hero unit and three supporting
 			pieces of content. Use it as a starting point to create something
 			more unique.</p>
 		<p>
