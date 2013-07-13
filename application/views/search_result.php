@@ -11,13 +11,13 @@
         <?php
         foreach ($show->result() as $had) {
             //echo $had->Isi_Arab. "<br/><br/>";
-            $highlite_string = highlightTerms($had->Isi_Indonesia, $terms);
+            $highlite_string = highlightTerms($had->isi_indonesia, $terms);
             echo '<div>';
             echo '<div>';
-            echo '<p><b>' . highlightTerms($had->Isi_Arab, $terms) . '</b><br/>';
+            echo '<p><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>';
             echo '</div>';
             echo '<div>';
-            echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . $had->longNama . ' No.' . $had->NoHdt . '</span><br/><br/>';
+            echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . $had->imam_nama . ' No.' . $had->no_hdt . '</span><br/><br/>';
             echo '</div>';
             echo '</div>';
         }
