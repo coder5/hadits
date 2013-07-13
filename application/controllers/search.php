@@ -47,7 +47,7 @@ class Search extends CI_Controller {
                     $arr = explode(' ', trim($data['search']));
                     $sum = '';
                     foreach ($arr as $v) {
-                        $sum .= '+' . $v . '* ';
+                        $sum .= '+' . $v . ' ';
                     }
 
                     //return $sum;
@@ -147,6 +147,10 @@ class Search extends CI_Controller {
         } else {
             echo "A match was not found.";
         }
+    }
+    
+    function get_version() {
+    	echo CI_VERSION; // echoes something like 1.7.1
     }
 
 }

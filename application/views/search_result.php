@@ -5,13 +5,13 @@
         <?php
         echo '<p>Anda mencari = ' . $terms . '</p>';
         echo "total " . $show->num_rows();
-
+		echo " Took ".$_SESSION['query_exec_time']. ' sec';
         ?>
 
         <?php
         foreach ($show->result() as $had) {
             //echo $had->Isi_Arab. "<br/><br/>";
-            $highlite_string = highlightTerms($had->isi_indonesia, $terms);
+            $highlite_string = highlightTerms($had->tema, $terms);
             echo '<div>';
             echo '<div>';
             echo '<p><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>';

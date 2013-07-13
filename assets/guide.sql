@@ -76,3 +76,23 @@ SELECT 6,`NoHdt`,`Isi_Arab`,`Isi_Indonesia`,`Isi_Arab_Gundul` FROM `had_nasai`
 
 INSERT INTO `hadistdbnew`.`had_all` (`imamId`, `NoHdt`, `Isi_Arab`, `Isi_Indonesia`, `Isi_Arab_Gundul`) 
 SELECT 5,`NoHdt`,`Isi_Arab`,`Isi_Indonesia`,`Isi_Arab_Gundul` FROM `had_tirmidzi`
+
+
+
+/* QUERY TEST FOR using LIKE and MATCH in fts*/
+
+SELECT
+	a.no_hdt AS no_hdt,tema,isi_indonesia,imam_nama, isi_arab
+FROM
+	`had_all` a
+INNER JOIN imam i ON a.imam_id = i.imam_id
+WHERE
+	isi_indonesia LIKE '%iblis%'  AND isi_indonesia LIKE '%air%'
+ORDER BY
+	i.imam_sorting ASC;
+
+
+SELECT a.no_hdt as no_hdt, tema, isi_indonesia, imam_nama, isi_arab FROM `had_all` a
+				INNER JOIN imam i ON a.imam_id = i.imam_id
+				WHERE MATCH (isi_indonesia) AGAINST ('+iblis +air' IN BOOLEAN MODE) 
+				ORDER BY i.imam_sorting ASC;

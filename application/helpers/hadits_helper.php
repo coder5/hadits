@@ -15,6 +15,10 @@ function highlightTerms($text_string, $terms) {
 	return $text_string;
 }
 
+function query_exec_time($time){
+	$_SESSION['query_exec_time'] = $time;
+}
+
 function imam_id($imam_slug){
 	switch ($imam_slug) {
 		case "bukhari" :
