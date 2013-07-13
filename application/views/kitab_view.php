@@ -1,3 +1,4 @@
+<!-- only show kitab -->
 <div class="span10">
 	<div class="hero-unit">
 		<h1>
