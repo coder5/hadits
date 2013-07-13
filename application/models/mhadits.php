@@ -83,37 +83,45 @@ class MHadits extends CI_Model {
     }
 
     function getAllKitab($imam) {
-        $sql = "SELECT * FROM datakitab_" . $imam . " ";
+        $sql = "SELECT * FROM kitab_all k
+        		WHERE k.imam_id ='" . imam_id($imam) . "'";
+        //echo $sql;
         $query = $this->db->query($sql);
         return $query->result();
     }
 
     function getIdKitab($imam, $kitab_imam_id) {
-        $sql = "SELECT * FROM datakitab_" . $imam . " WHERE kitab_imam_id=" . $kitab_imam_id;
+        $sql = "SELECT * FROM kitab_all WHERE kitab_imam_id=" . $kitab_imam_id ."
+        		AND imam_id ='" . imam_id($imam) . "'";
         $query = $this->db->query($sql);
         return $query->row();
     }
 
     function getAllBab($imam, $kitab_imam_id) {
-        $sql = "SELECT * FROM databab_" . $imam . " WHERE kitab_imam_id = " . $kitab_imam_id;
+        $sql = "SELECT * FROM bab_all WHERE kitab_imam_id = " . $kitab_imam_id ."
+        		AND imam_id = '" .imam_id($imam). "'";
+        echo $sql;
         $query = $this->db->query($sql);
         return $query->result();
     }
 
     function getIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT * FROM databab_" . $imam . " WHERE bab_imam_id=" . $bab_imam_id;
+        $sql = "SELECT * FROM bab_all  WHERE bab_imam_id=" . $bab_imam_id ."
+        		AND imam_id = '".imam_id($imam)."'";
         $query = $this->db->query($sql);
         return $query->row();
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT * FROM tema_" . $imam . " WHERE bab_imam_id=" . $bab_imam_id;
+        $sql = "SELECT * FROM tema_all WHERE bab_imam_id=" . $bab_imam_id ."
+        		AND imam_id = " . imam_id($imam) . "";
         $query = $this->db->query($sql);
         return $query->result();
     }
 
     function getHaditsIdHdt($imam, $id_hadits) {
-        $sql = "SELECT * FROM had_" . $imam . " WHERE no_hdt=" . $id_hadits;
+        $sql = "SELECT * FROM had_all WHERE no_hdt='" . $id_hadits ."'
+        		AND imam_id ='" . imam_id($imam) . "'";
         $query = $this->db->query($sql);
         return $query->row();
     }

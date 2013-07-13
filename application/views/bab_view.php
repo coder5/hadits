@@ -2,13 +2,13 @@
 	<div class="hero-unit">
 		<h1><?php echo $imam?></h1>
 		<h2>
-			 Kitab <?php echo $kitab->Kitab_Indonesia ?> 
+			 Kitab <?php echo $kitab->kitab_indonesia ?> 
 		</h2>
 		<h2>Bab :</h2>
 		<?php
 		$i = 1;
 		foreach($bab as $isi_bab) {
-			echo '<p><a href="'.site_url(). 'manual/tema/'.$imam.'/'.$isi_bab->ID_Bab.'">'.$i++." ".$isi_bab->Bab_Indonesia."</a></p>";
+			echo '<p><a href="'.site_url(). 'manual/tema/'.$imam.'/'.$isi_bab->bab_imam_id.'">'.$i++." ".$isi_bab->bab_indonesia."</a></p>";
 		}
 		?>
 		<p>

@@ -62,7 +62,7 @@
               Logged in as <a href="#" class="navbar-link">Username</a>
             </p>
             <ul class="nav">
-              <li class="active"><a href="<?php echo site_url()?>/search">Home</a></li>
+              <li class="active"><a href="<?php echo site_url()?>search">Home</a></li>
               <li><a href="<?php echo site_url()?>search">Search</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>

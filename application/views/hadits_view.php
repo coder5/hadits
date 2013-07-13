@@ -6,7 +6,7 @@
 		</h2>
 		<?php
 		$i = 1;
-			echo '<p>'.$hadits->Isi_Indonesia."</a></p>";
+			echo '<p>'.$hadits->isi_indonesia."</a></p>";
 		?>
 		<p>
 		</p>
