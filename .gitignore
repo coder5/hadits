@@ -1,3 +1,4 @@
 #ignore this configuration if not working add this "git -rm --cached ." "git add ." "git commit -m 'fixed'"
 application/config/database.php
 application/config/config.php
+admin/*
