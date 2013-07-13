@@ -63,7 +63,7 @@
             </p>
             <ul class="nav">
               <li class="active"><a href="<?php echo site_url()?>/search">Home</a></li>
-              <li><a href="<?php echo site_url()?>/search">Search</a></li>
+              <li><a href="<?php echo site_url()?>search">Search</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -77,15 +77,15 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Hadits</li>
-              <li class="active"><a href="<?php echo site_url();?>/manual/kitab/bukhari">Shahih Bukhari</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/muslim">Shahih Muslim</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/abudaud">Sunan Abu Daud</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/tirmidzi">Sunan Tirmidzi</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/nasai">Sunan Nasa'i</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/ibnumajah">Sunan Ibnu Majah</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/ahmad">Musnad Ahmad</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/malik">Muwatha' Malik</a></li>
-              <li><a href="<?php echo site_url();?>/manual/kitab/darimi">Sunan Darimi</a></li>
+              <li class="active"><a href="<?php echo site_url();?>manual/kitab/bukhari">Shahih Bukhari</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/muslim">Shahih Muslim</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/abudaud">Sunan Abu Daud</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/tirmidzi">Sunan Tirmidzi</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/nasai">Sunan Nasa'i</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/ibnumajah">Sunan Ibnu Majah</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/ahmad">Musnad Ahmad</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/malik">Muwatha' Malik</a></li>
+              <li><a href="<?php echo site_url();?>manual/kitab/darimi">Sunan Darimi</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

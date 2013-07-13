@@ -1,3 +1,4 @@
+<!-- only show kitab -->
 <div class="span10">
 	<div class="hero-unit">
 		<h1>
@@ -7,7 +8,7 @@
 		<?php
 		$i = 1;
 		foreach($kitab as $isi_kitab) {
-			echo '<p><a href="'.site_url().'/manual/bab/'.$imam.'/'.$isi_kitab->ID_Kitab.'">'.$i++." ".$isi_kitab->Kitab_Indonesia."</a></p>";
+			echo '<p><a href="'.site_url().'manual/bab/'.$imam.'/'.$isi_kitab->ID_Kitab.'">'.$i++." ".$isi_kitab->Kitab_Indonesia."</a></p>";
 		}
 		?>
 		<p>

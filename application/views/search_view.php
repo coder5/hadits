@@ -11,7 +11,7 @@
 		<div class="row-fluid">
 			<div class="span6">
 				<h2>Bhs Indonesia</h2>
-				<form action="<?php echo site_url();?>/search/result/" method="POST" />
+				<form action="<?php echo site_url();?>search/result/" method="POST" />
 				<p>
 					<label for="search_bool">Search Contain </label> <input
 						id="search_bool" name="search_bool" type="text" /> Minus : <input
@@ -53,7 +53,7 @@
 			<!--/span-->
 			<div class="span6">
 				<h2>Bhs Arab</h2>
-				<form action="<?php echo site_url();?>/search/result/" method="POST" />
+				<form action="<?php echo site_url();?>search/result/" method="POST" />
 				<p>
 					<label for="search_bool_arab">Search Contain </label> <input
 						id="search_bool_arab" name="search_bool_arab" type="text"
