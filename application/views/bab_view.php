@@ -8,7 +8,7 @@
 		<?php
 		$i = 1;
 		foreach($bab as $isi_bab) {
-			echo '<p><a href="'.site_url().'/manual/tema/'.$imam.'/'.$isi_bab->ID_Bab.'">'.$i++." ".$isi_bab->Bab_Indonesia."</a></p>";
+			echo '<p><a href="'.site_url(). 'manual/tema/'.$imam.'/'.$isi_bab->ID_Bab.'">'.$i++." ".$isi_bab->Bab_Indonesia."</a></p>";
 		}
 		?>
 		<p>
