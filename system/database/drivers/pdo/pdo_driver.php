@@ -461,7 +461,12 @@ class CI_DB_pdo_driver extends CI_DB {
 	 */
 	function _list_columns($table = '')
 	{
-		return "SHOW COLUMNS FROM ".$table;
+		 if ($db->dbdriver == "pdo" && $db == "sqlite" || $db->dbdriver == "sqlite") 
+		{
+	        return "PRAGMA table_info( {$tableName} )";
+	    } else {
+	        return "SHOW COLUMNS FROM ".$table;
+	    }
 	}
 
 	// --------------------------------------------------------------------

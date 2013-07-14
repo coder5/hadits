@@ -42,6 +42,30 @@ function imam_id($imam_slug){
 		default :
 			return "bukhari";
 	}
+}
 
+function imam_nama($imam_id){
+	switch ($imam_id) {
+		case "2" :
+			return "bukhari";
+		case "3" :
+			return "muslim";
+		case "1" :
+			return "ahmad";
+		case "4":
+			return "abudaud";
+		case "5":
+			return "tirmidzi";
+		case "6":
+			return "nasai";
+		case "7":
+			return "ibnumajah";
+		case "8":
+			return "malik";
+		case "9":
+			return "darimi";
+		default :
+			return "bukhari";
+	}
 }
 ?>

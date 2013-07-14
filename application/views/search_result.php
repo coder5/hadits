@@ -17,7 +17,7 @@
             echo '<p><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>';
             echo '</div>';
             echo '<div>';
-            echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . $had->imam_nama . ' No.' . $had->no_hdt . '</span><br/><br/>';
+            echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . imam_nama($had->imam_id) . ' No.' . $had->no_hdt . '</span><br/><br/>';
             echo '</div>';
             echo '</div>';
         }

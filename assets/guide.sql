@@ -96,3 +96,22 @@ SELECT a.no_hdt as no_hdt, tema, isi_indonesia, imam_nama, isi_arab FROM `had_al
 				INNER JOIN imam i ON a.imam_id = i.imam_id
 				WHERE MATCH (isi_indonesia) AGAINST ('+iblis +air' IN BOOLEAN MODE) 
 				ORDER BY i.imam_sorting ASC;
+				
+Creating Fts4
+
+
+CREATE VIRTUAL  TABLE had_all_fts4 USING fts4(
+"had_id"  INTEGER(11) NOT NULL,
+"imam_id"  INTEGER(2) NOT NULL,
+"no_hdt"  INTEGER(11),
+"tema"  TEXT,
+"isi_arab"  TEXT,
+"isi_indonesia"  TEXT,
+"isi_arab_gundul"  TEXT NOT NULL,
+"kitab_imam_id"  INTEGER(11) NOT NULL,
+"bab_imam_id"  INTEGER(11) NOT NULL
+);
+
+INSERT INTO had_all_fts4 SELECT * FROM had_all;
+
+

@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Search extends CI_Controller {
-
+	
     function __construct() {
         parent::__construct();
         $this->load->model('mhadits');
@@ -47,7 +47,7 @@ class Search extends CI_Controller {
                     $arr = explode(' ', trim($data['search']));
                     $sum = '';
                     foreach ($arr as $v) {
-                        $sum .= '+' . $v . ' ';
+                        $sum .= '' . $v . ' ';
                     }
 
                     //return $sum;
@@ -150,6 +150,7 @@ class Search extends CI_Controller {
     }
     
     function get_version() {
+    	echo APPPATH;
     	echo CI_VERSION; // echoes something like 1.7.1
     }
 
