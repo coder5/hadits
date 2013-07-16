@@ -1,5 +1,14 @@
 <?php
 
+
+function use_db($db=Null){
+	if($db='1') {
+		return "had_all_fts4";
+	} else {
+		return 'had_all';
+	}
+}
+
 function highlightTerms($text_string, $terms) {
 	$split_words = explode(" ", $terms);
 	//print_r($split_words);exit;

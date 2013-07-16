@@ -1,7 +1,8 @@
 bikin applikasi sms gratis
 1. COUNT hadits each Kitab  create field in kitab .. update query
 2. COUNT hadits each Bab create field in kitab .. update query
-3
+3. try using spinx
+4. try using libstemmer 
 
 
 

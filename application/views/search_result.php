@@ -4,6 +4,8 @@
         <h1>Pencarian Hadits</h1>
         <?php
         echo '<p>Anda mencari = ' . $terms . '</p>';
+        //print_r($show);exit;
+        //echo "db use". use_db();
         echo "total " . $show->num_rows();
 		echo " Took ".$_SESSION['query_exec_time']. ' sec';
         ?>
