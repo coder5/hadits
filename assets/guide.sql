@@ -121,3 +121,15 @@ SET h.imam_new_id = i.imam_new_id;
 UPDATE imam
 SET imam_new_id = imam_sorting;
 
+UPDATE had_all as h INNER JOIN imam i ON h.imam_id = i.imam_id
+SET h.imam_new_id = i.imam_new_id;
+
+UPDATE kitab_all as k INNER JOIN imam i ON k.imam_id = i.imam_id
+SET k.imam_new_id = i.imam_new_id;
+
+UPDATE bab_all as b INNER JOIN imam i ON b.imam_id = i.imam_id
+SET b.imam_new_id = i.imam_new_id;
+
+UPDATE tema_all as t INNER JOIN imam i ON t.imam_id = i.imam_id
+SET t.imam_new_id = i.imam_new_id;
+
