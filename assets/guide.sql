@@ -114,4 +114,10 @@ CREATE VIRTUAL  TABLE had_all_fts4 USING fts4(
 
 INSERT INTO had_all_fts4 SELECT * FROM had_all;
 
+UPDATE had_all h
+INNER JOIN imam i ON h.imam_id = i.imam_id
+SET h.imam_new_id = i.imam_new_id;
+
+UPDATE imam
+SET imam_new_id = imam_sorting;
 

@@ -1,9 +1,17 @@
-bikin applikasi sms gratis
+- update had_all imam_id
+- update bab_all
+- update kitab_all
+- update tema_all
+set nginx local multiple virtualhost for admin dll
 1. COUNT hadits each Kitab  create field in kitab .. update query
 2. COUNT hadits each Bab create field in kitab .. update query
 3. try using spinx
 4. try using libstemmer 
+5. try using apache lucene
 
+
+-- other project
+bikin applikasi sms gratis
 
 
 
