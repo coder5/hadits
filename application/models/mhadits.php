@@ -18,7 +18,6 @@ class MHadits extends CI_Model {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
         $sql = "SELECT a.no_hdt as no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4` a
-				-- INNER JOIN imam i ON a.imam_id = i.imam_id
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 				ORDER BY imam_id ASC;";
         $sqlite = "SELECT no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4`
@@ -47,9 +46,8 @@ class MHadits extends CI_Model {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
         $sql = "SELECT a.no_hdt as no_hdt,tema, isi_indonesia, imam_nama, isi_arab FROM `had_all_fts4` a
-		    	INNER JOIN imam i ON a.imam_id = i.imam_id
 		    	WHERE MATCH (isi_arab_Gundul) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
-		    	ORDER BY i.imam_sorting ASC;
+		    	ORDER BY a.imam_id ASC;
 		    	";
         $sqlite = "SELECT no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4`
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam
