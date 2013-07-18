@@ -17,10 +17,10 @@ class MHadits extends CI_Model {
     function searchHaditsBool($words, $words_min = NULL,$imam_id) {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT a.no_hdt as no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4` a
+        $sql = "SELECT * FROM `had_all` a
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 				ORDER BY imam_id ASC;";
-        $sqlite = "SELECT no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4`
+        $sqlite = "SELECT * FROM `had_all_fts4`
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC";
         echo $sqlite; //;exit;

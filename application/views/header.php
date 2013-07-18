@@ -29,6 +29,8 @@
         }
       }
 	.highlight { background-color: #FAD160; }
+	.hero-unit hr{ border-bottom: 1px solid #666; }
+	
 	</style>
     <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css" rel="stylesheet">

@@ -1,11 +1,23 @@
 get new navicat in warez 11.0.8
-0. Insert bab_all to had_all with 0 no_hd , 0 kitab_imam_id, isi_bab  
-0. Insert kitab_all to had_all with 0 no_hd , bab_imam_id, isi_kitab
-1. COUNT hadits each Kitab  create field in kitab .. update query
+
+add view detail
+create connection and model for mysql and sqlite
+add button to change config 
+add note
+0. Insert bab_all to had_all with 0 no_hd , 0 kitab_imam_id, isi_bab ... done  
+0. Insert kitab_all to had_all with 0 no_hd , bab_imam_id, isi_kitab ... done
+1. COUNT hadits each Kitab  create field in kitab .. update query 
 2. COUNT hadits each Bab create field in kitab .. update query
 3. try using spinx
 4. try using libstemmer 
 5. try using apache lucene
+
+
+
+<style>
+add new dropdown menu on the top
+</style>
+
 
 
 -- other project

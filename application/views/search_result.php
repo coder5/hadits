@@ -9,21 +9,23 @@
         echo "total " . $show->num_rows();
 		echo " Took ".$_SESSION['query_exec_time']. ' sec';
         ?>
-
+		<hr>
         <?php
         foreach ($show->result() as $had) {
             //echo $had->Isi_Arab. "<br/><br/>";
             $highlite_string = highlightTerms($had->tema, $terms);
-            echo '<div>';
-            echo '<div>';
-            echo '<p><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>';
-            echo '</div>';
-            echo '<div>';
-            echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . imam_nama($had->imam_id) . ' No.' . $had->no_hdt . '</span><br/><br/>';
-            echo '</div>';
-            echo '</div>';
-        }
-        ?>
+            ?>
+            <div>
+            <div>
+            <?php echo '<p><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>'; ?>
+            </div>
+            <div>
+            <?php echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . imam_nama($had->imam_id) . 
+            ' No.' . $had->no_hdt . '</span>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.$had->imam_id."/".$had->no_hdt.'" class="btn btn-small ">'. 'View Detail' .'</a>'  .'<br/><br/>'; ?>
+            </div>
+            </div>
+            <hr>
+        <?php } ?>
         <p>
             <a class="btn" href="#">View details &raquo;</a>
         </p>
