@@ -1,5 +1,5 @@
 <?php
-
+define('DBUSE', "sqlite");
 
 function use_db($db=Null){
 	if($db='1') {
@@ -7,6 +7,25 @@ function use_db($db=Null){
 	} else {
 		return 'had_all';
 	}
+}
+
+function use_dbs(){
+	$db = DBUSE;
+	if ($db =='sqlite') {
+		return 'sqlite';
+	} else {
+		return 'default';
+	}
+}
+
+function table_use(){
+	$db = DBUSE;
+	if ($db == "sqlite") {
+		return 'had_all_fts4';
+	} else {
+		return "had_all";
+	}
+
 }
 
 function highlightTerms($text_string, $terms) {

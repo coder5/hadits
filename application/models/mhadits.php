@@ -7,9 +7,15 @@
 class MHadits extends CI_Model {
 
 	private $sqlite;
+	public static $db = DBUSE;
+	private $DBUSE;
+// 	private TABLEUSE = 
 	//private $lite;
     function __construct() {
         parent::__construct();
+//         $db = $this->
+		$this->DBUSE = DBUSE;
+// 		$this->had_table = TABLEUSE;
         $this->sqlite = $this->load->database('sqlite', TRUE);
 		$lite = $this->load->database('sqlite', TRUE);
     }
@@ -17,15 +23,16 @@ class MHadits extends CI_Model {
     function searchHaditsBool($words, $words_min = NULL,$imam_id) {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT * FROM `had_all` a
+        $sql = "SELECT * FROM ".table_use()." 
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 				ORDER BY imam_id ASC;";
-        $sqlite = "SELECT * FROM `had_all_fts4`
+        $sqlite_query = "SELECT * FROM ".table_use()."
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC";
-        echo $sqlite; //;exit;
+        echo $sqlite_query; //;exit;
 		$msc=microtime(true);
-        $query = $this->sqlite->query($sqlite);
+		//echo DBUSE;
+        $query = $this->db->query($sqlite_query);
 //         $query2 = $this->sqlite->get('had_all_fts4', 10, 20);
         //echo $this->last_query();
 		query_exec_time(microtime(true)-$msc);

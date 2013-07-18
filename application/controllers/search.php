@@ -13,6 +13,10 @@ class Search extends CI_Controller {
     public function index() {
         $this->search_terms();
     }
+    
+    public function db(){
+    	echo DBUSE;
+    }
 
     public function search_terms() {
         $this->load->view("header");
