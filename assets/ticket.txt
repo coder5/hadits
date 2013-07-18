@@ -1,8 +1,6 @@
-- update had_all imam_id
-- update bab_all
-- update kitab_all
-- update tema_all
-set nginx local multiple virtualhost for admin dll
+get new navicat in warez 11.0.8
+0. Insert bab_all to had_all with 0 no_hd , 0 kitab_imam_id, isi_bab  
+0. Insert kitab_all to had_all with 0 no_hd , bab_imam_id, isi_kitab
 1. COUNT hadits each Kitab  create field in kitab .. update query
 2. COUNT hadits each Bab create field in kitab .. update query
 3. try using spinx
@@ -12,14 +10,6 @@ set nginx local multiple virtualhost for admin dll
 
 -- other project
 bikin applikasi sms gratis
-
-
-
-
-
-
-
-
 
 
 

@@ -7,7 +7,7 @@
 		<?php
 		$i = 1;
 		foreach($hadits as $isi_hadits) {
-			echo '<p>'. $i++ ." ". $isi_hadits->tema_indonesia.'<a class="btn"  href="'.site_url() .'manual/hadits/'. $imam .'/'. $isi_hadits->no_hdt .'/">View Detail</a></p>';
+			echo '<p>'. $i++ ." ". $isi_hadits->tema.'<a class="btn"  href="'.site_url() .'manual/hadits/'. $imam .'/'. $isi_hadits->no_hdt .'/">View Detail</a></p>';
 		}
 		?>
 		<p>

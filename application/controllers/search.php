@@ -24,9 +24,6 @@ class Search extends CI_Controller {
         $search_bool = $this->input->post('search_bool');
         $search_bool_arab = $this->input->post('search_bool_arab');
         $post = $this->input->post();
-//         $CI = &get_instance();
-//         $active_group = $CI->config->item('active_group');
-//         echo 'AKTIF DB IS '.$active_group." ini";
         
         $search_no = $post['search_no'];
         if($post['imam_id'] !=0) {

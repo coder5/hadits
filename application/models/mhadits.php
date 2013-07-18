@@ -36,6 +36,7 @@ class MHadits extends CI_Model {
         $sql = "SELECT * FROM had_all_fts4 a
 				INNER JOIN imam i ON a.imam_id = i.imam_id
 				WHERE a.imam_id ='$imam_id' AND a.no_hdt = '$no'";
+        echo $sql;
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -143,7 +144,7 @@ class MHadits extends CI_Model {
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT * FROM tema_all WHERE bab_imam_id=" . $bab_imam_id ."
+        $sql = "SELECT no_hdt, tema FROM had_all WHERE bab_imam_id=" . $bab_imam_id ."
         		AND imam_id = " . imam_id($imam) . "";
         $query = $this->db->query($sql);
         return $query->result();

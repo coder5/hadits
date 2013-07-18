@@ -133,3 +133,24 @@ SET b.imam_new_id = i.imam_new_id;
 UPDATE tema_all as t INNER JOIN imam i ON t.imam_id = i.imam_id
 SET t.imam_new_id = i.imam_new_id;
 
+
+
+CREATE TABLE "imam_test" (
+"imam_id"  INTEGER NOT NULL,
+"slug"  TEXT(255),
+"imam_nama"  TEXT(255),
+PRIMARY KEY ("imam_id" ASC, "imam_new_id" ASC)
+);
+
+
+CREATE VIRTUAL TABLE had_all_fts4 USING fts4(
+"had_id"  INTEGER(11) NOT NULL,
+"imam_id"  INTEGER(2) NOT NULL,
+"no_hdt"  INTEGER(11),
+"tema"  TEXT,
+"isi_arab"  TEXT,
+"isi_indonesia"  TEXT,
+"isi_arab_gundul"  TEXT NOT NULL,
+"kitab_imam_id"  INTEGER(11) NOT NULL,
+"bab_imam_id"  INTEGER(11) NOT NULL
+);

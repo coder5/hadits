@@ -6,7 +6,7 @@
 		</h2>
 		<?php
 		$i = 1;
-			echo '<p>'.$hadits->isi_indonesia."</a></p>";
+			echo '<p>'.$hadits->isi_indonesia. '  <span class="label label-inverse">HR ' . imam_nama($hadits->imam_id) . ' No.' . $hadits->no_hdt . "</span></p>";
 		?>
 		<p>
 		</p>

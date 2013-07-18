@@ -31,18 +31,18 @@ function query_exec_time($time){
 function imam_id($imam_slug){
 	switch ($imam_slug) {
 		case "bukhari" :
-			return "2";
-		case "muslim" :
-			return "3";
-		case "ahmad" :
 			return "1";
+		case "muslim" :
+			return "2";
 		case "abudaud":
-			return "4";
+			return "3";
 		case "tirmidzi":
-			return "5";
+			return "4";
 		case "nasai":
-			return "6";
+			return "5";
 		case "ibnumajah":
+			return "6";
+		case "ahmad" :
 			return "7";
 		case "malik":
 			return "8";
