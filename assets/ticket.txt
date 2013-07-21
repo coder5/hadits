@@ -1,5 +1,7 @@
-get new navicat in warez 11.0.8
+﻿get new navicat in warez 11.0.8
 
+add count bab & count hdt on kitab_all
+add count hdt on bab_all
 add view detail
 create connection and model for mysql and sqlite
 add button to change config 

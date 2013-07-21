@@ -11,7 +11,9 @@
 
     <!-- Le styles -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css" rel="stylesheet">
     <style type="text/css">
+	/* @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css); */
       body {
         padding-top: 60px;
         padding-bottom: 40px;
@@ -30,7 +32,7 @@
       }
 	.highlight { background-color: #FAD160; }
 	.hero-unit hr{ border-bottom: 1px solid #666; }
-	
+	.arabic {font-family: 'Droid Arabic Naskh', serif; font-size: 20px; font-weight: bold;}
 	</style>
     <link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css" rel="stylesheet">

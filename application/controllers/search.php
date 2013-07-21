@@ -28,20 +28,20 @@ class Search extends CI_Controller {
         $search_bool = $this->input->post('search_bool');
         $search_bool_arab = $this->input->post('search_bool_arab');
         $post = $this->input->post();
-        
-        $search_no = $post['search_no'];
-        if($post['imam_id'] !=0) {
-        	$imam_id = $post['imam_id'];
-        } else {
-        	$imam_id = 0;
-        }
+        print_r($post);//exit;
+        $imam_id = 0;
+		if ($post['search_no']) {		
+			$search_no = $post['search_no'];
+			if($post['imam_id'] !=0) {
+				$imam_id = $post['imam_id'];
+			}
+		}
         $search_bool_min = $this->input->post('search_bool_min');
         $search_bool_min_arab = $this->input->post('search_bool_min_arab');
         $search_like = $this->input->post('search_like');
         $search_like_arab = $this->input->post('search_like_arab');
         $search_like_exact = $this->input->post('search_like_exact');
         $search_like_exact_arab = $this->input->post('search_like_exact_arab');
-        //print_r($post);//exit;
         if (!empty($post)) {
             // If Indonesia
             if ($post['search'] == 'Submit') {
@@ -106,7 +106,7 @@ class Search extends CI_Controller {
                         $data['show'] = $this->mhadits->searchHaditsBoolArab($sum, $sum2,$imam_id);
                     } else {
                         $data['terms'] = $data['search'];
-                        $data['show'] = $this->mhadits->searchHaditsBoolArab($sum,$imam_id);
+                        $data['show'] = $this->mhadits->searchHaditsBoolArab($sum,$sum2="",$imam_id);
                     }
                 } elseif ($search_like_arab) {
                     //echo $search_like;

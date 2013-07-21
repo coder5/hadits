@@ -58,12 +58,12 @@ class MHadits extends CI_Model {
 		    	ORDER BY a.imam_id ASC;
 		    	";
         $sqlite = "SELECT no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4`
-		        WHERE isi_indonesia MATCH '$words $words_min' $imam
+		        WHERE isi_arab_Gundul MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC";
         //echo $sql;
         //die($sql);exit;
         $msc=microtime(true);
-        $query = $this->db->query($sql);
+        $query = $this->db->query($sqlite);
 		query_exec_time(microtime(true)-$msc);
         return $query;
     }
@@ -160,6 +160,7 @@ class MHadits extends CI_Model {
     function getHaditsIdHdt($imam, $id_hadits) {
         $sql = "SELECT * FROM had_all WHERE no_hdt='" . $id_hadits ."'
         		AND imam_id ='" . imam_id($imam) . "'";
+        //echo $sql;
         $query = $this->db->query($sql);
         return $query->row();
     }

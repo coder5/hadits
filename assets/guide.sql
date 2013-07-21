@@ -114,6 +114,12 @@ CREATE VIRTUAL  TABLE had_all_fts4 USING fts4(
 
 INSERT INTO had_all_fts4 SELECT * FROM had_all;
 
+
+INSERT INTO had_all_fts(`type`, imam_id, no_hdt, tema, isi_arab,
+isi_indonesia, isi_arab_gundul, kitab_imam_id, bab_imam_id
+) SELECT  `type`, imam_id, no_hdt, tema, isi_arab,
+isi_indonesia, isi_arab_gundul, kitab_imam_id, bab_imam_id FROM had1.had_all;
+
 UPDATE had_all h
 INNER JOIN imam i ON h.imam_id = i.imam_id
 SET h.imam_new_id = i.imam_new_id;
@@ -143,14 +149,41 @@ PRIMARY KEY ("imam_id" ASC, "imam_new_id" ASC)
 );
 
 
-CREATE VIRTUAL TABLE had_all_fts4 USING fts4(
-"had_id"  INTEGER(11) NOT NULL,
-"imam_id"  INTEGER(2) NOT NULL,
-"no_hdt"  INTEGER(11),
+
+CREATE VIRTUAL TABLE "had_all_fts4"  USING fts4(
+"type"  INTEGER NOT NULL DEFAULT 0,
+"imam_id"  INTEGER,
+"no_hdt"  INTEGER,
 "tema"  TEXT,
 "isi_arab"  TEXT,
 "isi_indonesia"  TEXT,
-"isi_arab_gundul"  TEXT NOT NULL,
-"kitab_imam_id"  INTEGER(11) NOT NULL,
-"bab_imam_id"  INTEGER(11) NOT NULL
+"isi_arab_gundul"  TEXT ,
+"kitab_imam_id"  INTEGER,
+"bab_imam_id"  INTEGER
 );
+
+INSERT INTO had_all_fts4 (
+"type",
+"imam_id"  ,
+"no_hdt"  ,
+"tema"  ,
+"isi_arab"  ,
+"isi_indonesia"  ,
+"isi_arab_gundul",
+"kitab_imam_id"  ,
+"bab_imam_id"  
+) SELECT 
+"type",
+"imam_id"  ,
+"no_hdt"  ,
+"tema"  ,
+"isi_arab"  ,
+"isi_indonesia"  ,
+"isi_arab_gundul",
+"kitab_imam_id"  ,
+"bab_imam_id"  
+FROM had_all;
+
+CREATE TABLE "android_metadata" ("locale" TEXT DEFAULT 'en_US')
+
+INSERT INTO "android_metadata" VALUES ('en_US')

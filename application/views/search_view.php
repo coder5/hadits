@@ -45,7 +45,6 @@
 				<p>
 					<input type="submit" value="Submit" name="search" class="submit" />
 				</p>
-				</form>
 				<p>
 					<a class="btn" href="#">View details &raquo;</a>
 				</p>
@@ -53,7 +52,6 @@
 			<!--/span-->
 			<div class="span6">
 				<h2>Bhs Arab</h2>
-				<form action="<?php echo site_url();?>search/result/" method="POST" />
 				<p>
 					<label for="search_bool_arab">Search Contain </label> <input
 						id="search_bool_arab" name="search_bool_arab" type="text"
@@ -69,6 +67,10 @@
 					<label for="search_like_arab">Search Exact</label> <input
 						id="search_like_exact_arab" name="search_like_exact_arab"
 						type="text" class="keyboardInput" />
+				</p>
+				<p>
+					<label for="search_no">Search No</label>
+					<input id="search_no" name="search_no" type="text" />
 				</p>
 				<p>
 					<input type="submit" value="SubmitArab" name="search" class="submit" />

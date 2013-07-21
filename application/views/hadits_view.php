@@ -5,7 +5,7 @@
 			Kitab <?php //echo $kitab->Kitab_Indonesia ?> Bab: <?php //echo $bab->Bab_Indonesia ?> 
 		</h2>
 		<?php
-		$i = 1;
+			echo '<p class="arabic">'.$hadits->isi_arab.'</p>';
 			echo '<p>'.$hadits->isi_indonesia. '  <span class="label label-inverse">HR ' . imam_nama($hadits->imam_id) . ' No.' . $hadits->no_hdt . "</span></p>";
 		?>
 		<p>
