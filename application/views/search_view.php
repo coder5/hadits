@@ -33,12 +33,13 @@
 				<p>
 					<label for="imam_id">Imam</label>
 					<input type="radio" name="imam_id" value="0" checked="yes" >All<br>
-					<input type="radio" name="imam_id" value="2">Bukhari<br>
-					<input type="radio" name="imam_id" value="3">Muslim<br>
-					<input type="radio" name="imam_id" value="4">Abu Daud<br>
-					<input type="radio" name="imam_id" value="5">Tirmidzi<br>
-					<input type="radio" name="imam_id" value="6">Nasa'i<br>
-					<input type="radio" name="imam_id" value="7">Ibnu Majah<br>
+					<input type="radio" name="imam_id" value="1">Bukhari<br>
+					<input type="radio" name="imam_id" value="2">Muslim<br>
+					<input type="radio" name="imam_id" value="3">Abu Daud<br>
+					<input type="radio" name="imam_id" value="4">Tirmidzi<br>
+					<input type="radio" name="imam_id" value="5">Nasa'i<br>
+					<input type="radio" name="imam_id" value="6">Ibnu Majah<br>
+					<input type="radio" name="imam_id" value="7">Ahmad<br>
 					<input type="radio" name="imam_id" value="8">Malik<br>
 					<input type="radio" name="imam_id" value="9">Ad Darimi<br>
 				</p>

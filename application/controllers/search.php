@@ -30,11 +30,12 @@ class Search extends CI_Controller {
         $post = $this->input->post();
         print_r($post);//exit;
         $imam_id = 0;
+        if($post['imam_id'] !=0) {
+        	$imam_id = $post['imam_id'];
+        }
 		if ($post['search_no']) {		
 			$search_no = $post['search_no'];
-			if($post['imam_id'] !=0) {
-				$imam_id = $post['imam_id'];
-			}
+			
 		}
         $search_bool_min = $this->input->post('search_bool_min');
         $search_bool_min_arab = $this->input->post('search_bool_min_arab');

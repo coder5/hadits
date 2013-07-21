@@ -3,6 +3,7 @@
 add count bab & count hdt on kitab_all
 add count hdt on bab_all
 add view detail
+add image on book
 create connection and model for mysql and sqlite
 add button to change config 
 add note
