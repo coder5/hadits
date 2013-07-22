@@ -7,28 +7,25 @@
         //print_r($show);exit;
         //echo "db use". use_db();
         echo "total " . $show->num_rows();
-		echo " Took ".$_SESSION['query_exec_time']. ' sec';
+		echo "<code> Took ".$_SESSION['query_exec_time']. ' sec</code>';
         ?>
 		<hr>
         <?php
-        foreach ($show->result() as $had) {
+        foreach ($show->result_array() as $had) {
             //echo $had->Isi_Arab. "<br/><br/>";
-            $highlite_string = highlightTerms($had->tema, $terms);
+            $highlite_string = highlightTerms($had[field("tema")], $terms);
             ?>
             <div>
             <div>
-            <?php echo '<p class="arabic"><b>' . highlightTerms($had->isi_arab, $terms) . '</b><br/>'; ?>
+            <?php echo '<p class="arabic"><b>' . highlightTerms($had[field("isi_arab")], $terms) . '</b><br/>'; ?>
             </div>
             <div>
-            <?php echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . imam_nama($had->imam_id) . 
-            ' No.' . $had->no_hdt . '</span>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had->imam_id)."/".$had->no_hdt.'" class="btn btn-small ">'. 'View Detail' .'</a>'  .'<br/><br/>'; ?>
+            <?php echo '' . $highlite_string . '  <span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) . 
+            ' No.' . $had[field("no_hdt")] . '</span>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'  .'<br/><br/>'; ?>
             </div>
             </div>
             <hr>
         <?php } ?>
-        <p>
-            <a class="btn" href="#">View details &raquo;</a>
-        </p>
         <div class="span6"></div>
         <!--/span-->
     </div>

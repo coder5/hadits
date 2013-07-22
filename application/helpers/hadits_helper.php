@@ -9,6 +9,19 @@ function use_db($db=Null){
 	}
 }
 
+function table_use2($table) {
+	$_SESSION['table_type'] = "fts";
+	$table_type = $_SESSION['table_type'];
+	if (isset($table_type)) {
+		if ($table == "fts"){
+			$_SESSION['table_type'] = 'fts';
+		} elseif ($table == "content") {
+			$_SESSION['table_type'] = 'content';
+		}
+	}
+// 	echo 'session'. $_SESSION['table_type'];
+}
+
 function use_dbs(){
 	$db = DBUSE;
 	if ($db =='sqlite') {
@@ -17,7 +30,36 @@ function use_dbs(){
 		return 'default';
 	}
 }
-
+function field($field) {
+	$table_type = $_SESSION['table_type'];
+// 	echo $table_type;//die;
+	if ($table_type == 'content') {
+		switch ($field) {
+			case "no_hdt" :
+				return "c2no_hdt";
+			case "type":
+				return "c0type";
+			case "imam_id":
+				return "c1imam_id";
+			case "tema":
+				return "c3tema";
+			case "isi_arab":
+				return "c4isi_arab";
+			case "isi_indonesia":
+				return "c5isi_indonesia";
+			case "isi_arab_gundul":
+				return "c6isi_arab_gundul";
+			case "kitab_imam_id":
+				return "c7kitab_imam_id";
+			case "bab_imam_id":
+				return "c8bab_imam_id";
+			default:
+				return 1;
+		}
+	} else {
+		return $field;
+	}
+}
 function table_use(){
 	$db = DBUSE;
 	if ($db == "sqlite") {
@@ -25,7 +67,6 @@ function table_use(){
 	} else {
 		return "had_all";
 	}
-
 }
 
 function highlightTerms($text_string, $terms) {
@@ -50,23 +91,23 @@ function query_exec_time($time){
 function imam_id($imam_slug){
 	switch ($imam_slug) {
 		case "bukhari" :
-			return "1";
+			return 1;
 		case "muslim" :
-			return "2";
+			return 2;
 		case "abudaud":
-			return "3";
+			return 3;
 		case "tirmidzi":
-			return "4";
+			return 4;
 		case "nasai":
-			return "5";
+			return 5;
 		case "ibnumajah":
-			return "6";
+			return 6;
 		case "ahmad" :
-			return "7";
+			return 7;
 		case "malik":
-			return "8";
+			return 8;
 		case "darimi":
-			return "9";
+			return 9;
 		case "1" :
 			return "bukhari";
 		case "2" :

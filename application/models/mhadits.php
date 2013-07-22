@@ -22,7 +22,7 @@ class MHadits extends CI_Model {
 
     function searchHaditsBool($words, $words_min = NULL,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND imam_id = '$imam_id'" : "";
+        $imam = $imam_id != 0 ? " AND imam_id IN ($imam_id)" : "";
         $sql = "SELECT * FROM ".table_use()." 
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 				ORDER BY imam_id ASC;";
@@ -40,10 +40,13 @@ class MHadits extends CI_Model {
     }
 
     function searchHaditsNo($imam_id, $no) {
-        $sql = "SELECT * FROM had_all_fts4 a
-				INNER JOIN imam i ON a.imam_id = i.imam_id
-				WHERE a.imam_id ='$imam_id' AND a.no_hdt = '$no'";
-        echo $sql;
+        $sql = "SELECT h.*, kitab_indonesia, bab_indonesia FROM had_all_fts4_content  h
+				INNER JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
+				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id
+				WHERE ".field("imam_id"). "=".$imam_id." 
+				AND ".field("no_hdt"). "=". $no 
+        		." GROUP BY h.docid";
+        echo "<blockquote><small>".$sql."</small></blockquote>";
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -52,15 +55,15 @@ class MHadits extends CI_Model {
 
     function searchHaditsBoolArab($words, $words_min = NULL,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT a.no_hdt as no_hdt,tema, isi_indonesia, imam_nama, isi_arab FROM `had_all_fts4` a
+        $imam = $imam_id != 0 ? " AND imam_id IN ($imam_id)" : "";
+        $sql = "SELECT no_hdt ,tema, isi_indonesia, imam_nama, isi_arab FROM `had_all_fts4` 
 		    	WHERE MATCH (isi_arab_Gundul) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
-		    	ORDER BY a.imam_id ASC;
+		    	ORDER BY imam_id ASC;
 		    	";
         $sqlite = "SELECT no_hdt, tema, isi_indonesia, imam_id, isi_arab FROM `had_all_fts4`
 		        WHERE isi_arab_Gundul MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC";
-        //echo $sql;
+        //echo "<blockquote><small>".$sql."</small></blockquote>";
         //die($sql);exit;
         $msc=microtime(true);
         $query = $this->db->query($sqlite);
@@ -70,8 +73,8 @@ class MHadits extends CI_Model {
 
     function searchHaditsLike($words,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT * FROM `had_all_fts4` a INNER JOIN imam i ON a.imam_id = i.imam_id WHERE isi_indonesia LIKE '%$words%' $imam";
+        $imam = $imam_id != 0 ? " AND imam_id IN($imam_id)" : "";
+        $sql = "SELECT * FROM `had_all_fts4` WHERE isi_indonesia LIKE '%$words%' $imam";
         //die($sql);exit;
         $msc=microtime(true);
         $query = $this->db->query($sql);
@@ -81,8 +84,8 @@ class MHadits extends CI_Model {
 
     function searchHaditsLikeExact($words,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT * FROM `had_all_fts4` a INNER JOIN imam i ON a.imam_id = i.imam_id WHERE isi_indonesia LIKE '% $words %' $imam";
+        $imam = $imam_id != 0 ? " AND imam_id IN($imam_id)" : "";
+        $sql = "SELECT * FROM `had_all_fts4` WHERE isi_indonesia LIKE '$words' $imam";
         //die($sql);exit;
         $msc=microtime(true);
         $query = $this->db->query($sql);
@@ -92,8 +95,8 @@ class MHadits extends CI_Model {
 
     function searchHaditsLikeArab($words,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
-        $sql = "SELECT * FROM `had_all_fts4` a INNER JOIN imam i ON a.imam_id = i.imam_id WHERE isi_arab_Gundul LIKE '%$words%' $imam";
+        $imam = $imam_id != 0 ? " AND imam_id IN($imam_id)" : "";
+        $sql = "SELECT * FROM `had_all_fts4` WHERE isi_arab_Gundul LIKE '%$words%' $imam";
         //die($sql);exit;
         $msc=microtime(true);
         $query = $this->db->query($sql);
@@ -103,7 +106,7 @@ class MHadits extends CI_Model {
 
     function searchHaditsLikeExactArab($words,$imam_id) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND a.imam_id = '$imam_id'" : "";
+        $imam = $imam_id != 0 ? " AND a.imam_id IN($imam_id)" : "";
         $sql = "SELECT * FROM `had_all_fts4` a INNER JOIN imam i ON a.imam_id = i.imam_id WHERE isi_arab_Gundul LIKE '% $words %' $imam";
         //die($sql);exit;
         $msc=microtime(true);
@@ -114,8 +117,8 @@ class MHadits extends CI_Model {
 
     function getAllKitab($imam) {
         $sql = "SELECT * FROM kitab_all k
-        		WHERE k.imam_id ='" . imam_id($imam) . "'";
-        //echo $sql;
+        		WHERE k.imam_id =" . imam_id($imam);
+        //echo "<blockquote><small>".$sql."</small></blockquote>";
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -123,8 +126,8 @@ class MHadits extends CI_Model {
     }
 	
     function getIdKitab($imam, $kitab_imam_id) {
-        $sql = "SELECT * FROM kitab_all WHERE kitab_imam_id=" . $kitab_imam_id ."
-        		AND imam_id ='" . imam_id($imam) . "'";
+        $sql = "SELECT * FROM kitab_all WHERE imam_id =". imam_id($imam) ."
+        		AND kitab_imam_id=". $kitab_imam_id;
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -132,9 +135,9 @@ class MHadits extends CI_Model {
     }
 
     function getAllBab($imam, $kitab_imam_id) {
-        $sql = "SELECT * FROM bab_all WHERE kitab_imam_id = " . $kitab_imam_id ."
-        		AND imam_id = '" .imam_id($imam). "'";
-        //echo $sql;
+        $sql = "SELECT * FROM bab_all WHERE imam_id=" . imam_id($imam) ."
+        		AND kitab_imam_id =" .$kitab_imam_id ;
+        //echo "<blockquote><small>".$sql."</small></blockquote>";
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -142,8 +145,8 @@ class MHadits extends CI_Model {
     }
 
     function getIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT * FROM bab_all  WHERE bab_imam_id=" . $bab_imam_id ."
-        		AND imam_id = '".imam_id($imam)."'";
+        $sql = "SELECT * FROM bab_all  WHERE imam_id=" . imam_id($imam) ."
+        		 AND bab_imam_id=".$bab_imam_id;
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
@@ -151,17 +154,24 @@ class MHadits extends CI_Model {
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT no_hdt, tema FROM had_all WHERE bab_imam_id=" . $bab_imam_id ."
-        		AND imam_id = " . imam_id($imam) . "";
+        $sql = "SELECT ".field('no_hdt').",".field('tema') ." FROM had_all_fts4_content 
+        		WHERE ".field('imam_id') ." =" .imam_id($imam) 
+        		." AND ".field('bab_imam_id') ."=".  $bab_imam_id;
+        echo "<blockquote><small>".$sql."</small></blockquote>";
+        $msc=microtime(true);
         $query = $this->db->query($sql);
+		query_exec_time(microtime(true)-$msc);
         return $query->result();
     }
 
     function getHaditsIdHdt($imam, $id_hadits) {
-        $sql = "SELECT * FROM had_all WHERE no_hdt='" . $id_hadits ."'
-        		AND imam_id ='" . imam_id($imam) . "'";
-        //echo $sql;
+        $sql = "SELECT * FROM had_all_fts4_content 
+        		WHERE ".field('imam_id') ." =" . imam_id($imam) ."
+        				AND ".field('no_hdt') ."=" . $id_hadits ;
+        echo "<blockquote><small>".$sql."</small></blockquote>";
+        $msc=microtime(true);
         $query = $this->db->query($sql);
+		query_exec_time(microtime(true)-$msc);
         return $query->row();
     }
 

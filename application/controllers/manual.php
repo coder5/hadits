@@ -31,6 +31,7 @@ class Manual extends CI_Controller {
 	
 	public function tema($imam,$id_bab){
 		$data['imam'] = $imam;
+		table_use2("content");
 		//$data['kitab'] = $this->mhadits->getIdKitab($imam, $id_kitab);
 		$data['bab'] = $this->mhadits->getIdBab($imam, $id_bab);
 		$data['hadits'] = $this->mhadits->getTemaIdBab($imam, $id_bab);
@@ -41,6 +42,7 @@ class Manual extends CI_Controller {
 	
 	public function hadits($imam,$id_hadits){
 		$data['imam'] = $imam;
+		table_use2("content");
 		//$data['kitab'] = $this->mhadits->getIdKitab($imam, $id_kitab);
 		//$data['bab'] = $this->mhadits->getIdBab($imam, $id_hadits);
 		$data['hadits'] = $this->mhadits->getHaditsIdHdt($imam, $id_hadits);
