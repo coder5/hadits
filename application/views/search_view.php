@@ -31,7 +31,7 @@
 						type="text" />
 				</p>
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="0"> All
+					<input type="checkbox" name="imam_id" checked="checked" value="0"> All
 					</label> 
 					<label class="checkbox"> 
 					<input type="checkbox" name="imam_id" value="1"> Bukhari

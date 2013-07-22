@@ -5,12 +5,15 @@
 			Kitab
 			<?php echo $imam?>
 		</h1>
+		<ol>
 		<?php
 		$i = 1;
 		foreach($kitab as $isi_kitab) {
-			echo '<p><a href="'.site_url().'manual/bab/'.$imam.'/'.$isi_kitab->kitab_imam_id.'">'.$i++." ".$isi_kitab->kitab_indonesia."</a></p>";
+			
+			echo '<li><a href="'.site_url().'manual/bab/'.$imam.'/'.$isi_kitab->kitab_imam_id.'">'.$isi_kitab->kitab_indonesia."</a></li>";
 		}
 		?>
+		</ol>
 		<p>
 			<a class="btn" href="#">View details &raquo;</a>
 		</p>

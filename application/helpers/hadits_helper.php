@@ -8,6 +8,31 @@ function use_db($db=Null){
 		return 'had_all';
 	}
 }
+function last_kitab($kitab=null) {
+	if ($kitab) {
+		$_SESSION['last_kitab'] = $kitab;
+		//echo 'ke set jadi'. $kitab;
+		return $kitab;
+	} else {
+		if (isset($_SESSION['last_kitab'])) {
+			//echo 'last ny dapet';
+			return $_SESSION['last_kitab'];
+		} else {
+			//echo 'last ny ga dapet';
+			return "";
+		}
+		
+	}
+}
+
+function last_bab($bab=null) {
+	if ($bab) {
+		$_SESSION['last_bab'] = $bab;
+		return $bab;
+	} else  {
+		return $_SESSION['last_bab'];
+	}
+}
 
 function table_use2($table) {
 	$_SESSION['table_type'] = "fts";
@@ -19,7 +44,7 @@ function table_use2($table) {
 			$_SESSION['table_type'] = 'content';
 		}
 	}
-// 	echo 'session'. $_SESSION['table_type'];
+	// 	echo 'session'. $_SESSION['table_type'];
 }
 
 function use_dbs(){
@@ -32,7 +57,7 @@ function use_dbs(){
 }
 function field($field) {
 	$table_type = $_SESSION['table_type'];
-// 	echo $table_type;//die;
+	// 	echo $table_type;//die;
 	if ($table_type == 'content') {
 		switch ($field) {
 			case "no_hdt" :
@@ -134,25 +159,25 @@ function imam_id($imam_slug){
 function imam_nama($imam_id){
 	switch ($imam_id) {
 		case "1" :
-			return "bukhari";
+			return "Bukhari";
 		case "2" :
-			return "muslim";
+			return "Muslim";
 		case "7" :
-			return "ahmad";
+			return "Ahmad";
 		case "3":
-			return "abudaud";
+			return "Abudaud";
 		case "4":
-			return "tirmidzi";
+			return "Tirmidzi";
 		case "5":
-			return "nasai";
+			return "Nasai";
 		case "6":
-			return "ibnumajah";
+			return "Ibnu Majah";
 		case "8":
-			return "malik";
+			return "Malik";
 		case "9":
-			return "darimi";
+			return "Darimi";
 		default :
-			return "bukhari";
+			return "Bukhari";
 	}
 }
 ?>

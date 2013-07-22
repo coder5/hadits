@@ -29,7 +29,7 @@ class MHadits extends CI_Model {
         $sqlite_query = "SELECT * FROM ".table_use()."
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC";
-        echo $sqlite_query; //;exit;
+        echo "<blockquote><small>".$sqlite_query."</small></blockquote>";
 		$msc=microtime(true);
 		//echo DBUSE;
         $query = $this->db->query($sqlite_query);
@@ -154,14 +154,14 @@ class MHadits extends CI_Model {
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT ".field('no_hdt').",".field('tema') ." FROM had_all_fts4_content 
+        $sql = "SELECT ".field('no_hdt').",".field('tema') .",".field('isi_indonesia')." FROM had_all_fts4_content 
         		WHERE ".field('imam_id') ." =" .imam_id($imam) 
-        		." AND ".field('bab_imam_id') ."=".  $bab_imam_id;
+        		." AND ".field('type')."=1 AND ".field('bab_imam_id') ."=".  $bab_imam_id;
         echo "<blockquote><small>".$sql."</small></blockquote>";
         $msc=microtime(true);
         $query = $this->db->query($sql);
 		query_exec_time(microtime(true)-$msc);
-        return $query->result();
+        return $query;
     }
 
     function getHaditsIdHdt($imam, $id_hadits) {
