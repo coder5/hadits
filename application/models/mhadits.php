@@ -26,9 +26,9 @@ class MHadits extends CI_Model {
         $sql = "SELECT * FROM ".table_use()." 
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 				ORDER BY imam_id ASC;";
-        $sqlite_query = "SELECT * FROM ".table_use()."
+        $sqlite_query = "SELECT *, length(isi_indonesia) as simple  FROM ".table_use()."
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam
-		        ORDER BY imam_id ASC";
+		        ORDER BY imam_id, simple ASC";
         echo "<blockquote><small>".$sqlite_query."</small></blockquote>";
 		$msc=microtime(true);
 		//echo DBUSE;
