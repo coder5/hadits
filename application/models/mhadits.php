@@ -34,12 +34,12 @@ class MHadits extends CI_Model {
         $imam = $imam_id != 0 ? " AND imam_id IN ($imam_id)" : "";
         $sql = "SELECT * FROM ".table_use()." 
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
-				ORDER BY imam_id ASC";
-        $sqlite_query = "SELECT *,docid FROM ".table_use()."
-		        WHERE isi_indonesia MATCH \"$words $words_min\" $imam
-		        ORDER BY imam_id ASC LIMIT ".$limit .",40";
-        echo $sqlite_query;
-        debug($sqlite_query);
+
+				ORDER BY imam_id ASC;";
+        $sqlite_query = "SELECT *,docid, length(isi_indonesia) as simple  FROM ".table_use()."
+		        WHERE isi_indonesia MATCH '$words $words_min' $imam
+		        ORDER BY imam_id, simple ASC";
+        echo "<blockquote><small>".$sqlite_query."</small></blockquote>";
 		$msc=microtime(true);
 		//echo DBUSE;
         $query = $this->db->query($sqlite_query);
