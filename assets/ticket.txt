@@ -26,7 +26,10 @@ create config for database use, table use
 
 mendengar adzan menjadi saksi di hari kiamat
 
-
+[remote "origin"]
+	url = git@bitbucket.org:coder5/hadits.git
+	fetch = +refs/heads/*:refs/remotes/bitbucket/*
+	
 <style>
 add new dropdown menu on the top
 </style>
