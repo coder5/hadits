@@ -5,14 +5,18 @@ if (!defined('BASEPATH'))
 
 class Save extends CI_Controller {
 
+	protected  $msaves;
+	
+	
 	function __construct() {
 		parent::__construct();
-		$this->load->model('msaves');
+        $this->msaves = new MSaves();
+// 		$this->load->model('msaves',TRUE);
 	}
 
-	public function index($docid,$nots) {
+	public function index($docid,$notes) {
 		//echo 'test';
-		$this->save_notes($docid,$nots);
+		$this->save_notes($docid,$notes);
 	}
 	
 	public function save_notes($docid,$notes) {
