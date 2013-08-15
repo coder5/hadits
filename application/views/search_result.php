@@ -25,12 +25,15 @@
 			<div>
 				<?php echo '' . $highlite_string . '  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.' . $had[field("no_hdt")] . '</span>&nbsp; &nbsp;'.
-			'<a href="#haditsModal'.$i.'" role="button" class="btn" data-toggle="modal">View Details</a>'.'<br/><br/>'; ?>
+			' No.' . $had[field("no_hdt")] . ' docid='. $had["docid"].  '</span>&nbsp;&nbsp;<a href=""><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;<span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span>&nbsp; &nbsp;';
+			?>
+			<a href="#haditsModal'<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
+			<a href="<?php echo site_url();?>save/<?php echo $had["docid"]; ?>/<?php echo 'test'?>" role="button" class="btn btn-primary">Save</a>
+			<br/><br/>
 				<?php
 				// <a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'
 				//              echo '<blockquote><small>HR ' . imam_nama($had[field("imam_id")]) .
-//             ' No.' . $had[field("no_hdt")] . '</small></blockquote>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'  .'<br/><br/>'; ?>
+//             ' No.' . $had[field("no_hdt")] ." kitab " .$had(field("kitab_imam_id")). " Bab " .$had(field("bab_imam_id")) .'</small></blockquote>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'  .'<br/><br/>'; ?>
 			</div>
 		</div>
 		</li>
@@ -39,15 +42,18 @@
 			tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
 			aria-hidden="true">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal"
-					aria-hidden="true">×</button>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 				<h3 id="myModalLabel">Kitab</h3>
 				<h3 id="myModalLabel">Bab</h3>
 			</div>
 			<div class="modal-body">
+				<p class="arabic">
+					<?php echo highlightTerms($had[field("isi_arab_gundul")], $terms) .'<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
+			' No.' . $had[field("no_hdt")] . '</span>'; ?>
+				</p>
 				<p>
 					<?php echo highlightTerms($had[field("isi_indonesia")], $terms) .'<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.' . $had[field("no_hdt")] . '</span>'; ?>
+			' No.' . $had[field("no_hdt")] .'</span>'; ?>
 				</p>
 			</div>
 			<div class="modal-footer">

@@ -18,6 +18,10 @@
 						placeholder="Keluarkan Keyword" name="search_bool_min" type="text" />
 				</p>
 				<p>
+					<input id="search_bab_kitab" placeholder="Search by Bab or Kitab"
+						name="search_bab_kitab" type="text" />
+				</p>
+				<p>
 					<input id="search_like" placeholder="Search Match"
 						name="search_like" type="text" />
 				</p>
@@ -74,24 +78,25 @@
 				<form action="<?php echo site_url();?>search/result/" method="POST" />
 				<h2>Bhs Arab</h2>
 				<p>
-					<label for="search_bool_arab">Search Contain </label> <input
+					  <input placeholder="Arabic Search Contain Harakat"
 						id="search_bool_arab" name="search_bool_arab" type="text"
-						class="keyboardInput" /> Minus : <input id="search_bool_min_arab"
+						class="keyboardInput" /><input id="search_bool_min_arab" placeholder="keluarkan kata Arab"
 						name="search_bool_min_arab" type="text" class="keyboardInput" />
 				</p>
-				<p>
-					<label for="search_like_arab">Search Match</label> <input
-						id="search_like_arab" name="search_like_arab" type="text"
+				<p><label>Cari Bhs Arab tanpa harakat (Gundul)</label>
+					  <input placeholder="Arabic Search Contain Tanpa Harakat"
+						id="search_bool_arab_gundul" name="search_bool_arab_gundul" type="text"
+						class="keyboardInput" /><input id="search_bool_min_arab_gundul" placeholder="keluarkan kata Arab"
+						name="search_bool_min_arab_gundul" type="text" class="keyboardInput" />
+				</p>
+				<p>		<input
+						id="search_like_arab" placeholder="Search Match" ="search_like_arab" type="text"
 						class="keyboardInput" />
 				</p>
 				<p>
-					<label for="search_like_arab">Search Exact</label> <input
+					<input placeholder="Search Exact"
 						id="search_like_exact_arab" name="search_like_exact_arab"
 						type="text" class="keyboardInput" />
-				</p>
-				<p>
-					<label for="search_no">Search No</label> <input id="search_no"
-						name="search_no" type="text" />
 				</p>
 				<p>
 					<input type="submit" value="SubmitArab" class="btn" name="search"

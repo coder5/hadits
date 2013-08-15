@@ -21,10 +21,32 @@ function last_kitab($kitab=null) {
 			//echo 'last ny ga dapet';
 			return "";
 		}
-		
+
 	}
 }
 
+function search_sess($searchterm){
+	if($searchterm) {
+		$_SESSION['searchterm'] = $searchterm;
+		return $searchterm;
+	} elseif($_SESSION['searchterm']) {
+		$searchterm = $_SESSION['searchterm'];
+		return $searchterm;
+	} else {
+		$searchterm ="";
+		return $searchterm;
+	}
+}
+
+function tyoe_had($type) {
+	if($type == 1) {
+		return 'hadits';
+	} elseif ($type == 2) {
+		return "kitab";
+	} elseif ($type == 3) {
+		return "bab";
+	}
+}
 function last_bab($bab=null) {
 	if ($bab) {
 		$_SESSION['last_bab'] = $bab;
@@ -46,7 +68,19 @@ function table_use2($table) {
 	}
 	// 	echo 'session'. $_SESSION['table_type'];
 }
-
+function debug($debug=null){
+	debug_backtrace();
+	if ($debug != null) {
+		$_SESSION['debug'] = "<blockquote><small>".$debug."</small></blockquote>";
+		return $_SESSION['debug'];
+	} else {
+		if(isset($_SESSION['debug'])) {
+			return $_SESSION['debug'];
+		} else {
+			return null;
+		}
+	}
+}
 function use_dbs(){
 	$db = DBUSE;
 	if ($db =='sqlite') {

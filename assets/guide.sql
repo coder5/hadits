@@ -187,3 +187,20 @@ FROM had_all;
 CREATE TABLE "android_metadata" ("locale" TEXT DEFAULT 'en_US')
 
 INSERT INTO "android_metadata" VALUES ('en_US')
+
+
+
+CREATE TABLE "notes" (
+"note_id"  INTEGER NOT NULL,
+"type"  INTEGER NOT NULL DEFAULT 0,
+"imam_id"  INTEGER,
+"no_hdt"  INTEGER,
+"tema"  TEXT,
+"notes"  TEXT,
+"isi_arab"  TEXT,
+"isi_indonesia"  TEXT,
+"isi_arab_gundul"  TEXT,
+"kitab_imam_id"  INTEGER,
+"bab_imam_id"  INTEGER,
+PRIMARY KEY ("note_id" ASC)
+);
