@@ -49,24 +49,6 @@ body {
 }
 </style>
 
-
-
-    <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.1.min.js"></script>
-<script type="text/javascript">
-function myFunction()
-{
-alert("I am an alert box!");
-}
-function btnClick()
-{
-   alert("button");
-}
-alert( "Handler for .click() called." );
-$('#test').click(function() {
-	alert( "testss" );
-// 	$.post("save/save_notes", { docid: "123", notes: "haidar testtt" } );
-});
-</script>
 <script type="text/javascript">
 $('#myModal').modal(options)
 </script>
@@ -151,4 +133,3 @@ $('#myModal').modal(options)
 				<!--/.well -->
 			</div>
 			<!--/span-->
-			<div class="btn" onclick="btnClick()" id="test" >xsss</div>

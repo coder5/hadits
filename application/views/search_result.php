@@ -1,6 +1,7 @@
 <div class="span10">
 	<div class="hero-unit">
 		<h1>Pencarian Hadits</h1>
+		<button type="button" id="test" >xsss</button>
 		<?php
 		echo '<p class="text-success">Anda Mencari Keyword = "' . $terms . '"</p>';
 		//print_r($show);exit;
@@ -28,7 +29,7 @@
 			' No.' . $had[field("no_hdt")] . ' docid='. $had["docid"].  '</span>&nbsp;&nbsp;<a href=""><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;<span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span>&nbsp; &nbsp;';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
-				<button type="button" id="test" >xsss</button>
+				<button type="button" class="test" >xsss</button>
 			<a href="#" <?php //echo site_url() . 'save/'. $had["docid"].'/test';?> role="button"  id="test" class="btn btn-primary savenotes">Save</a>
 			<br/><br/>
 				<?php
@@ -58,6 +59,7 @@
 				</p>
 			</div>
 			<div class="modal-footer">
+				<textarea name="notes" placeholder="Writes Your Notes to Save"></textarea>
 				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 				<button class="btn btn-primary">Save changes</button>
 			</div>
