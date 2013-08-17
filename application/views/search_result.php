@@ -15,6 +15,7 @@
 		$i =1;
 		foreach ($show->result_array() as $had) {
 			$i++;
+			$docid = $had['docid'];
 			//echo $had->Isi_Arab. "<br/><br/>";
 			$highlite_string = highlightTerms($had[field("tema")], $terms);
 			?>
@@ -26,11 +27,10 @@
 			<div>
 				<?php echo '' . $highlite_string . '  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.' . $had[field("no_hdt")] . ' docid='. $had["docid"].  '</span>&nbsp;&nbsp;<a href=""><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;<span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span>&nbsp; &nbsp;';
+			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;&nbsp;<a href=""><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;<span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span>&nbsp; &nbsp;';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
-				<button type="button" class="test" >xsss</button>
-			<a href="#" <?php //echo site_url() . 'save/'. $had["docid"].'/test';?> role="button"  id="test" class="btn btn-primary savenotes">Save</a>
+			<button role="button" id="test" class="btn btn-primary savenotes">Save</button>
 			<br/><br/>
 				<?php
 				// <a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'
@@ -53,15 +53,16 @@
 					<?php echo highlightTerms($had[field("isi_arab_gundul")], $terms) .'<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
 			' No.' . $had[field("no_hdt")] . '</span>'; ?>
 				</p>
-				<p>
+				<p class="isi-indo<?php echo $docid ?>">
 					<?php echo highlightTerms($had[field("isi_indonesia")], $terms) .'<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
 			' No.' . $had[field("no_hdt")] .'</span>'; ?>
 				</p>
 			</div>
 			<div class="modal-footer">
-				<textarea name="notes" placeholder="Writes Your Notes to Save"></textarea>
+				<input type="hidden" name="docid<?php echo $docid;?>" id="docid" value="<?php echo $had['docid']?>">
+				<textarea id="notes<?php echo $docid ?>" placeholder="Writes Your Notes to Save"></textarea>
 				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-				<button class="btn btn-primary">Save changes</button>
+				<button onclick="saveNotes('<?php echo $docid ?>')" class="btn btn-primary save-notes">Save changes</button>
 			</div>
 		</div>
 		<?php } ?>

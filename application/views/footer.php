@@ -32,9 +32,48 @@ $(document).ready(function() {
     }); 
     $('#test').click(function() {
     	alert( "testss" );
-    	$.post("<?php echo site_url();?>save/save_notes", { docid: "123", notes: "haidar testtt" } );
+//     	$(this).find('.content').slideToggle();
+    });
+    $('.save-notes22').click(function() {
+        var docid = $('#docid').val();
+        $(this).find("#docid").each(function(){
+            alert(docid + " adalah " + $(this).val());
+       });
+		alert("test no" + docid );
     });
 });
+// $('.save-notes').click(function() {
+// 	var getId = $(this).find("input[name='docid']");
+// 	var modal = $(this).find(".modal");
+// 	var docid2 = modal.find("input[name='docid']");
+// 	$(".modal").each(function(){
+// 	var docid = $("input[name^='docid']",this).val();
+// 	alert(docid);
+// 	});
+// 	$(".modal").each(function(){
+// 	    $("input[name='docid']", this).each(function() {
+//             alert(docid + " adalah " + $(this).val());
+// 	    });
+// 	});
+// });
+
+$('.buttons').click(function() {
+	$("div").each(function(){
+	    $("input[name='te2']", this).each(function() {
+	       alert($(this).val()); 
+	    });
+	    $("select option",this).each(function(){
+	        // alert($(this).val());
+	    });
+	});
+});
+function saveNotes(docid){
+	var docids = $("input[name='docid" + docid + "']").val();
+	var pIsiIndo = $(".isi-indo"+docid).text();
+	var notes = $('textarea#notes' + docid).val();
+	$.post("<?php echo site_url();?>save/save_notes", { docid: "123", notes: "haidar testtt" } );
+	alert("dapat doc" + docids + "notes "+ notes);
+}
 function myFunction()
 {
 alert("I am an alert box!");
