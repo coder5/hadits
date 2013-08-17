@@ -61,7 +61,7 @@
 			<div class="modal-footer">
 				<input type="hidden" name="docid<?php echo $docid;?>" id="docid" value="<?php echo $had['docid']?>">
 				<textarea id="notes<?php echo $docid ?>" placeholder="Writes Your Notes to Save"></textarea>
-				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button class="btn" onclick="myFunction()" data-dismiss="modal" aria-hidden="true">Close</button>
 				<button onclick="saveNotes('<?php echo $docid ?>')" class="btn btn-primary save-notes">Save changes</button>
 			</div>
 		</div>

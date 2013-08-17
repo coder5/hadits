@@ -26,6 +26,7 @@ echo debug();
     <script src="<?php echo base_url(); ?>assets/js/bootstrap-carousel.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap-typeahead.js"></script>
 <script type="text/javascript">
+
 $(document).ready(function() {
     $("#btnSubmit").click(function(){
         alert("Jquery Works");
@@ -57,22 +58,22 @@ $(document).ready(function() {
 // 	});
 // });
 
-$('.buttons').click(function() {
-	$("div").each(function(){
-	    $("input[name='te2']", this).each(function() {
-	       alert($(this).val()); 
-	    });
-	    $("select option",this).each(function(){
-	        // alert($(this).val());
-	    });
-	});
-});
-function saveNotes(docid){
-	var docids = $("input[name='docid" + docid + "']").val();
-	var pIsiIndo = $(".isi-indo"+docid).text();
-	var notes = $('textarea#notes' + docid).val();
-	$.post("<?php echo site_url();?>save/save_notes", { docid: "123", notes: "haidar testtt" } );
-	alert("dapat doc" + docids + "notes "+ notes);
+// $('.buttons').click(function() {
+// 	$("div").each(function(){
+// 	    $("input[name='te2']", this).each(function() {
+// 	       alert($(this).val()); 
+// 	    });
+// 	    $("select option",this).each(function(){
+// 	        // alert($(this).val());
+// 	    });
+// 	});
+// });
+function saveNotes(docidPost){
+	var docids = $("input[name='docid" + docidPost + "']").val();
+	var pIsiIndo = $(".isi-indo"+ docidPost).text();
+	var notesPost = $('textarea#notes' + docidPost).val();
+	$.post("<?php echo site_url();?>save/save_notes", { docid: docidPost, notes: notesPost } );
+	alert("dapat doc" + docids + "notes "+ notesPost);
 }
 function myFunction()
 {
