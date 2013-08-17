@@ -32,10 +32,10 @@ class MSaves extends CI_Model {
 		$this->db->select('docid,*');
 		$query = $this->db->get_where('had_all_fts4', array('docid' => $docid));
 		$data = $query->row_array();
+		$data['notes'] = $notes;
 		$this->db->insert('notes', $data); 
 		print_r($data);
 	}
-	
 	
 }
 ?>

@@ -1,7 +1,6 @@
 <div class="span10">
 	<div class="hero-unit">
 		<h1>Pencarian Hadits</h1>
-		<button type="button" id="test" >xsss</button>
 		<?php
 		echo '<p class="text-success">Anda Mencari Keyword = "' . $terms . '"</p>';
 		//print_r($show);exit;
@@ -61,7 +60,7 @@
 			<div class="modal-footer">
 				<input type="hidden" name="docid<?php echo $docid;?>" id="docid" value="<?php echo $had['docid']?>">
 				<textarea id="notes<?php echo $docid ?>" placeholder="Writes Your Notes to Save"></textarea>
-				<button class="btn" onclick="myFunction()" data-dismiss="modal" aria-hidden="true">Close</button>
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 				<button onclick="saveNotes('<?php echo $docid ?>')" class="btn btn-primary save-notes">Save changes</button>
 			</div>
 		</div>
