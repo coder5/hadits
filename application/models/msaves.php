@@ -11,6 +11,10 @@ class MSaves extends CI_Model {
 	private $DBUSE;
 // 	private TABLEUSE = 
 	//private $lite;
+	function MSaves() {
+		parent::__construct();
+	}
+	
     function __construct() {
         parent::__construct();
 //         $db = $this->

@@ -10,8 +10,8 @@ class Save extends CI_Controller {
 	
 	function __construct() {
 		parent::__construct();
+		$this->load->model('msaves',TRUE);
         $this->msaves = new MSaves();
-// 		$this->load->model('msaves',TRUE);
 	}
 
 	public function index($docid,$notes) {
@@ -19,8 +19,9 @@ class Save extends CI_Controller {
 		$this->save_notes($docid,$notes);
 	}
 	
-	public function save_notes($docid,$notes) {
-		$data['save'] = $this->msaves->saveNotes($docid,$notes);
+	public function save_notes() {
+		$post = $this->input->post();
+		$data['save'] = $this->msaves->saveNotes($post['docid'],$post['notes']);
 		return $data;
 	}
 	

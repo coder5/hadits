@@ -9,8 +9,7 @@
 		<?php
 		$i = 1;
 		foreach($lists->result() as $notes) {
-			
-			echo '<li>'.$notes->notes.'</li>';
+			echo '<li>'.$notes->isi_indonesia.'</li>';
 		}
 		?>
 		</ol>
