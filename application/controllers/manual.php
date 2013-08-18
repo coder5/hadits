@@ -2,9 +2,12 @@
 
 class Manual extends CI_Controller {
 
+	protected  $mhadits;
+	
 	function __construct() {
 		parent::__construct();
-		$this->load->model('mhadits');
+		$this->load->model('mhadits', TRUE);
+		$this->mhadits = new MHadits();
 	}
 
 	public function index()

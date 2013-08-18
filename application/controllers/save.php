@@ -7,7 +7,6 @@ class Save extends CI_Controller {
 
 	protected  $msaves;
 	
-	
 	function __construct() {
 		parent::__construct();
 		$this->load->model('msaves',TRUE);

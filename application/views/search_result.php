@@ -23,19 +23,21 @@
 			<div>
 				<?php echo '<p class="arabic"><b>' . highlightTerms($had[field("isi_arab")], $terms) . '</b><br/>'; ?>
 			</div>
-			<div>
+			<article>
 				<?php echo '' . $highlite_string . '  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;&nbsp;<a href=""><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;<span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span>&nbsp; &nbsp;';
+			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;&nbsp;
+			<a href="'.site_url().'manual/bab/'.imam_id($had[field("imam_id")]) .'/'. $had[field("kitab_imam_id")] .'"><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;
+			<a href="'.site_url().'manual/tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span></a>&nbsp; &nbsp;';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
-			<button role="button" id="test" class="btn btn-primary savenotes">Save</button>
+			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>
 			<br/><br/>
 				<?php
 				// <a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'
 				//              echo '<blockquote><small>HR ' . imam_nama($had[field("imam_id")]) .
 //             ' No.' . $had[field("no_hdt")] ." kitab " .$had(field("kitab_imam_id")). " Bab " .$had(field("bab_imam_id")) .'</small></blockquote>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'  .'<br/><br/>'; ?>
-			</div>
+			</article>
 		</div>
 		</li>
 		<hr />
@@ -66,6 +68,8 @@
 		</div>
 		<?php } ?>
 		</ol>
+		<div id="saveNotes" class="modal hide fade">
+		</div>
 		<div class="span6"></div>
 		<!--/span-->
 	</div>

@@ -28,6 +28,11 @@ echo debug();
 <script type="text/javascript">
 
 $(document).ready(function() {
+	$('#clickme').click(function() {
+	$("#expendable").slideToggle("slow", function() {
+	    // Animation complete.
+	  });
+	});
     $("#btnSubmit").click(function(){
         alert("Jquery Works");
     }); 

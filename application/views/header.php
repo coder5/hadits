@@ -50,7 +50,6 @@ body {
 </style>
 
 <script type="text/javascript">
-$('#myModal').modal(options)
 </script>
 <link
 	href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css"
