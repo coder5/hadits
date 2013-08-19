@@ -27,8 +27,8 @@
 				<?php echo '' . $highlite_string . '  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
 			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;&nbsp;
-			<a href="'.site_url().'manual/bab/'.imam_id($had[field("imam_id")]) .'/'. $had[field("kitab_imam_id")] .'"><span class="label label-success">' .' kitab ' . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;
-			<a href="'.site_url().'manual/tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-warning"> Bab '. $had[field("bab_imam_id")] . '</span></a>&nbsp; &nbsp;';
+			<a href="'.site_url().'manual/bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-success">' .' kitab '. $had['kitab_indonesia'] . $had[field("kitab_imam_id")] .'</span></a> &nbsp;&nbsp;
+			<a href="'.site_url().'manual/tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-warning"> Bab '. $had['bab_indonesia']. $had[field("bab_imam_id")] . '</span></a>&nbsp; &nbsp;';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
 			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>

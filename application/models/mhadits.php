@@ -27,8 +27,13 @@ class MHadits extends CI_Model {
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 
 				ORDER BY imam_id ASC;";
-        $sqlite_query = "SELECT *,docid, length(isi_indonesia) as simple  FROM ".table_use()."
-		        WHERE isi_indonesia MATCH '$words $words_min' $imam
+        $sqlite_query = "SELECT h.*,docid, length(isi_indonesia) as simple, k.kitab_indonesia, b.bab_indonesia  
+        		FROM ".table_use()." h
+        		INNER JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
+						AND h.".field('imam_id')." = k.imam_id
+				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
+						AND h.".field('imam_id')." = b.imam_id
+		        WHERE isi_indonesia MATCH '$words $words_min' $imam 
 		        ORDER BY imam_id, simple ASC";
         echo "<blockquote><small>".$sqlite_query."</small></blockquote>";
 		$msc=microtime(true);
@@ -58,9 +63,12 @@ class MHadits extends CI_Model {
     function searchHaditsNo($imam_id, $no) {
         $sql = "SELECT h.*, kitab_indonesia, bab_indonesia FROM had_all_fts4_content  h
 				INNER JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
-				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id
+						AND ".field('imam_id')." = k.imam_id
+				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
+						AND ".field('imam_id')." = b.imam_id
 				WHERE ".field("imam_id"). "=".$imam_id." 
-				AND ".field("no_hdt"). "=". $no 
+				AND ".field("no_hdt"). "=". $no ."
+				AND ".field("type"). "=1"
         		." GROUP BY h.docid";
         debug($sql);
         $msc=microtime(true);
