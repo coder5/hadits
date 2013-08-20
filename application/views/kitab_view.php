@@ -1,10 +1,8 @@
 <!-- only show kitab -->
 <div class="span10">
 	<div class="hero-unit">
-		<h1>
-			Kitab
-			<?php echo ucfirst($imam);?>
-		</h1>
+		<h2>Kitab <?php echo ucfirst(imam_nama($imam));?>
+		</h2>
 		<ol>
 		<?php
 		$i = 1;

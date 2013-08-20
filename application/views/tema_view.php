@@ -1,14 +1,12 @@
 <div class="span10">
 	<div class="hero-unit">
-		<h1>
-			<?php echo ucfirst($imam);?>
-		</h1>
-		<h2>
-			Kitab
-			<?php echo last_kitab() ?>
-			Bab:
-			<?php echo $last_bab; ?>
-		</h2>
+		<h2><?php echo ucfirst(imam_nama($imam));?></h2>
+		<h3>
+			<span class="text-success">Kitab
+			<?php echo $last_kitab; ?></span><br>
+			<span class="text-info">Bab:
+			<?php echo $last_bab; ?></span>
+		</h3>
 		<ol>
 			<?php
 			$i = 1;

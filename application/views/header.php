@@ -8,13 +8,13 @@ $uri = $this->uri->segment(2);
 <title>Hadits 9 Imam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
-<meta name="author" content="">
+<meta name="author" content="Haidar Mar'ie">
 
 <!-- Le styles -->
-<link href="<?php echo base_url(); ?>assets/css/bootstrap.css"
-	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css"
-	rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css" rel="stylesheet">
 <style type="text/css">
 /* @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css); */
 body {
@@ -48,20 +48,28 @@ body {
 	font-size: 20px;
 	font-weight: bold;
 }
+
+.label-kitab {
+	max-width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.label-bab {
+	max-width: 350px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 </style>
 
 <script type="text/javascript">
 </script>
-<link
-	href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css"
-	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css"
-	rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
-      <script src="<?php echo base_url(); ?>assets/js/html5shiv.js"></script>
-    <![endif]-->
+<script src="<?php echo base_url(); ?>assets/js/html5shiv.js"></script>
+<![endif]-->
 
 <!-- Fav and touch icons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144"
@@ -80,7 +88,7 @@ body {
 
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container-fluid">
+			<div class="container-fluid" style="width: auto">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse"
 					data-target=".nav-collapse">
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
@@ -89,14 +97,14 @@ body {
 				<a class="brand" href="#">Hadits 9 Imam</a>
 				<div class="nav-collapse collapse">
 					<p class="navbar-text pull-right">
-						Logged in as <a href="#" class="navbar-link">Username</a>
+						<i class="icon-user icon-white"></i> Logged in as <a href="#" class="navbar-link">Username</a>
 					</p>
 					<ul class="nav">
-						<li class="active"><a href="<?php echo site_url()?>search">Home</a>
+						<li class="active"><a href="<?php echo site_url()?>search"><i class="icon-home icon-white"></i> Home</a>
 						</li>
-						<li><a href="<?php echo site_url()?>search">Search</a></li>
-						<li><a href="<?php echo site_url()?>list_notes">Bookmarks</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a href="<?php echo site_url()?>search"><i class="icon-search icon-white"></i> Advanced Search</a></li>
+						<li><a href="<?php echo site_url()?>list_notes"><i class="icon-bookmark icon-white"></i> Bookmarks</a></li>
+						<li><a href="#contact"><i class="icon-envelope icon-white"></i> Contact</a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse -->
@@ -109,7 +117,7 @@ body {
 			<div class="span2">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
-						<li class="nav-header">Hadits</li>
+						<li class="nav-header"><i class="icon-book"></i> Hadits</li>
 						<li <?php echo $uri =='bukhari'?'class="active"':''; ?>><a
 							href="<?php echo site_url();?>kitab/bukhari">Shahih
 								Bukhari</a></li>

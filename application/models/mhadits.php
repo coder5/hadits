@@ -171,6 +171,18 @@ class MHadits extends CI_Model {
         return $query->result();
     }
 	
+    function getKitabBabId($imam, $bab_imam_id) {
+        $sql = "SELECT * FROM bab_all b
+        		INNER JOIN kitab_all k ON b.kitab_imam_id = k.kitab_imam_id AND b.imam_id = k.imam_id
+        		WHERE b.imam_id=" . imam_id($imam) ."
+        		 AND b.bab_imam_id=".$bab_imam_id;
+        debug('babSql'.$sql);
+        $msc=microtime(true);
+        $query = $this->db->query($sql);
+		query_exec_time(microtime(true)-$msc);
+        return $query->row();
+    }
+    
     function getIdKitab($imam, $kitab_imam_id) {
         $sql = "SELECT * FROM kitab_all 
         		WHERE imam_id =". imam_id($imam) ."

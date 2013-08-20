@@ -197,19 +197,37 @@ function imam_nama($imam_id){
 			return "Bukhari";
 		case "2" :
 			return "Muslim";
-		case "7" :
-			return "Ahmad";
 		case "3":
-			return "Abudaud";
+			return "Abu Daud";
 		case "4":
 			return "Tirmidzi";
 		case "5":
-			return "Nasai";
+			return "Nasa'i";
 		case "6":
 			return "Ibnu Majah";
+		case "7" :
+			return "Ahmad";
 		case "8":
 			return "Malik";
 		case "9":
+			return "Darimi";
+		case "bukhari" :
+			return "Bukhari";
+		case "muslim" :
+			return "Muslim";
+		case "abudaud":
+			return "Abu Daud";
+		case "tirmidzi":
+			return "Tirmidzi";
+		case "nasai":
+			return "Nasa'i";
+		case "ibnumajah":
+			return "Ibnu Majah";
+		case "ahmad" :
+			return "Ahmad";
+		case "malik":
+			return "Malik";
+		case "darimi":
 			return "Darimi";
 		default :
 			return "Bukhari";

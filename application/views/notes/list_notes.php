@@ -1,10 +1,10 @@
 <!-- only show kitab -->
 <div class="span10">
 	<div class="hero-unit">
-		<h1>
+		<h2>
 			Notes
 			<?php //echo $imam?>
-		</h1>
+		</h2>
 		<ol>
 		<?php
 		$i = 1;

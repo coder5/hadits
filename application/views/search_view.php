@@ -1,6 +1,6 @@
 <div class="span10">
 	<div class="hero-unit">
-		<h1>Pencarian Hadits</h1>
+		<h2>Pencarian Hadits</h2>
 		<p>Anda Dapat Mencari Hadits yg memenuhi keyword yg anda masukan pada
 			pilahan 1 , Jika Anda Ingin Mengeluarkan Kata yg tidak di inginkan
 			bisa masukan di input minus no.2 .</p>

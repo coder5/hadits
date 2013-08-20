@@ -1,6 +1,6 @@
 <div class="span10">
 	<div class="hero-unit">
-		<h1>Pencarian Hadits</h1>
+		<h2>Pencarian Hadits</h2>
 		<?php
 		echo '<p class="text-success">Anda Mencari Keyword = "' . $terms . '"</p>';
 		//print_r($show);exit;
@@ -24,11 +24,11 @@
 				<?php echo '<p class="arabic"><b>' . highlightTerms($had[field("isi_arab")], $terms) . '</b><br/>'; ?>
 			</div>
 			<article>
-				<?php echo '' . $highlite_string . '  
+				<?php echo '<p>' . $highlite_string . '</p>  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;&nbsp;
-			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-success">' .' kitab '. $had['kitab_indonesia'] .'</span></a> &nbsp;&nbsp;
-			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-warning"> Bab '. $had['bab_indonesia']. '</span></a>&nbsp; &nbsp;';
+			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;
+			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-info label-kitab">Kitab '. $had['kitab_indonesia'] .'</span></a>
+			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-success label-bab">Bab '. $had['bab_indonesia']. '</span></a>';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
 			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>
