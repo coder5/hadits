@@ -44,13 +44,7 @@ class Search extends CI_Controller {
 		echo "<blockquote><small>";
 		print_r($post);//exit;
 		echo "</small></blockquote>";
-		$imam_id = 0;
-		table_use2("fts");
-		if (isset($post['imam_id'])) {
-			if($post['imam_id'] !=0) {
-				$imam_id = $post['imam_id'];
-			}
-		} 
+		
 		if (isset($post['search_no'])) {
 			if ($post['search_no']) {
 			}
@@ -63,6 +57,15 @@ class Search extends CI_Controller {
 		$search_like_arab = $this->input->post('search_like_arab');
 		$search_like_exact = $this->input->post('search_like_exact');
 		$search_like_exact_arab = $this->input->post('search_like_exact_arab');
+		
+		$imam_id = 0;
+		table_use2("fts");
+		if (isset($post['imam_id'])) {
+			if($post['imam_id'][0] !=0 && is_array($post['imam_id'])) {
+				$imams = implode(",", $post['imam_id']);
+				$imam_id = $imams;
+			}
+		}
 		
 		if (!empty($post)) {
 			// If Indonesia

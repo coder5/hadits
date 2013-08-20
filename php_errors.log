@@ -225,3 +225,6 @@ Stack trace:
 [20-Aug-2013 13:03:56 Asia/Jakarta] PHP   5. CI_Loader->view() /home/haidar/public_html/hadits/application/controllers/search.php:179
 [20-Aug-2013 13:03:56 Asia/Jakarta] PHP   6. CI_Loader->_ci_load() /home/haidar/public_html/hadits/system/core/Loader.php:419
 [20-Aug-2013 13:03:56 Asia/Jakarta] PHP   7. include() /home/haidar/public_html/hadits/system/core/Loader.php:833
+[20-Aug-2013 17:59:53 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
+[20-Aug-2013 18:54:51 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
+[20-Aug-2013 18:54:51 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193

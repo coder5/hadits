@@ -22,8 +22,8 @@ class MHadits extends CI_Model {
 
     function searchHaditsBool($words, $words_min = NULL,$imam_id, $limit=null) {
         $extract = $words;
-        $imam = $imam_id != 0 ? " AND imam_id IN ($imam_id)" : "";
-        $sql = "SELECT * FROM ".table_use()." 
+        $imam = $imam_id != 0 ? " AND h.imam_id IN ($imam_id)" : "";
+        $sql = "SELECT * FROM ".table_use()." h 
 				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 
 				ORDER BY imam_id ASC;";
