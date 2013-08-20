@@ -26,7 +26,7 @@
 			<article>
 				<?php echo '<p>' . $highlite_string . '</p>  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>&nbsp;
+			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>
 			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-info label-kitab">Kitab '. $had['kitab_indonesia'] .'</span></a>
 			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-success label-bab">Bab '. $had['bab_indonesia']. '</span></a>';
 			?>

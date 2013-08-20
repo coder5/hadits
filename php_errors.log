@@ -228,3 +228,4 @@ Stack trace:
 [20-Aug-2013 17:59:53 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
 [20-Aug-2013 18:54:51 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
 [20-Aug-2013 18:54:51 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
+[20-Aug-2013 21:26:09 Asia/Jakarta] PHP Fatal error:  Call to a member function num_rows() on a non-object in C:\nginx\html\hadits\application\views\search_result.php on line 8

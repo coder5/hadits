@@ -56,7 +56,7 @@ body {
 	text-overflow: ellipsis;
 }
 .label-bab {
-	max-width: 350px;
+	max-width: 300px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -96,9 +96,6 @@ body {
 				</button>
 				<a class="brand" href="#">Hadits 9 Imam</a>
 				<div class="nav-collapse collapse">
-					<p class="navbar-text pull-right">
-						<i class="icon-user icon-white"></i> Logged in as <a href="#" class="navbar-link">Username</a>
-					</p>
 					<ul class="nav">
 						<li class="active"><a href="<?php echo site_url()?>search"><i class="icon-home icon-white"></i> Home</a>
 						</li>
@@ -106,6 +103,12 @@ body {
 						<li><a href="<?php echo site_url()?>list_notes"><i class="icon-bookmark icon-white"></i> Bookmarks</a></li>
 						<li><a href="#contact"><i class="icon-envelope icon-white"></i> Contact</a></li>
 					</ul>
+					<p class="navbar-text pull-right">
+						<i class="icon-user icon-white"></i> Logged in as <a href="#" class="navbar-link">Username</a>
+					</p>
+					<form class="navbar-form pull-right" action="<?php echo site_url();?>search/result/" method="POST">
+						  <input type="text" name="search_bool" class="search-query span2" placeholder="Search">
+					</form>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
