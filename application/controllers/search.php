@@ -88,7 +88,7 @@ class Search extends CI_Controller {
 						$arr2 = explode(' ', trim($data['search2']));
 						$sum2 = '';
 						foreach ($arr2 as $v) {
-							$sum2 .= '-' . $v . ' ';
+							$sum2 .= '-' . $v . '* ';
 						}
 						$data['terms'] = $data['search'];
 						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum2, $imam_id , $page);
