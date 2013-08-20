@@ -67,3 +67,12 @@ ahlu , ahli
 	دزل
 	الزكاة
 	فتنن نس
+	
+	
+	
+on eclipse
+get this software first before update
+egit
+http://download.eclipse.org/egit/github/updates-2.3
+Mylyn 3.8 for Eclipse 3.7, 3.8 and 4.2
+http://download.eclipse.org/mylyn/releases/3.8

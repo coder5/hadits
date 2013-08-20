@@ -144,7 +144,7 @@ function highlightTerms($text_string, $terms) {
 		$term = preg_quote($term);
 		## Now we can highlight the terms
 		//$text_string = strtolower($text_string);
-		$text_string = preg_replace("/($term)/i", '<span class="highlight">\1</span>', $text_string);
+		$text_string = preg_replace("/($term)/i", '<span class="highlight text-error">\1</span>', $text_string);
 	}
 	## lastly, return text string with highlighted term in it
 	return colorizePerawi($text_string);

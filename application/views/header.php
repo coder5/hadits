@@ -37,8 +37,6 @@ body {
 
 .highlight {
 	font-weight: bold;
-	color: #000;
-	background-color: #999999;
 }
 
 .hero-unit hr {
