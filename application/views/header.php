@@ -95,6 +95,7 @@ body {
 						<li class="active"><a href="<?php echo site_url()?>search">Home</a>
 						</li>
 						<li><a href="<?php echo site_url()?>search">Search</a></li>
+						<li><a href="<?php echo site_url()?>list_notes">Bookmarks</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
