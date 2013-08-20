@@ -1,4 +1,11 @@
-﻿get new navicat in warez 11.0.8
+﻿replace perawi name [] bracklet to span colorize
+create route for manual , kitab, bab, tema , hadits ... done
+kitab details bugs on http://hadits.coder5.dev/tema/tirmidzi/455 kitab name not shown
+highlight imam when using kitab / bab use left sidebar
+
+
+ 
+get new navicat in warez 11.0.8 ... done
 get sinonim word for instance .. wanita & perempuan , gadis ,perawat , puteri, dusta, berbohong , bohong, jin , ifrit, kejar , mengejar
 quran , al qur'an , qur'an
 database all word so you can check with levenstein

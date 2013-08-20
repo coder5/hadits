@@ -1,7 +1,7 @@
 <div class="span10">
 	<div class="hero-unit">
 		<h1>
-			<?php echo $imam?>
+			<?php echo ucfirst($imam);?>
 		</h1>
 		<h2>
 			Kitab
@@ -25,7 +25,7 @@
 				aria-hidden="true">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">×</button>
+						aria-hidden="true">x</button>
 					<h3 id="myModalLabel">Kitab</h3>
 					<h3 id="myModalLabel">Bab <?php echo $last_bab; ?></h3>
 				</div>
