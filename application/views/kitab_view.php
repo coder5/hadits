@@ -3,14 +3,14 @@
 	<div class="hero-unit">
 		<h1>
 			Kitab
-			<?php echo $imam?>
+			<?php echo ucfirst($imam);?>
 		</h1>
 		<ol>
 		<?php
 		$i = 1;
 		foreach($kitab as $isi_kitab) {
 			
-			echo '<li><a href="'.site_url().'manual/bab/'.$imam.'/'.$isi_kitab->kitab_imam_id.'">'.$isi_kitab->kitab_indonesia."</a></li>";
+			echo '<li><a href="'.site_url().'bab/'.$imam.'/'.$isi_kitab->kitab_imam_id.'">'.$isi_kitab->kitab_indonesia."</a></li>";
 		}
 		?>
 		</ol>

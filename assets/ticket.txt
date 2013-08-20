@@ -1,4 +1,11 @@
-﻿get new navicat in warez 11.0.8
+﻿replace perawi name [] bracklet to span colorize
+create route for manual , kitab, bab, tema , hadits ... done
+
+
+
+
+ 
+get new navicat in warez 11.0.8 ... done
 get sinonim word for instance .. wanita & perempuan , gadis ,perawat , puteri, dusta, berbohong , bohong, jin , ifrit, kejar , mengejar
 quran , al qur'an , qur'an
 database all word so you can check with levenstein
