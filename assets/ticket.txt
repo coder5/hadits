@@ -1,7 +1,7 @@
 ﻿replace perawi name [] bracklet to span colorize
 create route for manual , kitab, bab, tema , hadits ... done
 kitab details bugs on http://hadits.coder5.dev/tema/tirmidzi/455 kitab name not shown
-
+highlight imam when using kitab / bab use left sidebar
 
 
  
