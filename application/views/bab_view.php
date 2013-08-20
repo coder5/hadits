@@ -2,7 +2,7 @@
 	<div class="hero-unit">
 		<h2>Bab <?php echo ucfirst(imam_nama($imam));?></h2>
 		<h3 class="text-success">
-			 Kitab: <?php echo $kitab->kitab_indonesia ?> 
+			 Kitab <?php echo $kitab->kitab_indonesia ?> 
 		</h3>
 		<h3 class="text-info">Judul Bab</h3>
 		<ol>
