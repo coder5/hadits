@@ -46,6 +46,8 @@ echo debug();
 	       });
 			alert("test no" + docid );
 	    });
+
+		$('.articles').tooltip(options);
 	});
 	// $('.save-notes').click(function() {
 	// 	var getId = $(this).find("input[name='docid']");

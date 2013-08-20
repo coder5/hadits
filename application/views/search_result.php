@@ -24,15 +24,17 @@
 				<?php echo '<p class="arabic"><b>' . highlightTerms($had[field("isi_arab")], $terms) . '</b><br/>'; ?>
 			</div>
 			<article>
+			<div class='articles'>
 				<?php echo '<p>' . $highlite_string . '</p>  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.<abbr title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</abbr></span>
+			' No.<a href="#" data-toogle="tooltip" title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</a></span>
 			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-info label-kitab">Kitab '. $had['kitab_indonesia'] .'</span></a>
 			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-success label-bab">Bab '. $had['bab_indonesia']. '</span></a>';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
 			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>
 			<br/><br/>
+			</div>
 			</article>
 		</div>
 		</li>
@@ -42,10 +44,11 @@
 			aria-hidden="true">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-				<h3 id="myModalLabel">Kitab</h3>
-				<h3 id="myModalLabel">Bab</h3>
+				<h3 id="myModalLabel">Hadits Details</h3>
 			</div>
 			<div class="modal-body">
+				<h4 class="text-info">Kitab <?php echo $had['kitab_indonesia']?></h3>
+				<h4 class="text-success">Bab <?php echo $had['bab_indonesia']?></h3>
 				<p class="arabic">
 					<?php echo highlightTerms($had[field("isi_arab_gundul")], $terms) .'<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
 			' No.' . $had[field("no_hdt")] . '</span>'; ?>
