@@ -215,7 +215,7 @@ class MHadits extends CI_Model {
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT ".field('no_hdt').",".field('tema') .",".field('isi_indonesia')." FROM had_all_fts4_content 
+        $sql = "SELECT * FROM had_all_fts4_content 
         		WHERE ".field('imam_id') ." =" .imam_id($imam) 
         		." AND ".field('type')."=1 AND ".field('bab_imam_id') ."=".  $bab_imam_id;
         debug($sql);

@@ -14,7 +14,7 @@
 			foreach($hadits->result_array() as $isi_hadits) {
 				$i++;
 				echo '<li>'. $isi_hadits[field("tema")].
-				'<a href="#haditsModal'.$i.'" role="button" class="btn" data-toggle="modal">View Details</a></li>
+				' <a href="#haditsModal'.$i.'" role="button" class="btn" data-toggle="modal">View Details</a></li>
 					<hr class="divider"/>';
 				//'<a class="btn"  href="'.site_url() .'manual/hadits/'. $imam .'/'. $isi_hadits[field("no_hdt")] .'/">View Detail &raquo;</a></li>';
 				?>
@@ -28,9 +28,13 @@
 					<h3 id="myModalLabel">Bab <?php echo $last_bab; ?></h3>
 				</div>
 				<div class="modal-body">
+					<p class="arabic">
+					<?php echo $isi_hadits[field("isi_arab")] .' <span class="label label-inverse">HR ' . imam_nama($imam) .
+					' No.' . $isi_hadits[field("no_hdt")] . '</span>'; ?>
+					</p>
 					<p>
-						<?php echo $isi_hadits[field("isi_indonesia")] .'<span class="label label-inverse">HR ' . $imam .
-			' No.' . $isi_hadits[field("no_hdt")] . '</span>'; ?>
+					<?php echo $isi_hadits[field("isi_indonesia")] .' <span class="label label-inverse">HR ' . imam_nama($imam).
+					' No.' . $isi_hadits[field("no_hdt")] . '</span>'; ?>
 					</p>
 				</div>
 				<div class="modal-footer">
