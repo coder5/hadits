@@ -7,7 +7,7 @@ get sinonim word for instance .. wanita & perempuan , gadis ,perawat , puteri, d
 quran , al qur'an , qur'an, qubur (kubur),
 database all word so you can check with levenstein
 arabic collation problem for with harakat or without harakat
-search byv bab and kitab
+search by bab and kitab
 put type or bab name
 repair log for sql and post on footer and set in hdr_helper
 add count bab & count hdt on kitab_all

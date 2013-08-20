@@ -29,9 +29,9 @@ class MHadits extends CI_Model {
 				ORDER BY imam_id ASC;";
         $sqlite_query = "SELECT h.*,docid, length(isi_indonesia) as simple, k.kitab_indonesia, b.bab_indonesia  
         		FROM ".table_use()." h
-        		INNER JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
+        		LEFT JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
 						AND h.".field('imam_id')." = k.imam_id
-				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
+				LEFT JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
 						AND h.".field('imam_id')." = b.imam_id
 		        WHERE isi_indonesia MATCH '$words $words_min' $imam 
 		        ORDER BY imam_id, simple ASC";
