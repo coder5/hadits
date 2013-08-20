@@ -61,6 +61,9 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+.perawi-color {
+	color: #448bf4;
+}
 </style>
 
 <script type="text/javascript">
@@ -120,6 +123,8 @@ body {
 			<div class="span2">
 				<div class="well sidebar-nav">
 					<ul class="nav nav-list">
+						<li>Qur'an</li>
+  						<li class="divider"></li>
 						<li class="nav-header"><i class="icon-book"></i> Hadits</li>
 						<li <?php echo $uri =='bukhari'?'class="active"':''; ?>><a
 							href="<?php echo site_url();?>kitab/bukhari">Shahih

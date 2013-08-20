@@ -129,6 +129,12 @@ function table_use(){
 	}
 }
 
+function colorizePerawi($text){
+	$text_rep = str_replace('[', '<span class="perawi-color">', $text);
+	$text_rep2 = str_replace(']', '</span>', $text_rep);
+	return  $text_rep2;
+}
+
 function highlightTerms($text_string, $terms) {
 	$split_words = explode(" ", $terms);
 	//print_r($split_words);exit;
@@ -141,7 +147,7 @@ function highlightTerms($text_string, $terms) {
 		$text_string = preg_replace("/($term)/i", '<span class="highlight">\1</span>', $text_string);
 	}
 	## lastly, return text string with highlighted term in it
-	return $text_string;
+	return colorizePerawi($text_string);
 }
 
 function query_exec_time($time){
