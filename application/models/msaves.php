@@ -28,6 +28,15 @@ class MSaves extends CI_Model {
 		return $query = $this->db->get('notes');
 	}
 	
+	function viewNote($note_id) {
+		$this->db->select('*');
+		$this->db->join('bab_all', 'notes.kitab_imam_id = bab_all.kitab_imam_id AND bab_all.imam_id = notes.imam_id', 'inner');
+		$this->db->join('kitab_all', 'notes.kitab_imam_id = kitab_all.kitab_imam_id AND kitab_all.imam_id = notes.imam_id', 'inner');
+		$query = $this->db->get_where('notes', array('note_id' => $note_id));
+		//echo $this->db->last_query();
+		return $query->row_array();
+	}
+	
 	function saveNotes($docid, $notes) {
 		$this->db->select('docid,*');
 		$query = $this->db->get_where('had_all_fts4', array('docid' => $docid));

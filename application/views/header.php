@@ -106,7 +106,7 @@ body {
 					<p class="navbar-text pull-right">
 						<i class="icon-user icon-white"></i> Logged in as <a href="#" class="navbar-link">Username</a>
 					</p>
-					<form class="navbar-form pull-right" action="<?php echo site_url();?>search/result/" method="POST">
+					<form class="navbar-form pull-left" action="<?php echo site_url();?>search/result/" method="POST">
 						  <input type="text" name="search_bool" class="search-query span2" placeholder="Search">
 					</form>
 				</div>

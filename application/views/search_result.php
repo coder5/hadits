@@ -33,10 +33,6 @@
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
 			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>
 			<br/><br/>
-				<?php
-				// <a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'
-				//              echo '<blockquote><small>HR ' . imam_nama($had[field("imam_id")]) .
-//             ' No.' . $had[field("no_hdt")] ." kitab " .$had(field("kitab_imam_id")). " Bab " .$had(field("bab_imam_id")) .'</small></blockquote>&nbsp; &nbsp;<a href="'. site_url().'manual/hadits/'.imam_id($had[field("imam_id")])."/".$had[field("no_hdt")].'" class="btn btn-small ">'. 'View Detail &raquo;' .'</a>'  .'<br/><br/>'; ?>
 			</article>
 		</div>
 		</li>

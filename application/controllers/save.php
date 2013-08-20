@@ -1,7 +1,4 @@
-<?php
-
-if (!defined('BASEPATH'))
-	exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Save extends CI_Controller {
 
@@ -14,7 +11,6 @@ class Save extends CI_Controller {
 	}
 
 	public function index($docid,$notes) {
-		//echo 'test';
 		$this->save_notes($docid,$notes);
 	}
 	
@@ -22,6 +18,14 @@ class Save extends CI_Controller {
 		$post = $this->input->post();
 		$data['save'] = $this->msaves->saveNotes($post['docid'],$post['notes']);
 		return $data;
+	}
+	
+	public function view_note($note_id){
+		table_use2('fts');
+		$data['note'] = $this->msaves->viewNote($note_id);
+		$this->load->view("header", $data);
+		$this->load->view("notes/view_note", $data);
+		$this->load->view("footer", $data);
 	}
 	
 	public function list_notes(){
