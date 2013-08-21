@@ -72,6 +72,10 @@ ahlu , ahli
 	
 on eclipse
 get this software first before update
+kepler
+http://download.eclipse.org/releases/kepler
+The Eclipse Project Updates
+http://download.eclipse.org/eclipse/updates/4.3
 egit
 http://download.eclipse.org/egit/github/updates-2.3
 Mylyn 3.8 for Eclipse 3.7, 3.8 and 4.2
