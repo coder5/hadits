@@ -46,5 +46,10 @@ class MSaves extends CI_Model {
 		print_r($data);
 	}
 	
+	function saveCategory($data){
+		$this->db->insert($data);
+		return $this->db->insert_id();
+	}
+	
 }
 ?>

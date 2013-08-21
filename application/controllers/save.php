@@ -14,10 +14,22 @@ class Save extends CI_Controller {
 		$this->save_notes($docid,$notes);
 	}
 	
+	public function new_category(){
+		$post = $this->input->post();
+		if ($post) {
+			$data['category'] = $this->msaves->saveCategory($post);
+		} else {
+			$this->load->view("header", $data);
+			$this->load->view("notes/new_category", $data);
+			$this->load->view("footer", $data);
+		}
+		//return $data;
+	}
+	
 	public function save_notes() {
 		$post = $this->input->post();
 		$data['save'] = $this->msaves->saveNotes($post['docid'],$post['notes']);
-		return $data;
+		//return $data;
 	}
 	
 	public function view_note($note_id){
