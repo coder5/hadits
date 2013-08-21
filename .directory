@@ -1,5 +1,9 @@
 [Dolphin]
+<<<<<<< HEAD
 Timestamp=2013,8,19,18,30,1
+=======
+Timestamp=2013,8,20,11,57,0
+>>>>>>> b36928190b39f9f1652bb2cd1b454c907ff615c8
 Version=3
 ViewMode=1
 VisibleRoles=Details_size,Details_date,CustomizedDetails

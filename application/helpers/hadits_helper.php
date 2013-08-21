@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
 define('DBUSE', "sqlite");
 
 function use_db($db=Null){
@@ -128,6 +129,12 @@ function table_use(){
 	}
 }
 
+function colorizePerawi($text){
+	$text_rep = str_replace('[', '<span class="perawi-color">', $text);
+	$text_rep2 = str_replace(']', '</span>', $text_rep);
+	return  $text_rep2;
+}
+
 function highlightTerms($text_string, $terms) {
 	$split_words = explode(" ", $terms);
 	//print_r($split_words);exit;
@@ -137,10 +144,10 @@ function highlightTerms($text_string, $terms) {
 		$term = preg_quote($term);
 		## Now we can highlight the terms
 		//$text_string = strtolower($text_string);
-		$text_string = preg_replace("/($term)/i", '<span class="highlight">\1</span>', $text_string);
+		$text_string = preg_replace("/($term)/i", '<span class="highlight text-error">\1</span>', $text_string);
 	}
 	## lastly, return text string with highlighted term in it
-	return $text_string;
+	return colorizePerawi($text_string);
 }
 
 function query_exec_time($time){
@@ -196,19 +203,37 @@ function imam_nama($imam_id){
 			return "Bukhari";
 		case "2" :
 			return "Muslim";
-		case "7" :
-			return "Ahmad";
 		case "3":
-			return "Abudaud";
+			return "Abu Daud";
 		case "4":
 			return "Tirmidzi";
 		case "5":
-			return "Nasai";
+			return "Nasa'i";
 		case "6":
 			return "Ibnu Majah";
+		case "7" :
+			return "Ahmad";
 		case "8":
 			return "Malik";
 		case "9":
+			return "Darimi";
+		case "bukhari" :
+			return "Bukhari";
+		case "muslim" :
+			return "Muslim";
+		case "abudaud":
+			return "Abu Daud";
+		case "tirmidzi":
+			return "Tirmidzi";
+		case "nasai":
+			return "Nasa'i";
+		case "ibnumajah":
+			return "Ibnu Majah";
+		case "ahmad" :
+			return "Ahmad";
+		case "malik":
+			return "Malik";
+		case "darimi":
 			return "Darimi";
 		default :
 			return "Bukhari";

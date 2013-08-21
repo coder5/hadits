@@ -1,9 +1,13 @@
-﻿get new navicat in warez 11.0.8
+﻿
+
+
+ 
+get new navicat in warez 11.0.8 ... done
 get sinonim word for instance .. wanita & perempuan , gadis ,perawat , puteri, dusta, berbohong , bohong, jin , ifrit, kejar , mengejar
-quran , al qur'an , qur'an
+quran , al qur'an , qur'an, qubur (kubur),
 database all word so you can check with levenstein
 arabic collation problem for with harakat or without harakat
-search byv bab and kitab
+search by bab and kitab
 put type or bab name
 repair log for sql and post on footer and set in hdr_helper
 add count bab & count hdt on kitab_all
@@ -13,7 +17,10 @@ add view detail
 add image on book
 create connection and model for mysql and sqlite
 add button to change config 
-add note
+replace perawi name [] bracklet to span colorize
+create route for manual , kitab, bab, tema , hadits ... done
+kitab details bugs on http://hadits.coder5.dev/tema/tirmidzi/455 kitab name not shown
+highlight imam when using kitab / bab use left sidebar
 create config for database use, table use 
 0. Insert bab_all to had_all with 0 no_hd , 0 kitab_imam_id, isi_bab ... done  
 0. Insert kitab_all to had_all with 0 no_hd , bab_imam_id, isi_kitab ... done
@@ -26,7 +33,10 @@ create config for database use, table use
 
 mendengar adzan menjadi saksi di hari kiamat
 
-
+[remote "origin"]
+	url = git@bitbucket.org:coder5/hadits.git
+	fetch = +refs/heads/*:refs/remotes/bitbucket/*
+	
 <style>
 add new dropdown menu on the top
 </style>
@@ -57,3 +67,16 @@ ahlu , ahli
 	دزل
 	الزكاة
 	فتنن نس
+	
+	
+	
+on eclipse
+get this software first before update
+kepler
+http://download.eclipse.org/releases/kepler
+The Eclipse Project Updates
+http://download.eclipse.org/eclipse/updates/4.3
+egit
+http://download.eclipse.org/egit/github/updates-2.3
+Mylyn 3.8 for Eclipse 3.7, 3.8 and 4.2
+http://download.eclipse.org/mylyn/releases/3.8

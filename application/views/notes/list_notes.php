@@ -1,16 +1,14 @@
 <!-- only show kitab -->
 <div class="span10">
 	<div class="hero-unit">
-		<h1>
+		<h2>
 			Notes
-			<?php //echo $imam?>
-		</h1>
+		</h2>
 		<ol>
 		<?php
 		$i = 1;
 		foreach($lists->result() as $notes) {
-			
-			echo '<li>'.$notes->notes.'</li>';
+			echo '<li><a href="'.site_url().'save/view_note/'.$notes->note_id.'">'.$notes->notes.'</a></li>';
 		}
 		?>
 		</ol>

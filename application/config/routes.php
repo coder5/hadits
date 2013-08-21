@@ -42,5 +42,17 @@ $route['default_controller'] = "search";
 $route['404_override'] = '';
 
 
+$route['kitab/(:any)'] = 'manual/kitab/$1';
+
+# manual/bab/darimi/1
+$route['bab/(:any)/(:num)'] = 'manual/bab/$1/$2';
+
+# manual/tema/abudaud/1
+$route['tema/(:any)/(:num)'] = 'manual/tema/$1/$2';
+
+# bookmarks list_notes
+$route['bookmark'] = 'save/list_notes';
+$route['list_notes'] = 'save/list_notes';
+
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

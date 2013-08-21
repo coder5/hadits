@@ -1,6 +1,6 @@
 <div class="span10">
 	<div class="hero-unit">
-		<h1>Pencarian Hadits</h1>
+		<h2>Pencarian Hadits</h2>
 		<p>Anda Dapat Mencari Hadits yg memenuhi keyword yg anda masukan pada
 			pilahan 1 , Jika Anda Ingin Mengeluarkan Kata yg tidak di inginkan
 			bisa masukan di input minus no.2 .</p>
@@ -10,7 +10,7 @@
 		<div class="row-fluid">
 			<div class="span6">
 				<h2>Bhs Indonesia</h2>
-				<form class="navbar-form pull-left" class="form-search"
+				<form class="navbar-form pull-left" class="form-search" enctype="multipart/form-data"
 					action="<?php echo site_url();?>search/result/" method="POST" />
 				<p>
 					<input placeholder="Keyowrd" id="search_bool" name="search_bool"
@@ -35,34 +35,34 @@
 						type="text" />
 				</p>
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" checked="checked" value="0"> All
+					<input type="checkbox" name="imam_id[]" checked="checked" value="0"> All
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="1"> Bukhari
+					<input type="checkbox" name="imam_id[]" value="1"> Bukhari
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="2"> Muslim
+					<input type="checkbox" name="imam_id[]" value="2"> Muslim
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="3"> Abu Daud
+					<input type="checkbox" name="imam_id[]" value="3"> Abu Daud
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="4"> Tirmidzi
+					<input type="checkbox" name="imam_id[]" value="4"> Tirmidzi
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="5"> Nasa'i
+					<input type="checkbox" name="imam_id[]" value="5"> Nasa'i
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="6">Ibnu Majah
+					<input type="checkbox" name="imam_id[]" value="6">Ibnu Majah
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="7">Ahmad
+					<input type="checkbox" name="imam_id[]" value="7">Ahmad
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="8">Malik
+					<input type="checkbox" name="imam_id[]" value="8">Malik
 					</label> 
 					<label class="checkbox"> 
-					<input type="checkbox" name="imam_id" value="9"> Ad Darimi
+					<input type="checkbox" name="imam_id[]" value="9"> Ad Darimi
 					</label> 
 				<p>
 					<input type="submit" value="Search" class="btn" name="search"
@@ -114,10 +114,12 @@
 	<div class="row-fluid">
 		<div class="span6">
 			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
+			<p>Donec id elit non mi porta gravida at eget metus.<button id="clickme">
+			ReadMore</button> 
+			<span id="expendable" style="display:none">Fusce dapibus,
 				tellus ac cursus commodo, tortor mauris condimentum nibh, ut
 				fermentum massa justo sit amet risus. Etiam porta sem malesuada
-				magna mollis euismod. Donec sed odio dui.</p>
+				magna mollis euismod. Donec sed odio dui.</span></p>
 			<p>
 				<a class="btn" href="#">View details &raquo;</a>
 			</p>
