@@ -5,19 +5,19 @@
   font-family: 'Droid Arabic Naskh';
   font-style: normal;
   font-weight: 400;
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Regular.eot);
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Regular.woff2) format('woff2'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Regular.woff) format('woff'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Regular.ttf) format('truetype');
+  src: url(../font/DroidNaskh-Regular.eot);
+  src: url(../font/DroidNaskh-Regular.eot?#iefix) format('embedded-opentype'),
+       url(../font/DroidNaskh-Regular.woff2) format('woff2'),
+       url(../font/DroidNaskh-Regular.woff) format('woff'),
+       url(../font/DroidNaskh-Regular.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Droid Arabic Naskh';
   font-style: normal;
   font-weight: 700;
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Bold.eot);
-  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Bold.eot?#iefix) format('embedded-opentype'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Bold.woff2) format('woff2'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Bold.woff) format('woff'),
-       url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabicnaskh/v4/DroidNaskh-Bold.ttf) format('truetype');
+  src: url(../font/DroidNaskh-Bold.eot);
+  src: url(../font/DroidNaskh-Bold.eot?#iefix) format('embedded-opentype'),
+       url(../font/DroidNaskh-Bold.woff2) format('woff2'),
+       url(../font/DroidNaskh-Bold.woff) format('woff'),
+       url(../font/DroidNaskh-Bold.ttf) format('truetype');
 }

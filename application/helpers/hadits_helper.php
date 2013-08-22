@@ -2,13 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 define('DBUSE', "sqlite");
 
-function use_db($db=Null){
-	if($db='1') {
-		return "had_all_fts4";
-	} else {
-		return 'had_all';
-	}
-}
+
 function last_kitab($kitab=null) {
 	if ($kitab) {
 		$_SESSION['last_kitab'] = $kitab;
@@ -39,7 +33,7 @@ function search_sess($searchterm){
 	}
 }
 
-function tyoe_had($type) {
+function type_had($type) {
 	if($type == 1) {
 		return 'hadits';
 	} elseif ($type == 2) {
@@ -54,6 +48,24 @@ function last_bab($bab=null) {
 		return $bab;
 	} else  {
 		return $_SESSION['last_bab'];
+	}
+}
+
+function use_dbs(){
+	$db = DBUSE;
+	if ($db =='sqlite') {
+		return 'sqlite';
+	} else {
+		return 'default';
+	}
+}
+
+function table_use(){
+	$db = DBUSE;
+	if ($db == "sqlite") {
+		return 'had_all_fts4';
+	} else {
+		return "had_all";
 	}
 }
 
@@ -82,14 +94,7 @@ function debug($debug=null){
 		}
 	}
 }
-function use_dbs(){
-	$db = DBUSE;
-	if ($db =='sqlite') {
-		return 'sqlite';
-	} else {
-		return 'default';
-	}
-}
+
 function field($field) {
 	$table_type = $_SESSION['table_type'];
 	// 	echo $table_type;//die;
@@ -120,14 +125,7 @@ function field($field) {
 		return $field;
 	}
 }
-function table_use(){
-	$db = DBUSE;
-	if ($db == "sqlite") {
-		return 'had_all_fts4';
-	} else {
-		return "had_all";
-	}
-}
+
 
 function colorizePerawi($text){
 	$text_rep = str_replace('[', '<span class="perawi-color">', $text);

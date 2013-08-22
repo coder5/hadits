@@ -12,7 +12,7 @@ try {
 	**************************************/
 
 	// Create (connect to) SQLite database in file
-	$file_db = new PDO('sqlite:../application/db/haditst_teaser.db');
+	$file_db = new PDO('sqlite:../../application/db/hadits1.db');
 	// Set errormode to exceptions
 	$file_db->setAttribute(PDO::ATTR_ERRMODE,
 			PDO::ERRMODE_EXCEPTION);
@@ -92,14 +92,14 @@ try {
 // 	$stmt = $memory_db->prepare($insert);
 
 	// Select all data from file db messages table
-	$result = $file_db->query('SELECT * FROM had_all_fts4 LIMIT 3;');
+	$result = $file_db->query("SELECT * FROM sqlite_master WHERE type='table';");
 	
 	print_r($result);
 	// Loop thru all data from messages table
 	// and insert it to file db
 	foreach ($result as $m) {
 		// Bind values directly to statement variables
-		echo  $m['isi_indonesia']. "<br/>";
+		echo  'nama adalah ='.$m['name']. "<br/>";
 		//print_r($m);
 		//$stmt->bindValue(':isi_indonesia', $m['isi_indonesia'], SQLITE3_TEXT);
 		//$stmt->bindValue(':imam_id', $m['imam_id'], SQLITE3_INTEGER);
@@ -138,19 +138,19 @@ try {
 	**************************************/
 
 	// Drop table messages from file db
-	$file_db->exec("DROP TABLE messages");
-	// Drop table messages from memory db
-	$memory_db->exec("DROP TABLE messages");
+// 	$file_db->exec("DROP TABLE messages");
+// 	// Drop table messages from memory db
+// 	$memory_db->exec("DROP TABLE messages");
 
 
-	/**************************************
-	 * Close db connections                *
-	**************************************/
+// 	/**************************************
+// 	 * Close db connections                *
+// 	**************************************/
 
-	// Close file db connection
-	$file_db = null;
-	// Close memory db connection
-	$memory_db = null;
+// 	// Close file db connection
+// 	$file_db = null;
+// 	// Close memory db connection
+// 	$memory_db = null;
 }
 catch(PDOException $e) {
 	// Print PDOException message
