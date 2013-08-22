@@ -27,9 +27,9 @@
 			<div class='articles'>
 				<?php echo '<p>' . $highlite_string . '</p>  
 			<span class="label label-inverse">HR ' . imam_nama($had[field("imam_id")]) .
-			' No.<a href="#" data-toogle="tooltip" title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</a></span>
-			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'"><span class="label label-info label-kitab">Kitab '. $had['kitab_indonesia'] .'</span></a>
-			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'"><span class="label label-success label-bab">Bab '. $had['bab_indonesia']. '</span></a>';
+			' No.<a href="#" data-toogle="tooltip" class="tooltip-docid" title="'.$had["docid"].'">' . $had[field("no_hdt")] . '</a></span>
+			<a href="'.site_url().'bab/'.imam_id($had[field("imam_id")]) .'/'.$had[field("kitab_imam_id")] .'" class="tooltip-kitab" title="'.$had['kitab_indonesia'].'"><span class="label label-info label-kitab">Kitab '. $had['kitab_indonesia'] .'</span></a>
+			<a href="'.site_url().'tema/'.imam_id($had[field("imam_id")]) .'/'. $had[field("bab_imam_id")] .'" class="tooltip-bab" title="'.$had['bab_indonesia'].'"><span class="label label-success label-bab">Bab '. $had['bab_indonesia']. '</span></a>';
 			?>
 			<a href="#haditsModal<?php echo $i; ?>" role="button" class="btn" data-toggle="modal">View Details</a>
 			<a href="#saveNotes" role="button" class="btn btn-primary">Save</a>
