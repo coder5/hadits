@@ -113,7 +113,7 @@ class Search extends CI_Controller {
 				} elseif ($search_no) {
 					table_use2("content");
 					$data['search'] = $search_no;
-					$data['imam_id'] = $post['imam_id'];
+					$data['imam_id'] = $imam_id;
 					$data['terms'] = trim($data['search']);
 					$data['show'] = $this->mhadits->searchHaditsNo($data['imam_id'], $data['search']);
 				} elseif ($search_bab_kitab) {

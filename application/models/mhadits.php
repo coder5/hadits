@@ -13,10 +13,10 @@ class MHadits extends CI_Model {
 	//private $lite;
     function __construct() {
         parent::__construct();
-//         $db = $this->
+//      $db = $this->
 // 		$this->DBUSE = DBUSE;
 // 		$this->had_table = TABLEUSE;
-//         $this->sqlite = $this->load->database('sqlite', TRUE);
+//      $this->sqlite = $this->load->database('sqlite', TRUE);
 // 		$lite = $this->load->database('sqlite', TRUE);
     }
 
@@ -66,15 +66,15 @@ class MHadits extends CI_Model {
     	return $query;
     }
     function searchHaditsNo($imam_id, $no) {
-        $sql = "SELECT h.*, kitab_indonesia, bab_indonesia FROM had_all_fts4_content  h
+        $sql = "SELECT h.*,". docid() ." as docid, kitab_indonesia, bab_indonesia FROM ".table_use()."  h
 				INNER JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
-						AND ".field('imam_id')." = k.imam_id
+						AND h.".field('imam_id')." = k.imam_id
 				INNER JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
-						AND ".field('imam_id')." = b.imam_id
-				WHERE ".field("imam_id"). "=".$imam_id." 
+						AND h.".field('imam_id')." = b.imam_id
+				WHERE h.".field("imam_id"). "=".$imam_id." 
 				AND ".field("no_hdt"). "=". $no ."
 				AND ".field("type"). "=1"
-        		." GROUP BY h.docid";
+        		." GROUP BY h.".field("no_hdt");
         debug($sql);
         $msc=microtime(true);
         $query = $this->db->query($sql);
@@ -86,7 +86,7 @@ class MHadits extends CI_Model {
     function searchHaditsBoolArab($words, $words_min = NULL,$imam_id, $pages=null) {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND imam_id IN ($imam_id)" : "";
-        $sql = "SELECT * FROM `had_all_fts4` 
+        $sql = "SELECT * FROM ".table_use()."
 		    	WHERE MATCH (isi_arab) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 		    	ORDER BY imam_id ASC;
 		    	";
@@ -220,7 +220,7 @@ class MHadits extends CI_Model {
     }
 
     function getTemaIdBab($imam, $bab_imam_id) {
-        $sql = "SELECT * FROM had_all_fts4_content 
+        $sql = "SELECT * FROM ".table_use()." 
         		WHERE ".field('imam_id') ." =" .imam_id($imam) 
         		." AND ".field('type')."=1 AND ".field('bab_imam_id') ."=".  $bab_imam_id;
         debug($sql);
@@ -231,7 +231,7 @@ class MHadits extends CI_Model {
     }
 
     function getHaditsIdHdt($imam, $id_hadits) {
-        $sql = "SELECT * FROM had_all_fts4_content 
+        $sql = "SELECT * FROM ".table_use()."  
         		WHERE ".field('imam_id') ." =" . imam_id($imam) ."
         				AND ".field('no_hdt') ."=" . $id_hadits ;
         debug($sql);

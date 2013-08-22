@@ -62,13 +62,27 @@ function use_dbs(){
 
 function table_use(){
 	$db = use_dbs();
+	$table = $_SESSION['table_type'];
 	if ($db == "sqlite") {
-		return 'had_all_fts4';
+		if ($table == "fts"){
+			$_SESSION['table_type'] = 'fts';
+			return 'had_all_fts4';
+		} elseif ($table == "content") {
+			$_SESSION['table_type'] = 'content';
+			return 'had_all_fts4_content';
+		}
 	} else {
 		return "had_all";
 	}
 }
-
+function docid(){
+	$db = use_dbs();
+	if ($db == 'sqlite') {
+		return 'docid';
+	} else {
+		return 'had_id';
+	}
+}
 function table_use2($table) {
 	$_SESSION['table_type'] = "fts";
 	$db = use_dbs();
