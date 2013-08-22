@@ -78,7 +78,11 @@ class Search extends CI_Controller {
 					$arr = explode(' ', trim($session_sess));
 					$sum = '';
 					foreach ($arr as $v) {
-						$sum .= '' . $v . '* ';
+						if (use_dbs() == "sqlite") {
+							$sum .= '' . $v . '* ';
+						} else {
+							$sum .= '+' . $v . '* ';
+						}						
 					}
 
 					//return $sum;

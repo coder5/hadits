@@ -1,6 +1,0 @@
-[19-Aug-2013 16:28:57 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193 test
-[19-Aug-2013 16:32:49 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
-[19-Aug-2013 16:33:19 UTC] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
-[19-Aug-2013 23:34:08 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
-[19-Aug-2013 23:34:58 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
-[19-Aug-2013 23:35:01 Asia/Jakarta] PHP Fatal error:  Call to a member function execute() on a non-object in C:\nginx\html\hadits\system\database\drivers\pdo\pdo_driver.php on line 193
