@@ -14,32 +14,37 @@ class MHadits extends CI_Model {
     function __construct() {
         parent::__construct();
 //         $db = $this->
-		$this->DBUSE = DBUSE;
+// 		$this->DBUSE = DBUSE;
 // 		$this->had_table = TABLEUSE;
-        $this->sqlite = $this->load->database('sqlite', TRUE);
-		$lite = $this->load->database('sqlite', TRUE);
+//         $this->sqlite = $this->load->database('sqlite', TRUE);
+// 		$lite = $this->load->database('sqlite', TRUE);
     }
 
     function searchHaditsBool($words, $words_min = NULL,$imam_id, $limit=null) {
         $extract = $words;
         $imam = $imam_id != 0 ? " AND h.imam_id IN ($imam_id)" : "";
-        $sql = "SELECT * FROM ".table_use()." h 
-				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
-
-				ORDER BY imam_id ASC;";
-        $sqlite_query = "SELECT h.*,docid, length(isi_indonesia) as simple, k.kitab_indonesia, b.bab_indonesia  
-        		FROM ".table_use()." h
-        		LEFT JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
+        $sql = "SELECT h.*,had_id AS docid, length(isi_indonesia) as simple, k.kitab_indonesia, b.bab_indonesia   FROM ".table_use()." h 
+       		 	LEFT JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
 						AND h.".field('imam_id')." = k.imam_id
 				LEFT JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
 						AND h.".field('imam_id')." = b.imam_id
-		        WHERE isi_indonesia MATCH '$words $words_min' $imam 
+				WHERE MATCH (isi_indonesia) AGAINST ('$words $words_min' IN BOOLEAN MODE) $imam
 		        ORDER BY imam_id, simple ASC";
-        echo "<blockquote><small>".$sqlite_query."</small></blockquote>";
+        $sqlite_query = "SELECT h.*,docid, length(isi_indonesia) as simple, k.kitab_indonesia, b.bab_indonesia  
+		        		FROM ".table_use()." h
+		        		LEFT JOIN kitab_all k ON h.".field('kitab_imam_id')." = k.kitab_imam_id
+								AND h.".field('imam_id')." = k.imam_id
+						LEFT JOIN bab_all b ON h.".field('bab_imam_id')." = b.bab_imam_id 
+								AND h.".field('imam_id')." = b.imam_id
+				        WHERE isi_indonesia MATCH '$words $words_min' $imam 
+				        ORDER BY imam_id, simple ASC";
 		$msc=microtime(true);
 		//echo DBUSE;
-        $query = $this->db->query($sqlite_query);
-//         $query2 = $this->sqlite->get('had_all_fts4', 10, 20);
+		//echo use_dbs();exit;
+		$sql_query = use_dbs() == "default" ? $sql : $sqlite_query;
+        debug($sql_query);
+        $query = $this->db->query($sql_query);
+		//$query2 = $this->sqlite->get('had_all_fts4', 10, 20);
         //echo $this->last_query();
 		query_exec_time(microtime(true)-$msc);
         return $query;
@@ -55,7 +60,7 @@ class MHadits extends CI_Model {
     	$msc=microtime(true);
     	//echo DBUSE;
     	$query = $this->db->query($sqlite_query);
-    	//         $query2 = $this->sqlite->get('had_all_fts4', 10, 20);
+    	//$query2 = $this->sqlite->get('had_all_fts4', 10, 20);
     	//echo $this->last_query();
     	query_exec_time(microtime(true)-$msc);
     	return $query;
