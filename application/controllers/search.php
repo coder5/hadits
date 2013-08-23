@@ -93,7 +93,6 @@ class Search extends CI_Controller {
 							$sum .= '+' . $v . '* ';
 						}						
 					}
-
 					//return $sum;
 					//echo $sum;exit;
 					//$plus = str_replace(' ', '+', $post);
