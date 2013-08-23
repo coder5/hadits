@@ -41,7 +41,7 @@ class MHadits extends CI_Model {
 		$msc=microtime(true);
 		//echo DBUSE;
 		//echo use_dbs();exit;
-		$sql_query = use_dbs() == "default" ? $sql : $sqlite_query;
+		$sql_query = DBUSE == "mysql" ? $sql : $sqlite_query;
         debug($sql_query);
         $query = $this->db->query($sql_query);
 		//$query2 = $this->sqlite->get('had_all_fts4', 10, 20);

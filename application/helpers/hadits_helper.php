@@ -1,40 +1,45 @@
 <?php
-date_default_timezone_set('Asia/Jakarta');
-define('DBUSE', "sqlite");
+date_default_timezone_set ( 'Asia/Jakarta' );
+$ci =& get_instance();
+$ci->load->database();
+$activedb = $ci->db->active_group;
+// $activedb = $ci->config->item('active_group');
+if ($activedb) {
+	define ( 'DBUSE', $activedb );
+}
 
 
-function last_kitab($kitab=null) {
+
+
+function last_kitab($kitab = null) {
 	if ($kitab) {
-		$_SESSION['last_kitab'] = $kitab;
-		//echo 'ke set jadi'. $kitab;
+		$_SESSION ['last_kitab'] = $kitab;
+		// echo 'ke set jadi'. $kitab;
 		return $kitab;
 	} else {
-		if (isset($_SESSION['last_kitab'])) {
-			//echo 'last ny dapet';
-			return $_SESSION['last_kitab'];
+		if (isset ( $_SESSION ['last_kitab'] )) {
+			// echo 'last ny dapet';
+			return $_SESSION ['last_kitab'];
 		} else {
-			//echo 'last ny ga dapet';
+			// echo 'last ny ga dapet';
 			return "";
 		}
-
 	}
 }
-
-function search_sess($searchterm){
-	if($searchterm) {
-		$_SESSION['searchterm'] = $searchterm;
+function search_sess($searchterm) {
+	if ($searchterm) {
+		$_SESSION ['searchterm'] = $searchterm;
 		return $searchterm;
-	} elseif($_SESSION['searchterm']) {
-		$searchterm = $_SESSION['searchterm'];
+	} elseif ($_SESSION ['searchterm']) {
+		$searchterm = $_SESSION ['searchterm'];
 		return $searchterm;
 	} else {
-		$searchterm ="";
+		$searchterm = "";
 		return $searchterm;
 	}
 }
-
 function type_had($type) {
-	if($type == 1) {
+	if ($type == 1) {
 		return 'hadits';
 	} elseif ($type == 2) {
 		return "kitab";
@@ -42,41 +47,40 @@ function type_had($type) {
 		return "bab";
 	}
 }
-function last_bab($bab=null) {
+function last_bab($bab = null) {
 	if ($bab) {
-		$_SESSION['last_bab'] = $bab;
+		$_SESSION ['last_bab'] = $bab;
 		return $bab;
-	} else  {
-		return $_SESSION['last_bab'];
-	}
-}
-
-function use_dbs(){
-	$db = $_SESSION['active_db'];
-	if ($db =='sqlite') {
-		return 'sqlite';
 	} else {
-		return 'default';
+		return $_SESSION ['last_bab'];
 	}
 }
-
-function table_use(){
-	$db = use_dbs();
-	$table = $_SESSION['table_type'];
+function use_dbs() {
+// 	$db = $_SESSION ['active_db'];
+// 	if ($db == 'sqlite') {
+// 		return 'sqlite';
+// 	} else {
+// 		return 'default';
+// 	}
+	return DBUSE;
+}
+function table_use() {
+	$db = DBUSE;
+	$table = $_SESSION ['table_type'];
 	if ($db == "sqlite") {
-		if ($table == "fts"){
-			$_SESSION['table_type'] = 'fts';
+		if ($table == "fts") {
+			$_SESSION ['table_type'] = 'fts';
 			return 'had_all_fts4';
 		} elseif ($table == "content") {
-			$_SESSION['table_type'] = 'content';
+			$_SESSION ['table_type'] = 'content';
 			return 'had_all_fts4_content';
 		}
 	} else {
 		return "had_all";
 	}
 }
-function docid(){
-	$db = use_dbs();
+function docid() {
+	$db = DBUSE;
 	if ($db == 'sqlite') {
 		return 'docid';
 	} else {
@@ -84,173 +88,166 @@ function docid(){
 	}
 }
 function table_use2($table) {
-	$_SESSION['table_type'] = "fts";
-	$db = use_dbs();
+	$_SESSION ['table_type'] = "fts";
+	$db = DBUSE;
 	if ($db == "sqlite") {
-		$table_type = $_SESSION['table_type'];
-		if (isset($table_type)) {
-			if ($table == "fts"){
-				$_SESSION['table_type'] = 'fts';
+		$table_type = $_SESSION ['table_type'];
+		if (isset ( $table_type )) {
+			if ($table == "fts") {
+				$_SESSION ['table_type'] = 'fts';
 			} elseif ($table == "content") {
-				$_SESSION['table_type'] = 'content';
+				$_SESSION ['table_type'] = 'content';
 			}
 		}
 	} else {
-		$_SESSION['table_type'] = 'mysql';
+		$_SESSION ['table_type'] = 'mysql';
 	}
-	// 	echo 'session'. $_SESSION['table_type'];
+	// echo 'session'. $_SESSION['table_type'];
 }
-function debug($debug=null){
-	debug_backtrace();
+function debug($debug = null) {
+	debug_backtrace ();
 	if ($debug != null) {
-		$_SESSION['debug'] = "<blockquote><small>DB=".use_dbs()." ".$debug."</small></blockquote>";
-		echo $_SESSION['debug'];
+		$_SESSION ['debug'] = "<blockquote><small>DB=" . DBUSE . " " . $debug . "</small></blockquote>";
+		echo $_SESSION ['debug'];
 	} else {
-		if(isset($_SESSION['debug'])) {
-			echo $_SESSION['debug'];
+		if (isset ( $_SESSION ['debug'] )) {
+			echo $_SESSION ['debug'];
 		} else {
 			return null;
 		}
 	}
 }
-
 function field($field) {
-	$table_type = $_SESSION['table_type'];
-	// 	echo $table_type;//die;
+	$table_type = $_SESSION ['table_type'];
+	// echo $table_type;//die;
 	if ($table_type == 'content') {
 		switch ($field) {
 			case "no_hdt" :
 				return "c2no_hdt";
-			case "type":
+			case "type" :
 				return "c0type";
-			case "imam_id":
+			case "imam_id" :
 				return "c1imam_id";
-			case "tema":
+			case "tema" :
 				return "c3tema";
-			case "isi_arab":
+			case "isi_arab" :
 				return "c4isi_arab";
-			case "isi_indonesia":
+			case "isi_indonesia" :
 				return "c5isi_indonesia";
-			case "isi_arab_gundul":
+			case "isi_arab_gundul" :
 				return "c6isi_arab_gundul";
-			case "kitab_imam_id":
+			case "kitab_imam_id" :
 				return "c7kitab_imam_id";
-			case "bab_imam_id":
+			case "bab_imam_id" :
 				return "c8bab_imam_id";
-			default:
+			default :
 				return 1;
 		}
 	} else {
 		return $field;
 	}
 }
-
-
-function colorizePerawi($text){
-	$text_rep = str_replace('[', '<span class="perawi-color">', $text);
-	$text_rep2 = str_replace(']', '</span>', $text_rep);
-	return  $text_rep2;
+function colorizePerawi($text) {
+	$text_rep = str_replace ( '[', '<span class="perawi-color">', $text );
+	$text_rep2 = str_replace ( ']', '</span>', $text_rep );
+	return $text_rep2;
 }
-
 function highlightTerms($text_string, $terms) {
-	$split_words = explode(" ", $terms);
-	//print_r($split_words);exit;
-	## We can loop through the array of terms from string
-	foreach ($split_words as $term) {
-		## use preg_quote
-		$term = preg_quote($term);
-		## Now we can highlight the terms
-		//$text_string = strtolower($text_string);
-		$text_string = preg_replace("/($term)/i", '<span class="highlight text-error">\1</span>', $text_string);
+	$split_words = explode ( " ", $terms );
+	// print_r($split_words);exit;
+	// We can loop through the array of terms from string
+	foreach ( $split_words as $term ) {
+		// use preg_quote
+		$term = preg_quote ( $term );
+		// Now we can highlight the terms
+		// $text_string = strtolower($text_string);
+		$text_string = preg_replace ( "/($term)/i", '<span class="highlight text-error">\1</span>', $text_string );
 	}
-	## lastly, return text string with highlighted term in it
-	return colorizePerawi($text_string);
+	// lastly, return text string with highlighted term in it
+	return colorizePerawi ( $text_string );
 }
-
-function query_exec_time($time){
-	$_SESSION['query_exec_time'] = $time;
+function query_exec_time($time) {
+	$_SESSION ['query_exec_time'] = $time;
 }
-
-function imam_id($imam_slug){
+function imam_id($imam_slug) {
 	switch ($imam_slug) {
 		case "bukhari" :
 			return 1;
 		case "muslim" :
 			return 2;
-		case "abudaud":
+		case "abudaud" :
 			return 3;
-		case "tirmidzi":
+		case "tirmidzi" :
 			return 4;
-		case "nasai":
+		case "nasai" :
 			return 5;
-		case "ibnumajah":
+		case "ibnumajah" :
 			return 6;
 		case "ahmad" :
 			return 7;
-		case "malik":
+		case "malik" :
 			return 8;
-		case "darimi":
+		case "darimi" :
 			return 9;
 		case "1" :
 			return "bukhari";
 		case "2" :
 			return "muslim";
-		case "3":
+		case "3" :
 			return "abudaud";
-		case "4":
+		case "4" :
 			return "tirmidzi";
-		case "5":
+		case "5" :
 			return "nasai";
-		case "6":
+		case "6" :
 			return "ibnumajah";
 		case "7" :
 			return "ahmad";
-		case "8":
+		case "8" :
 			return "malik";
-		case "9":
+		case "9" :
 			return "darimi";
 		default :
 			return "1";
 	}
 }
-
-function imam_nama($imam_id){
+function imam_nama($imam_id) {
 	switch ($imam_id) {
 		case "1" :
 			return "Bukhari";
 		case "2" :
 			return "Muslim";
-		case "3":
+		case "3" :
 			return "Abu Daud";
-		case "4":
+		case "4" :
 			return "Tirmidzi";
-		case "5":
+		case "5" :
 			return "Nasa'i";
-		case "6":
+		case "6" :
 			return "Ibnu Majah";
 		case "7" :
 			return "Ahmad";
-		case "8":
+		case "8" :
 			return "Malik";
-		case "9":
+		case "9" :
 			return "Darimi";
 		case "bukhari" :
 			return "Bukhari";
 		case "muslim" :
 			return "Muslim";
-		case "abudaud":
+		case "abudaud" :
 			return "Abu Daud";
-		case "tirmidzi":
+		case "tirmidzi" :
 			return "Tirmidzi";
-		case "nasai":
+		case "nasai" :
 			return "Nasa'i";
-		case "ibnumajah":
+		case "ibnumajah" :
 			return "Ibnu Majah";
 		case "ahmad" :
 			return "Ahmad";
-		case "malik":
+		case "malik" :
 			return "Malik";
-		case "darimi":
+		case "darimi" :
 			return "Darimi";
 		default :
 			return "Bukhari";

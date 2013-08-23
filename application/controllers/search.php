@@ -5,9 +5,11 @@ if (!defined('BASEPATH'))
 
 class Search extends CI_Controller {
 
+	
 	function __construct() {
 		parent::__construct();
 		$this->load->model('mhadits');
+        $this->mhadits = new MHadits();
 	}
 
 	public function index() {
@@ -15,7 +17,14 @@ class Search extends CI_Controller {
 	}
 
 	public function db(){
-		echo DBUSE;
+		echo DBUSE.'<br/>';
+		if (!defined('PDO::ATTR_DRIVER_NAME')) {
+			echo 'PDO unavailable';
+		} elseif (defined('PDO::ATTR_DRIVER_NAME')) {
+			echo 'PDO available';
+		}
+		phpinfo();
+		
 	}
 
 	public function search_terms() {

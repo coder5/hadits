@@ -49,36 +49,34 @@
 $active_record = TRUE;
 
 # Server
-// $db['default']['hostname'] = 'hadits.us';
-// $db['default']['username'] = 'haditsus_hadits';
-// $db['default']['password'] = 'kD[Il(gT$N7?';
-// $db['default']['database'] = 'haditsus_hadits';
-// $db['default']['dbdriver'] = 'mysql';
-// $db['default']['dbprefix'] = '';
-// $db['default']['pconnect'] = TRUE;
-// $db['default']['db_debug'] = TRUE;
-// $db['default']['cache_on'] = FALSE;
-// $db['default']['cachedir'] = '';
-// $db['default']['char_set'] = 'utf8';
-// $db['default']['dbcollat'] = 'utf8_general_ci';
+// $db['mysql']['hostname'] = 'hadits.us';
+// $db['mysql']['username'] = 'haditsus_hadits';
+// $db['mysql']['password'] = 'kD[Il(gT$N7?';
+// $db['mysql']['database'] = 'haditsus_hadits';
+// $db['mysql']['dbdriver'] = 'mysql';
+// $db['mysql']['dbprefix'] = '';
+// $db['mysql']['pconnect'] = TRUE;
+// $db['mysql']['db_debug'] = TRUE;
+// $db['mysql']['cache_on'] = FALSE;
+// $db['mysql']['cachedir'] = '';
+// $db['mysql']['char_set'] = 'utf8';
+// $db['mysql']['dbcollat'] = 'utf8_general_ci';
 
 # Localhost
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-// $db['default']['password'] = 'bippo';
-$db['default']['database'] = 'hadits1';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
+$db['mysql']['hostname'] = 'localhost';
+$db['mysql']['username'] = 'root';
+// $db['mysql']['password'] = 'root';
+$db['mysql']['password'] = 'bippo';
+$db['mysql']['database'] = 'hadits1';
+$db['mysql']['dbdriver'] = 'mysql';
+$db['mysql']['dbprefix'] = '';
+$db['mysql']['pconnect'] = TRUE;
+$db['mysql']['db_debug'] = TRUE;
+$db['mysql']['cache_on'] = FALSE;
+$db['mysql']['cachedir'] = '';
+$db['mysql']['char_set'] = 'utf8';
+$db['mysql']['dbcollat'] = 'utf8_general_ci';
+$db['mysql']['swap_pre'] = '';
 
 
 $db['sqlite']['hostname'] = 'sqlite:'.APPPATH.'db/hadits1.db';
@@ -94,12 +92,15 @@ $db['sqlite']['cachedir'] = '';
 $db['sqlite']['char_set'] = 'utf8';
 $db['sqlite']['dbcollat'] = 'utf8_general_ci';
 $db['sqlite']['swap_pre'] = '';
-$db['sqlite']['autoinit'] = TRUE;
-$db['sqlite']['stricton'] = FALSE;
+// $db['sqlite']['autoinit'] = TRUE;
+// $db['sqlite']['stricton'] = FALSE;
 
 //set the default db
-$active_group = 'sqlite';
-// $active_group = 'default';
+$using_db = 'mysql';
+// $using_db = 'sqlite';
+
+$active_group = $using_db;
+$db[$using_db]['active_group'] = $active_group;
 
 $_SESSION['active_db'] = $active_group;
 //use_dbs($active_group);
