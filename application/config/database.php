@@ -65,8 +65,8 @@ $active_record = TRUE;
 # Localhost
 $db['mysql']['hostname'] = 'localhost';
 $db['mysql']['username'] = 'root';
-// $db['mysql']['password'] = 'root';
-$db['mysql']['password'] = 'bippo';
+$db['mysql']['password'] = 'root';
+// $db['mysql']['password'] = 'bippo';
 $db['mysql']['database'] = 'hadits1';
 $db['mysql']['dbdriver'] = 'mysql';
 $db['mysql']['dbprefix'] = '';
@@ -96,7 +96,7 @@ $db['sqlite']['swap_pre'] = '';
 // $db['sqlite']['stricton'] = FALSE;
 
 //set the default db
-$using_db = 'mysql';
+$using_db = 'sqlite';
 // $using_db = 'sqlite';
 
 $active_group = $using_db;

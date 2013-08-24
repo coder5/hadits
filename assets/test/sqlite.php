@@ -1,10 +1,10 @@
 <?php
 $query = "SELECT * FROM sqlite_master WHERE type='table'";
-$db_sqlite = '../../application/db/hadits1.db';
+$db_sqlite = '../../application/db/kitab.db';
 class MyDB extends SQLite3 {
-	protected $db_sqlite = '../../application/db/hadits1.db';
+	protected $db_sqlite = '../../application/db/kitab.db';
 	function __construct() {
-		$this->open ( '../../application/db/hadits1.db' );
+		$this->open ( '../../application/db/kitab.db' );
 	}
 }
 $db = new MyDB ();

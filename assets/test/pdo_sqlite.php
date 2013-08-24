@@ -12,7 +12,7 @@ try {
 	**************************************/
 
 	// Create (connect to) SQLite database in file
-	$file_db = new PDO('sqlite:../../application/db/hadits1.db');
+	$file_db = new PDO('sqlite:../../application/db/kitab.db');
 	// Set errormode to exceptions
 	$file_db->setAttribute(PDO::ATTR_ERRMODE,
 			PDO::ERRMODE_EXCEPTION);
