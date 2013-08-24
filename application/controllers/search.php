@@ -49,7 +49,7 @@ class Search extends CI_Controller {
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		
-		$post = $this->input->post();
+		$post = $this->input->post(NULL, TRUE);
 		echo "<blockquote><small>";
 		print_r($post);//exit;
 		echo "</small></blockquote>";

@@ -1,16 +1,12 @@
 <?php
 date_default_timezone_set ( 'Asia/Jakarta' );
-$ci =& get_instance();
-$ci->load->database();
+$ci = & get_instance ();
+$ci->load->database ();
 $activedb = $ci->db->active_group;
 // $activedb = $ci->config->item('active_group');
 if ($activedb) {
 	define ( 'DBUSE', $activedb );
 }
-
-
-
-
 function last_kitab($kitab = null) {
 	if ($kitab) {
 		$_SESSION ['last_kitab'] = $kitab;
@@ -56,12 +52,12 @@ function last_bab($bab = null) {
 	}
 }
 function use_dbs() {
-// 	$db = $_SESSION ['active_db'];
-// 	if ($db == 'sqlite') {
-// 		return 'sqlite';
-// 	} else {
-// 		return 'default';
-// 	}
+	// $db = $_SESSION ['active_db'];
+	// if ($db == 'sqlite') {
+	// return 'sqlite';
+	// } else {
+	// return 'default';
+	// }
 	return DBUSE;
 }
 function table_use() {
@@ -86,6 +82,25 @@ function docid() {
 	} else {
 		return 'had_id';
 	}
+}
+function escp($post) {
+	$arr = explode ( ' ', trim ( $post ) );
+	$array = array_filter ( $arr );
+	$arr_val = array_values ( $array );
+	// $final_keyword = implode(' ', $arr_val);
+	return $arr_val;
+}
+function escp_db($post) {
+	$arr_val = escp ( $post );
+	$sum = '';
+	foreach ( $arr_val as $var ) {
+		if (DBUSE == 'sqlite') {
+			$sum .= $var . '*';
+		} else {
+			$sum .= ' +' . $var . '*';
+		}
+	}
+	return $sum;
 }
 function table_use2($table) {
 	$_SESSION ['table_type'] = "fts";
