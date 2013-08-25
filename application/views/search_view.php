@@ -99,7 +99,7 @@
 						type="text" class="keyboardInput" />
 				</p>
 				<p>
-					<input type="submit" value="SubmitArab" class="btn" name="search"
+					<input type="submit" value="SearchArab" class="btn" name="search"
 						class="submit" />
 				</p>
 				</form>

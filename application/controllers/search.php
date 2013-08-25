@@ -83,21 +83,16 @@ class Search extends CI_Controller {
 					// $search_bool;
 					$data['search'] = ($this->input->post('search_bool', TRUE));
 					$session_sess = search_sess(trim($data['search']));
-					$data['search2'] = ($this->input->post('search_bool_min', TRUE));
+					$data['search_min'] = ($this->input->post('search_bool_min', TRUE));
 					$arr = explode(' ', trim($session_sess));
 					$sum = escp_db($session_sess);
+					$data['terms'] = keyword($session_sess);
 // 					var_dump($sum);exit;
 					if ($search_bool_min) {
-						$arr2 = explode(' ', trim($data['search2']));
-						$sum2 = '';
-						foreach ($arr2 as $v) {
-							$sum2 .= '-' . $v . '* ';
-						}
-						$data['terms'] = keyword($session_sess);
-						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum2, $imam_id , $page);
+						$sum_min = escp_dbmin($data['search_min']);
+						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum_min, $imam_id , $page);
 					} else {
-						$data['terms'] = keyword($session_sess);
-						$data['show'] = $this->mhadits->searchHaditsBool($sum,$sum2="", $imam_id, $page);
+						$data['show'] = $this->mhadits->searchHaditsBool($sum,$sum_min="", $imam_id, $page);
 					}
 				} elseif ($search_like) {
 					//echo $search_like;
@@ -120,7 +115,7 @@ class Search extends CI_Controller {
 					$data['terms'] = trim($data['search']);
 					$data['show'] = $this->mhadits->searchBabKitab($data['search'],$imam_id);
 				}
-			} else {
+			} elseif ($post['search'] == 'SearchArab') {
 				// arab
 				if ($search_bool_arab) {
 					// $search_bool;
@@ -177,6 +172,8 @@ class Search extends CI_Controller {
 					$data['terms'] = trim($data['search']);
 					$data['show'] = $this->mhadits->searchHaditsLikeExactArab($data['search'],$imam_id);
 				}
+			} elseif ($post['search'] == "Simple") {
+				
 			}
 		}
 		//exit;

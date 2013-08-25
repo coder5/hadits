@@ -90,11 +90,9 @@ function escp($post) {
 	// $final_keyword = implode(' ', $arr_val);
 	return $arr_val;
 }
-
 function keyword($post) {
-	return implode ( ' ', escp($post));
+	return implode ( ' ', escp ( $post ) );
 }
-
 function escp_db($post) {
 	$arr_val = escp ( $post );
 	$sum = '';
@@ -104,6 +102,14 @@ function escp_db($post) {
 		} else {
 			$sum .= ' +' . $var . '*';
 		}
+	}
+	return $sum;
+}
+function escp_dbmin($post) {
+	$arr_val = escp ( $post );
+	$sum = '';
+	foreach ( $arr_val as $var ) {
+		$sum .= '-' . $var . '*';
 	}
 	return $sum;
 }
