@@ -90,6 +90,11 @@ function escp($post) {
 	// $final_keyword = implode(' ', $arr_val);
 	return $arr_val;
 }
+
+function keyword($post) {
+	return implode ( ' ', escp($post));
+}
+
 function escp_db($post) {
 	$arr_val = escp ( $post );
 	$sum = '';

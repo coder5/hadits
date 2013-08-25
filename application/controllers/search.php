@@ -85,27 +85,18 @@ class Search extends CI_Controller {
 					$session_sess = search_sess(trim($data['search']));
 					$data['search2'] = ($this->input->post('search_bool_min', TRUE));
 					$arr = explode(' ', trim($session_sess));
-					$sum = '';
-					foreach ($arr as $v) {
-						if (use_dbs() == "sqlite") {
-							$sum .= '' . $v . '* ';
-						} else {
-							$sum .= '+' . $v . '* ';
-						}						
-					}
-					//return $sum;
-					//echo $sum;exit;
-					//$plus = str_replace(' ', '+', $post);
+					$sum = escp_db($session_sess);
+// 					var_dump($sum);exit;
 					if ($search_bool_min) {
 						$arr2 = explode(' ', trim($data['search2']));
 						$sum2 = '';
 						foreach ($arr2 as $v) {
 							$sum2 .= '-' . $v . '* ';
 						}
-						$data['terms'] = $data['search'];
+						$data['terms'] = keyword($session_sess);
 						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum2, $imam_id , $page);
 					} else {
-						$data['terms'] = $data['search'];
+						$data['terms'] = keyword($session_sess);
 						$data['show'] = $this->mhadits->searchHaditsBool($sum,$sum2="", $imam_id, $page);
 					}
 				} elseif ($search_like) {
