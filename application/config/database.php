@@ -96,8 +96,8 @@ $db['sqlite']['swap_pre'] = '';
 // $db['sqlite']['stricton'] = FALSE;
 
 //set the default db
+// $using_db = 'mysql';
 $using_db = 'sqlite';
-// $using_db = 'sqlite';
 
 $active_group = $using_db;
 $db[$using_db]['active_group'] = $active_group;

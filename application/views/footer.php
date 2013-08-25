@@ -3,7 +3,7 @@ echo debug();
 ?>
 
       <footer>
-        <p>&copy; Company 2013 Hadits.us</p>
+        <p>&copy; Company 2013 hadits.us Database Engine <?php echo strtoupper(DBUSE);?></p>
       </footer>
 
     </div><!--/.fluid-container-->
