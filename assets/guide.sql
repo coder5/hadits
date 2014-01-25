@@ -120,6 +120,13 @@ isi_indonesia, isi_arab_gundul, kitab_imam_id, bab_imam_id
 ) SELECT  `type`, imam_id, no_hdt, tema, isi_arab,
 isi_indonesia, isi_arab_gundul, kitab_imam_id, bab_imam_id FROM had1.had_all;
 
+
+INSERT into notes (`type`,imam_id,docid,no_hdt,tema,notes,isi_arab,isi_indonesia,isi_arab_gundul,kitab_imam_id,bab_imam_id)
+
+SELECT `type`,imam_id,docid,no_hdt,tema,notes,isi_arab,isi_indonesia,isi_arab_gundul,kitab_imam_id,bab_imam_id
+FROM notes2
+
+
 UPDATE had_all h
 INNER JOIN imam i ON h.imam_id = i.imam_id
 SET h.imam_new_id = i.imam_new_id;

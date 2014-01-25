@@ -1,6 +1,8 @@
 ﻿Create Quran just like hadits show
 
+add creation_time on Notes
 
+bugs on notes / bookmark details kitab n bab
  
 get new navicat in warez 11.0.8 ... done
 get sinonim word for instance .. wanita & perempuan , gadis ,perawat , puteri, dusta, berbohong , bohong, jin , ifrit, kejar , mengejar
