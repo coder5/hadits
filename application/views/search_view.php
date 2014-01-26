@@ -1,6 +1,6 @@
 <div class="col-md-10">
 	<div class="jumbotron">
-		<h2>Pencarian Hadits</h2>
+		<h2>Pencarian Hadits 9 Imam Lengkap</h2>
 		<p>Anda Dapat Mencari Hadits yg memenuhi keyword yg anda masukan pada
 			pilahan 1 , Jika Anda Ingin Mengeluarkan Kata yg tidak di inginkan
 			bisa masukan di input minus no.2 .</p>
@@ -119,71 +119,6 @@
 		</div>
 		<!--/row-->
 	</div>
-	<div class="row">
-		<div class="col-md-6">
-			<h2>Heading</h2>
-			<p>
-				Donec id elit non mi porta gravida at eget metus.
-				<button id="clickme">ReadMore</button>
-				<span id="expendable" style="display: none">Fusce dapibus, tellus ac
-					cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
-					justo sit amet risus. Etiam porta sem malesuada magna mollis
-					euismod. Donec sed odio dui.</span>
-			</p>
-			<p>
-				<a class="btn" href="#">View details &raquo;</a>
-			</p>
-		</div>
-		<!--/span-->
-		<div class="col-md-6">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-				tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-				fermentum massa justo sit amet risus. Etiam porta sem malesuada
-				magna mollis euismod. Donec sed odio dui.</p>
-			<p>
-				<a class="btn" href="#">View details &raquo;</a>
-			</p>
-		</div>
-		<!--/span-->
-	</div>
-	<!--/row-->
-	<div class="row">
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-				tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-				fermentum massa justo sit amet risus. Etiam porta sem malesuada
-				magna mollis euismod. Donec sed odio dui.</p>
-			<p>
-				<a class="btn" href="#">View details &raquo;</a>
-			</p>
-		</div>
-		<!--/span-->
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-				tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-				fermentum massa justo sit amet risus. Etiam porta sem malesuada
-				magna mollis euismod. Donec sed odio dui.</p>
-			<p>
-				<a class="btn" href="#">View details &raquo;</a>
-			</p>
-		</div>
-		<!--/span-->
-		<div class="col-md-4">
-			<h2>Heading</h2>
-			<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus,
-				tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-				fermentum massa justo sit amet risus. Etiam porta sem malesuada
-				magna mollis euismod. Donec sed odio dui.</p>
-			<p>
-				<a class="btn" href="#">View details &raquo;</a>
-			</p>
-		</div>
-		<!--/span-->
-	</div>
-	<!--/row-->
 </div>
 <!--/span-->
 </div>

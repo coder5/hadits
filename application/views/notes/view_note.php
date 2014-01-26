@@ -1,6 +1,7 @@
 <!-- only show kitab -->
 <div class="col-md-9">
 	<div class="jumbotron">
+		<div class="img-rounded">
 		<h2>
 			<a href="<?php echo site_url()?>bookmark">Notes</a>
 		</h2>
@@ -42,7 +43,13 @@
 		</div>
 		<div class="span6"></div>
 		<!--/span-->
+		</div>
 	</div>
+	<div class="panel panel-default">
+	  <div class="panel-body">
+	    Basic panel example
+  	</div>
+</div>
 	<!--/row-->
 </div>
 <!--/span-->

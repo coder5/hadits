@@ -15,16 +15,17 @@ $uri = $this->uri->segment ( 2 );
 	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css"
 	rel="stylesheet">
-<link
-	href="<?php echo base_url(); ?>assets/css/offcanvas.css"
+<link href="<?php echo base_url(); ?>assets/css/offcanvas.css"
+	rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/docs.css"
 	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css"
 	rel="stylesheet">
 <style type="text/css">
 /* @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css); */
 body {
-	padding-top: 60px;
 	padding-bottom: 40px;
+	padding-top: 80px;
 }
 
 .sidebar-nav {
@@ -40,24 +41,50 @@ body {
 	}
 }
 
-.highlight {
+.highlight-terms {
 	font-weight: bold;
 }
 
-.white, .white a {
-  color: #fff;
+.white,.white a {
+	color: #fff;
 }
 
 .jumbotron hr {
 	border-bottom: 1px solid #666;
 }
 
+.navbar {
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
+	background-color: #563d7c;
+	border-color: #463265;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
+}
+
+.navbar .navbar-nav>li>a {
+	color: #cdbfe3;
+}
+
+.navbar .navbar-nav>.active>a,.navbar .navbar-nav>.active>a:hover {
+	color: #fff;
+	background-color: #463265;
+}
+
+.navbar-nav>li>a {
+	color: #999;
+}
+
+.navbar-nav>li>a {
+	color: #cdbfe3;
+}
+
+.navbar-inverse  .navbar-brand {
+	color: #fff;
+}
 /*
 .container .jumbotron {
 padding-left: 10px;
 padding-right: 10px;
 }*/
-
 .arabic {
 	font-family: 'Droid Arabic Naskh', serif;
 	font-size: 20px;
@@ -105,49 +132,55 @@ padding-right: 10px;
 </head>
 
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
+    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"data-target=".navbar-collapse">
-					<span class="glyphicon glyphicon-bar"></span> 
-					<span class="glyphicon glyphicon-bar"></span> 
-					<span class="glyphicon glyphicon-bar"></span>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="glyphicon glyphicon-bar"></span> <span
+						class="glyphicon glyphicon-bar"></span> <span
+						class="glyphicon glyphicon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Quran Hadits Lengkap</a>
+				<a class="navbar-brand" href="<?php echo site_url()?>search">Quran Hadits Lengkap</a>
 			</div>
-			<div class="collapse navbar-collapse">
-          		<ul class="nav navbar-nav">
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+							<ul class="nav navbar-nav">
 					<li class="active"><a href="<?php echo site_url()?>search"><i
 							class="glyphicon glyphicon-home white"></i> Home</a></li>
 					<li><a href="<?php echo site_url()?>search"><i
 							class="glyphicon glyphicon-search white"></i> Advanced Search</a></li>
 					<li><a href="<?php echo site_url()?>list_notes"><i
 							class="glyphicon glyphicon-bookmark white"></i> Bookmarks</a></li>
-					<li><a href="#contact"><i class="glyphicon glyphicon-envelope white"></i>
-							Contact</a></li>
+					<li><a href="#contact"><i
+							class="glyphicon glyphicon-envelope white"></i> Contact</a></li>
 				</ul>
 				<p class="navbar-text pull-right">
-					<i class="glyphicon glyphicon-user white"></i> Logged in as <a href="#"
-						class="navbar-link">Username</a>
+					<i class="glyphicon glyphicon-user white"></i> Logged in as <a
+						href="#" class="navbar-link">Username</a>
 				</p>
 				<form class="navbar-form pull-left"
 					action="<?php echo site_url();?>search/result/" method="POST">
-					<input type="text" name="search_bool" class="search-query span2"
-						placeholder="Search">
+					<input type="text" name="search_bool"
+						class="search-query form-control" placeholder="Search">
+					<button type="submit" value="Search" name="search"
+						class="btn btn-default">Submit</button>
 				</form>
-			</div>
-			<!--/.nav-collapse -->
+			</nav>
 		</div>
-	</div>
+</header>
 
-	<div class="container">
+	 
+    
+	
+	<div class="container  bs-docs-container">
 		<div class="row">
 			<div class="col-md-2">
 				<div class="well sidebar-nav">
 					<ul class="nav">
-						<li>Qur'an</li>
+						<li class="nav-header active"><a><i class="glyphicon glyphicon-book"></i> Qur'an</a></li>
 						<li class="divider"></li>
-						<li class="nav-header"><i class="glyphicon glyphicon-book"></i> Hadits</li>
+						<li class="nav-header active"><a><i class="glyphicon glyphicon-book"></i>
+							Hadits</a></li>
 						<li <?php echo $uri =='bukhari'?'class="active"':''; ?>><a
 							href="<?php echo site_url();?>kitab/bukhari">Shahih Bukhari</a></li>
 						<li <?php echo $uri =='muslim'?'class="active"':''; ?>><a
