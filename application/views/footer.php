@@ -1,5 +1,5 @@
 <?php
-echo debug();
+//echo debug();
 ?>
 
       <footer>

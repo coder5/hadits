@@ -50,9 +50,9 @@ class Search extends CI_Controller {
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		
 		$post = $this->input->post(NULL, TRUE);
-		echo "<blockquote><small>";
+		/*echo "<blockquote><small>";
 		print_r($post);//exit;
-		echo "</small></blockquote>";
+		echo "</small></blockquote>";*/
 		
 		if (isset($post['search_no'])) {
 			if ($post['search_no']) {
@@ -181,6 +181,11 @@ class Search extends CI_Controller {
 		$this->load->view("header", $data);
 		$this->load->view('search_result', $data);
 		$this->load->view("footer", $data);
+	}
+	
+	public function hadits_details($doic){
+		$data['docid'] = $doic;
+		$this->load->view("hadits_details",$data);
 	}
 
 	public function test() {

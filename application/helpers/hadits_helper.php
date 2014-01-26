@@ -130,14 +130,15 @@ function table_use2($table) {
 	}
 	// echo 'session'. $_SESSION['table_type'];
 }
+// Disable Debug
 function debug($debug = null) {
 	debug_backtrace ();
 	if ($debug != null) {
 		$_SESSION ['debug'] = "<blockquote><small>DB=" . DBUSE . " " . $debug . "</small></blockquote>";
-		echo $_SESSION ['debug'];
+		// echo $_SESSION ['debug'];
 	} else {
 		if (isset ( $_SESSION ['debug'] )) {
-			echo $_SESSION ['debug'];
+			// echo $_SESSION ['debug'];
 		} else {
 			return null;
 		}
@@ -187,7 +188,7 @@ function highlightTerms($text_string, $terms) {
 		$term = preg_quote ( $term );
 		// Now we can highlight the terms
 		// $text_string = strtolower($text_string);
-		$text_string = preg_replace ( "/($term)/i", '<span class="highlight text-error">\1</span>', $text_string );
+		$text_string = preg_replace ( "/($term)/i", '<span class="highlight-terms text-danger">\1</span>', $text_string );
 	}
 	// lastly, return text string with highlighted term in it
 	return colorizePerawi ( $text_string );
