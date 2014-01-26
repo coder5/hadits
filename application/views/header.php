@@ -1,5 +1,5 @@
 <?php
-$uri = $this->uri->segment(2);
+$uri = $this->uri->segment ( 2 );
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +11,15 @@ $uri = $this->uri->segment(2);
 <meta name="author" content="Haidar Mar'ie">
 
 <!-- Le styles -->
-<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/bootstrap-responsive.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css" rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/droidarabicnaskh.css"
+	rel="stylesheet">
+<link
+	href="<?php echo base_url(); ?>assets/css/offcanvas.css"
+	rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css"
+	rel="stylesheet">
 <style type="text/css">
 /* @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css); */
 body {
@@ -39,9 +44,19 @@ body {
 	font-weight: bold;
 }
 
-.hero-unit hr {
+.white, .white a {
+  color: #fff;
+}
+
+.jumbotron hr {
 	border-bottom: 1px solid #666;
 }
+
+/*
+.container .jumbotron {
+padding-left: 10px;
+padding-right: 10px;
+}*/
 
 .arabic {
 	font-family: 'Droid Arabic Naskh', serif;
@@ -55,12 +70,14 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
 .label-bab {
 	max-width: 300px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+
 .perawi-color {
 	color: #448bf4;
 }
@@ -88,63 +105,67 @@ body {
 </head>
 
 <body>
-
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container-fluid" style="width: auto">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"data-target=".navbar-collapse">
+					<span class="glyphicon glyphicon-bar"></span> 
+					<span class="glyphicon glyphicon-bar"></span> 
+					<span class="glyphicon glyphicon-bar"></span>
 				</button>
-				<a class="brand" href="#">Quran Hadits Lengkap</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="active"><a href="<?php echo site_url()?>search"><i class="icon-home icon-white"></i> Home</a>
-						</li>
-						<li><a href="<?php echo site_url()?>search"><i class="icon-search icon-white"></i> Advanced Search</a></li>
-						<li><a href="<?php echo site_url()?>list_notes"><i class="icon-bookmark icon-white"></i> Bookmarks</a></li>
-						<li><a href="#contact"><i class="icon-envelope icon-white"></i> Contact</a></li>
-					</ul>
-					<p class="navbar-text pull-right">
-						<i class="icon-user icon-white"></i> Logged in as <a href="#" class="navbar-link">Username</a>
-					</p>
-					<form class="navbar-form pull-left" action="<?php echo site_url();?>search/result/" method="POST">
-						  <input type="text" name="search_bool" class="search-query span2" placeholder="Search">
-					</form>
-				</div>
-				<!--/.nav-collapse -->
+				<a class="navbar-brand" href="#">Quran Hadits Lengkap</a>
 			</div>
+			<div class="collapse navbar-collapse">
+          		<ul class="nav navbar-nav">
+					<li class="active"><a href="<?php echo site_url()?>search"><i
+							class="glyphicon glyphicon-home white"></i> Home</a></li>
+					<li><a href="<?php echo site_url()?>search"><i
+							class="glyphicon glyphicon-search white"></i> Advanced Search</a></li>
+					<li><a href="<?php echo site_url()?>list_notes"><i
+							class="glyphicon glyphicon-bookmark white"></i> Bookmarks</a></li>
+					<li><a href="#contact"><i class="glyphicon glyphicon-envelope white"></i>
+							Contact</a></li>
+				</ul>
+				<p class="navbar-text pull-right">
+					<i class="glyphicon glyphicon-user white"></i> Logged in as <a href="#"
+						class="navbar-link">Username</a>
+				</p>
+				<form class="navbar-form pull-left"
+					action="<?php echo site_url();?>search/result/" method="POST">
+					<input type="text" name="search_bool" class="search-query span2"
+						placeholder="Search">
+				</form>
+			</div>
+			<!--/.nav-collapse -->
 		</div>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2">
 				<div class="well sidebar-nav">
-					<ul class="nav nav-list">
+					<ul class="nav">
 						<li>Qur'an</li>
-  						<li class="divider"></li>
-						<li class="nav-header"><i class="icon-book"></i> Hadits</li>
+						<li class="divider"></li>
+						<li class="nav-header"><i class="glyphicon glyphicon-book"></i> Hadits</li>
 						<li <?php echo $uri =='bukhari'?'class="active"':''; ?>><a
-							href="<?php echo site_url();?>kitab/bukhari">Shahih
-								Bukhari</a></li>
-						<li <?php echo $uri =='muslim'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/muslim">Shahih
-								Muslim</a></li>
-						<li <?php echo $uri =='abudaud'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/abudaud">Sunan
-								Abu Daud</a></li>
-						<li <?php echo $uri =='tirmidzi'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/tirmidzi">Sunan
-								Tirmidzi</a></li>
-						<li <?php echo $uri =='nasai'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/nasai">Sunan
-								Nasa'i</a></li>
-						<li <?php echo $uri =='ibnumajah'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/ibnumajah">Sunan
-								Ibnu Majah</a></li>
-						<li <?php echo $uri =='ahmad'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/ahmad">Musnad
-								Ahmad</a></li>
-						<li <?php echo $uri =='malik'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/malik">Muwatha'
-								Malik</a></li>
-						<li <?php echo $uri =='darimi'?'class="active"':''; ?>><a href="<?php echo site_url();?>kitab/darimi">Sunan
-								Darimi</a></li>
+							href="<?php echo site_url();?>kitab/bukhari">Shahih Bukhari</a></li>
+						<li <?php echo $uri =='muslim'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/muslim">Shahih Muslim</a></li>
+						<li <?php echo $uri =='abudaud'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/abudaud">Sunan Abu Daud</a></li>
+						<li <?php echo $uri =='tirmidzi'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/tirmidzi">Sunan Tirmidzi</a></li>
+						<li <?php echo $uri =='nasai'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/nasai">Sunan Nasa'i</a></li>
+						<li <?php echo $uri =='ibnumajah'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/ibnumajah">Sunan Ibnu Majah</a></li>
+						<li <?php echo $uri =='ahmad'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/ahmad">Musnad Ahmad</a></li>
+						<li <?php echo $uri =='malik'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/malik">Muwatha' Malik</a></li>
+						<li <?php echo $uri =='darimi'?'class="active"':''; ?>><a
+							href="<?php echo site_url();?>kitab/darimi">Sunan Darimi</a></li>
 					</ul>
 				</div>
 				<!--/.well -->

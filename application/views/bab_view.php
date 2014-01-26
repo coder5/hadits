@@ -1,5 +1,5 @@
-<div class="span10">
-	<div class="hero-unit">
+<div class="col-xs-13 col-sm-10">
+	<div class="jumbotron">
 		<h2>Bab <?php echo ucfirst(imam_nama($imam));?></h2>
 		<h3 class="text-success">
 			 Kitab <?php echo $kitab->kitab_indonesia ?> 

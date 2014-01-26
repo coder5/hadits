@@ -1,6 +1,6 @@
 <!-- only show kitab -->
-<div class="span10">
-	<div class="hero-unit">
+<div class="col-xs-13 col-sm-10">
+	<div class="jumbotron">
 		<h2>Kitab <?php echo ucfirst(imam_nama($imam));?>
 		</h2>
 		<ol>
@@ -15,13 +15,9 @@
 		<p>
 			<a class="btn" href="#">View details &raquo;</a>
 		</p>
-		<div class="span6"></div>
-		<!--/span-->
-	</div>
-	<!--/row-->
-</div>
-<!--/span-->
-</div>
-<!--/row-->
+		<div class="col-md-6"></div><!--/span-->
+	</div><!--/row-->
+</div><!--/span-->
+</div><!--/row-->
 
 <hr>

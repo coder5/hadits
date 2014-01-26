@@ -1,6 +1,6 @@
 <!-- only show kitab -->
-<div class="span10">
-	<div class="hero-unit">
+<div class="col-md-9">
+	<div class="jumbotron">
 		<h2>
 			<a href="<?php echo site_url()?>bookmark">Notes</a>
 		</h2>
