@@ -205,6 +205,14 @@ class MHadits extends CI_Model {
 		query_exec_time ( microtime ( true ) - $msc );
 		return $query->row ();
 	}
+	function countHadits(){
+		$sql = "SELECT count(had_id) as c, imam_nama FROM had_all h
+				INNER JOIN imam i ON i.imam_id = h.imam_id
+				GROUP BY h.imam_id 
+				ORDER BY c DESC";
+		$query = $this->db->query($sql);
+		return $query;
+	}
 }
 
 # OLD
