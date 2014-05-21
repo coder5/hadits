@@ -132,7 +132,8 @@ padding-right: 10px;
 </head>
 
 <body>
-    <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav"
+		role="banner">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -141,10 +142,12 @@ padding-right: 10px;
 						class="glyphicon glyphicon-bar"></span> <span
 						class="glyphicon glyphicon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo site_url()?>search">Quran Hadits Lengkap</a>
+				<a class="navbar-brand" href="<?php echo site_url()?>search">Quran
+					Hadits Lengkap</a>
 			</div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-							<ul class="nav navbar-nav">
+			<nav class="collapse navbar-collapse bs-navbar-collapse"
+				role="navigation">
+				<ul class="nav navbar-nav">
 					<li class="active"><a href="<?php echo site_url()?>search"><i
 							class="glyphicon glyphicon-home white"></i> Home</a></li>
 					<li><a href="<?php echo site_url()?>search"><i
@@ -155,7 +158,7 @@ padding-right: 10px;
 							class="glyphicon glyphicon-envelope white"></i> Contact</a></li>
 				</ul>
 				<p class="navbar-text pull-right">
-					<i class="glyphicon glyphicon-user white"></i> Logged in as <a
+					<i class="glyphicon glyphicon-user white"></i> <a
 						href="#" class="navbar-link">Username</a>
 				</p>
 				<form class="navbar-form pull-left"
@@ -167,20 +170,21 @@ padding-right: 10px;
 				</form>
 			</nav>
 		</div>
-</header>
+	</header>
 
-	 
-    
-	
+
+
+
 	<div class="container  bs-docs-container">
 		<div class="row">
 			<div class="col-md-2">
 				<div class="well sidebar-nav">
 					<ul class="nav">
-						<li class="nav-header active"><a><i class="glyphicon glyphicon-book"></i> Qur'an</a></li>
+						<li class="nav-header active"><a><i
+								class="glyphicon glyphicon-book"></i> Qur'an</a></li>
 						<li class="divider"></li>
-						<li class="nav-header active"><a><i class="glyphicon glyphicon-book"></i>
-							Hadits</a></li>
+						<li class="nav-header active"><a><i
+								class="glyphicon glyphicon-book"></i> Hadits</a></li>
 						<li <?php echo $uri =='bukhari'?'class="active"':''; ?>><a
 							href="<?php echo site_url();?>kitab/bukhari">Shahih Bukhari</a></li>
 						<li <?php echo $uri =='muslim'?'class="active"':''; ?>><a

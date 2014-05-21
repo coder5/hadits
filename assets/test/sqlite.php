@@ -1,10 +1,10 @@
 <?php
-$query = "SELECT * FROM sqlite_master WHERE type='table'";
-$db_sqlite = '../../application/db/kitab.db';
+//$query = "SELECT * FROM sqlite_master WHERE type='table'";
+$db_sqlite = 'kitab.db';
 class MyDB extends SQLite3 {
-	protected $db_sqlite = '../../application/db/kitab.db';
+	protected $db_sqlite = 'kitab.db';
 	function __construct() {
-		$this->open ( '../../application/db/kitab.db' );
+		$this->open ( 'kitab.db' );
 	}
 }
 $db = new MyDB ();
@@ -14,11 +14,17 @@ if (! $db) {
 	echo "Opened database successfully\n";
 }
 
+$query = "SELECT * FROM kitab_all";
+
 $sql = <<<EOF
      $query
 EOF;
 
-$ret = $db->exec ( $sql );
+$ret = $db->query ( $sql );
+
+foreach ( $ret as $m ) {
+		echo 'nama adalah =' . $m ['kitab_indonesia'] . "<br/>";
+	}
 
 if (! $ret) {
 	echo $db->lastErrorMsg ();
@@ -34,7 +40,7 @@ if (! $db) {
 } else {
 	echo "Opened database successfully\n";
 	while ( $row = $ret->fetchArray(SQLITE3_ASSOC) ) {
-		echo "NAME = " . $row ['name'] . "\n";
+		echo "NAME = " . $row ['kitab_indonesia'] . "<br/>";
 	}
 	echo "Operation done successfully\n";
 }
