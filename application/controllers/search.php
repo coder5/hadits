@@ -1,58 +1,47 @@
 <?php
-
-if (!defined('BASEPATH'))
+if (! defined('BASEPATH'))
 	exit('No direct script access allowed');
-
 class Search extends CI_Controller {
-
-	
 	function __construct() {
 		parent::__construct();
 		$this->load->model('mhadits');
-        $this->mhadits = new MHadits();
+		$this->mhadits = new MHadits();
 	}
-
 	public function index() {
 		$this->search_terms();
 	}
-
-	public function db(){
-		echo DBUSE.'<br/>';
-		if (!defined('PDO::ATTR_DRIVER_NAME')) {
+	public function db() {
+		echo DBUSE . '<br/>';
+		if (! defined('PDO::ATTR_DRIVER_NAME')) {
 			echo 'PDO unavailable';
 		} elseif (defined('PDO::ATTR_DRIVER_NAME')) {
 			echo 'PDO available';
 		}
 		phpinfo();
-		
 	}
-
 	public function search_terms() {
 		$this->load->view("header");
 		$this->load->view('search_view');
 		$this->load->view("footer");
 	}
-
 	public function result() {
 		$search_bool = $this->input->post('search_bool');
 		$search_bool_arab = $this->input->post('search_bool_arab');
 		$search_bool_arab_gundul = $this->input->post('search_bool_arab_gundul');
 		$this->load->library('pagination');
-		$this->load->library('pagination');
 		
 		$config['base_url'] = site_url('hadits/search');
-		$config['total_rows'] = $totalItems=100;
-		$config['per_page'] = $itemsPerPage=30;
+		$config['total_rows'] = $totalItems = 100;
+		$config['per_page'] = $itemsPerPage = 30;
 		$config['uri_segment'] = 3;
-		
 		
 		$this->pagination->initialize($config);
 		$page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 		
 		$post = $this->input->post(NULL, TRUE);
-		/*echo "<blockquote><small>";
-		print_r($post);//exit;
-		echo "</small></blockquote>";*/
+		/*
+		 * echo "<blockquote><small>"; print_r($post);//exit; echo "</small></blockquote>";
+		 */
 		
 		if (isset($post['search_no'])) {
 			if ($post['search_no']) {
@@ -70,13 +59,13 @@ class Search extends CI_Controller {
 		$imam_id = 0;
 		table_use2("fts");
 		if (isset($post['imam_id'])) {
-			if($post['imam_id'][0] !=0 && is_array($post['imam_id'])) {
+			if ($post['imam_id'][0] != 0 && is_array($post['imam_id'])) {
 				$imams = implode(",", $post['imam_id']);
 				$imam_id = $imams;
 			}
 		}
 		
-		if (!empty($post)) {
+		if (! empty($post)) {
 			// If Indonesia
 			if ($post['search'] == 'Search') {
 				if ($search_bool) {
@@ -87,23 +76,23 @@ class Search extends CI_Controller {
 					$arr = explode(' ', trim($session_sess));
 					$sum = escp_db($session_sess);
 					$data['terms'] = keyword($session_sess);
-// 					var_dump($sum);exit;
+					// var_dump($sum);exit;
 					if ($search_bool_min) {
 						$sum_min = escp_dbmin($data['search_min']);
-						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum_min, $imam_id , $page);
+						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum_min, $imam_id, $page);
 					} else {
-						$data['show'] = $this->mhadits->searchHaditsBool($sum,$sum_min="", $imam_id, $page);
+						$data['show'] = $this->mhadits->searchHaditsBool($sum, $sum_min = "", $imam_id, $page);
 					}
 				} elseif ($search_like) {
-					//echo $search_like;
+					// echo $search_like;
 					$data['search'] = strtolower($this->input->post('search_like', TRUE));
 					$data['terms'] = trim($data['search']);
-					$data['show'] = $this->mhadits->searchHaditsLike($data['search'],$imam_id);
+					$data['show'] = $this->mhadits->searchHaditsLike($data['search'], $imam_id);
 				} elseif ($search_like_exact) {
-					//echo $search_like;
+					// echo $search_like;
 					$data['search'] = strtolower($this->input->post('search_like_exact', TRUE));
 					$data['terms'] = trim($data['search']);
-					$data['show'] = $this->mhadits->searchHaditsLikeExact($data['search'],$imam_id);
+					$data['show'] = $this->mhadits->searchHaditsLikeExact($data['search'], $imam_id);
 				} elseif ($search_no) {
 					table_use2("content");
 					$data['search'] = $search_no;
@@ -113,7 +102,7 @@ class Search extends CI_Controller {
 				} elseif ($search_bab_kitab) {
 					$data['search'] = strtolower($this->input->post('search_bab_kitab', TRUE));
 					$data['terms'] = trim($data['search']);
-					$data['show'] = $this->mhadits->searchBabKitab($data['search'],$imam_id);
+					$data['show'] = $this->mhadits->searchBabKitab($data['search'], $imam_id);
 				}
 			} elseif ($post['search'] == 'SearchArab') {
 				// arab
@@ -134,16 +123,17 @@ class Search extends CI_Controller {
 							$sum2 .= '-' . $v . ' ';
 						}
 						$data['terms'] = $data['search'];
-						$data['show'] = $this->mhadits->searchHaditsBoolArab($sum, $sum2,$imam_id, $page);
+						$data['show'] = $this->mhadits->searchHaditsBoolArab($sum, $sum2, $imam_id, $page);
 					} else {
 						$data['terms'] = $data['search'];
-						$data['show'] = $this->mhadits->searchHaditsBoolArab($sum,$sum2="",$imam_id,$page);
+						$data['show'] = $this->mhadits->searchHaditsBoolArab($sum, $sum2 = "", $imam_id, $page);
 					}
 				} elseif ($search_bool_arab_gundul) {
 					// $search_bool;
 					$data['search'] = ($this->input->post('search_bool_arab_gundul', TRUE));
 					$session_sess = search_sess($data['search']);
-					$data['search2'] = ($this->input->post('search_bool_min_arab_gundul', TRUE));;
+					$data['search2'] = ($this->input->post('search_bool_min_arab_gundul', TRUE));
+					;
 					$arr = explode(' ', trim($session_sess));
 					$sum = '';
 					foreach ($arr as $v) {
@@ -156,51 +146,47 @@ class Search extends CI_Controller {
 							$sum2 .= '-' . $v . ' ';
 						}
 						$data['terms'] = $data['search'];
-						$data['show'] = $this->mhadits->searchHaditsBoolArabGundul($sum, $sum2,$imam_id);
+						$data['show'] = $this->mhadits->searchHaditsBoolArabGundul($sum, $sum2, $imam_id);
 					} else {
 						$data['terms'] = $data['search'];
-						$data['show'] = $this->mhadits->searchHaditsBoolArabGundul($sum,$sum2="",$imam_id);
+						$data['show'] = $this->mhadits->searchHaditsBoolArabGundul($sum, $sum2 = "", $imam_id);
 					}
 				} elseif ($search_like_arab) {
-					//echo $search_like;
+					// echo $search_like;
 					$data['search'] = strtolower($this->input->post('search_like_arab', TRUE));
 					$data['terms'] = trim($data['search']);
-					$data['show'] = $this->mhadits->searchHaditsLikeArab($data['search'],$imam_id);
+					$data['show'] = $this->mhadits->searchHaditsLikeArab($data['search'], $imam_id);
 				} elseif ($search_like_exact_arab) {
-					//echo $search_like;
+					// echo $search_like;
 					$data['search'] = strtolower($this->input->post('search_like_exact_arab', TRUE));
 					$data['terms'] = trim($data['search']);
-					$data['show'] = $this->mhadits->searchHaditsLikeExactArab($data['search'],$imam_id);
+					$data['show'] = $this->mhadits->searchHaditsLikeExactArab($data['search'], $imam_id);
 				}
 			} elseif ($post['search'] == "Simple") {
-				
 			}
 		}
-		//exit;
-		//$search = $data['search'];
+		// exit;
+		// $search = $data['search'];
 		$this->load->view("header", $data);
 		$this->load->view('search_result', $data);
 		$this->load->view("footer", $data);
 	}
-	
-	public function hadits_details($doic){
+	public function hadits_details($doic) {
 		$data['docid'] = $doic;
-		$this->load->view("hadits_details",$data);
+		$this->load->view("hadits_details", $data);
 	}
-
 	public function test() {
 		$string = "matahari barat";
 		$arr = explode(' ', trim($string));
-		//$words = array():
+		// $words = array():
 		foreach ($arr as $v) {
 			echo '+' . $v . ' ';
-			//print_r($v);
-			//if (strlen($v)>0){
-			//$words[] = $v;
-			//}
+			// print_r($v);
+			// if (strlen($v)>0){
+			// $words[] = $v;
+			// }
 		}
 	}
-
 	public function match() {
 		$subject = "abcdef";
 		$pattern = '/^def/';
@@ -213,12 +199,10 @@ class Search extends CI_Controller {
 			echo "A match was not found.";
 		}
 	}
-
 	function get_version() {
 		echo APPPATH;
 		echo CI_VERSION; // echoes something like 1.7.1
 	}
-
 }
 
 /* End of file welcome.php */

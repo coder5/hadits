@@ -135,10 +135,10 @@ function debug($debug = null) {
 	debug_backtrace ();
 	if ($debug != null) {
 		$_SESSION ['debug'] = "<blockquote><small>DB=" . DBUSE . " " . $debug . "</small></blockquote>";
-		// echo $_SESSION ['debug'];
+		 echo $_SESSION ['debug'];
 	} else {
 		if (isset ( $_SESSION ['debug'] )) {
-			// echo $_SESSION ['debug'];
+			 echo $_SESSION ['debug'];
 		} else {
 			return null;
 		}
