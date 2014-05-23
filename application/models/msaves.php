@@ -51,5 +51,10 @@ class MSaves extends CI_Model {
 		return $this->db->insert_id();
 	}
 	
+	function insertPost($data){
+		$this->db->insert($data);
+		return $this->db->insert_id();
+	}
+	
 }
 ?>
