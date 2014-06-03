@@ -52,7 +52,7 @@ class MSaves extends CI_Model {
 	}
 	
 	function insertPost($data){
-		$this->db->insert($data);
+		$this->db->insert('post',$data);
 		return $this->db->insert_id();
 	}
 	

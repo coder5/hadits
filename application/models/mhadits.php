@@ -24,7 +24,7 @@ class MHadits extends CI_Model {
 		DBUSE == 'mysql' ? $this->db->where ( 'MATCH (isi_indonesia) AGAINST ("' . $words . ' ' . $words_min . '" IN BOOLEAN MODE) '.$imam, NULL, FALSE ) : $this->db->where ( "isi_indonesia MATCH '" . $words . $words_min ."' " .$imam, NULL, FALSE );
 		$msc = microtime ( true );
 		$query = $this->db->get ( table_use () );
-		debug ( $this->db->last_query () );
+		$this->firephp->log ( $this->db->last_query () );
 		query_exec_time ( microtime ( true ) - $msc );
 		return $query;
 	}
@@ -38,7 +38,7 @@ class MHadits extends CI_Model {
 				WHERE h." . field ( "imam_id" ) . "=" . $imam_id . "
 				AND " . field ( "no_hdt" ) . "=" . $no . "
 				AND " . field ( "type" ) . "=1" . " GROUP BY h." . field ( "no_hdt" );
-		debug ( $sql );
+		$this->firephp->log ( $sql );
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sql );
 		query_exec_time ( microtime ( true ) - $msc );
@@ -51,7 +51,7 @@ class MHadits extends CI_Model {
 		        WHERE isi_indonesia MATCH '$word ' $imam
 		        AND type !=1
 		        ORDER BY imam_id ASC";
-		debug ( $sqlite_query );
+		$this->firephp->log ( $sqlite_query );
 		$msc = microtime ( true );
 		// echo DBUSE;
 		$query = $this->db->query ( $sqlite_query );
@@ -71,7 +71,7 @@ class MHadits extends CI_Model {
 		$sqlite = "SELECT * FROM `had_all_fts4`
 		        WHERE isi_arab MATCH '$words $words_min' $imam
 		        ORDER BY imam_id ASC LIMIT " . $limit . ",40";
-		debug ( $sqlite );
+		$this->firephp->log ( $sqlite );
 		// die($sql);exit;
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sqlite );
@@ -90,7 +90,7 @@ class MHadits extends CI_Model {
 		$sqlite = "SELECT * FROM `had_all_fts4`
 			    	WHERE isi_arab_gundul MATCH '$words $words_min' $imam
 			    	ORDER BY imam_id ASC LIMIT " . $limit . ",40";
-		debug ( $sqlite );
+		$this->firephp->log ( $sqlite );
 		// die($sql);exit;
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sqlite );
@@ -152,7 +152,7 @@ class MHadits extends CI_Model {
         		INNER JOIN kitab_all k ON b.kitab_imam_id = k.kitab_imam_id AND b.imam_id = k.imam_id
         		WHERE b.imam_id=" . imam_id ( $imam ) . "
         		 AND b.bab_imam_id=" . $bab_imam_id;
-		debug ( 'babSql' . $sql );
+		$this->firephp->log ( 'babSql' . $sql );
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sql );
 		query_exec_time ( microtime ( true ) - $msc );
@@ -189,7 +189,7 @@ class MHadits extends CI_Model {
 	function getTemaIdBab($imam, $bab_imam_id) {
 		$sql = "SELECT * FROM " . table_use () . " 
         		WHERE " . field ( 'imam_id' ) . " =" . imam_id ( $imam ) . " AND " . field ( 'type' ) . "=1 AND " . field ( 'bab_imam_id' ) . "=" . $bab_imam_id;
-		debug ( $sql );
+		$this->firephp->log ( $sql );
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sql );
 		query_exec_time ( microtime ( true ) - $msc );
@@ -199,7 +199,7 @@ class MHadits extends CI_Model {
 		$sql = "SELECT * FROM " . table_use () . "  
         		WHERE " . field ( 'imam_id' ) . " =" . imam_id ( $imam ) . "
         				AND " . field ( 'no_hdt' ) . "=" . $id_hadits;
-		debug ( $sql );
+		$this->firephp->log ( $sql );
 		$msc = microtime ( true );
 		$query = $this->db->query ( $sql );
 		query_exec_time ( microtime ( true ) - $msc );

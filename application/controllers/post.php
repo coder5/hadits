@@ -13,10 +13,20 @@ class Post extends CI_Controller {
 	}
 
 	public function index() {
-		echo 'post';
+		echo 'post'.FCPATH;
 		$post = $this->input->post();
-		$data['data'] = $post;
-		$this->msaves->insertPost($post);
+		//print_r($post);exit;
+		if($post) {
+			$data = implode(',',$post);
+			//$data['data'] = $post['data'];
+			//$id = $this->msaves->insertPost($data);
+			//echo 'insert id is'.$id;
+			$fp = fopen(FCPATH.'assets' . "/post.txt","wb");
+			fwrite($fp,$data);
+			fclose($fp);
+		}
+		
+		
 		print_r($post);
 	}
 	
