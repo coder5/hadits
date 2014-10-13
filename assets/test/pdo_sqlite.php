@@ -94,6 +94,10 @@ try {
 	// Select all data from file db messages table
 	$result = $file_db->query("SELECT * FROM sqlite_master WHERE type='table';");
 	
+	$stmt = $dbh->prepare("INSERT INTO post (data) VALUES ('1234')");
+	$data = array($user_name, $password);
+	$stmt->execute($data);
+	
 	print_r($result);
 	// Loop thru all data from messages table
 	// and insert it to file db
