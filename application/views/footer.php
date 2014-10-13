@@ -3,7 +3,7 @@
 ?>
 
       <footer>
-        <p>&copy; Company 2013 hadits.us Database Engine <?php echo strtoupper(DBUSE);?></p>
+        <p>&copy; Company 2013 hadits.us Develop By Haidar Mansur. Database Engine <?php echo strtoupper(DBUSE);?></p>
       </footer>
 
     </div><!--/.fluid-container-->
