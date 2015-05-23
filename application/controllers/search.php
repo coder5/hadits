@@ -200,6 +200,11 @@ class Search extends CI_Controller {
 			echo "A match was not found.";
 		}
 	}
+	
+	public function info() {
+		phpinfo();
+	}
+	
 	function get_version() {
 		echo APPPATH;
 		echo CI_VERSION; // echoes something like 1.7.1
