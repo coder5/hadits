@@ -180,8 +180,8 @@ padding-right: 10px;
 			<div class="col-md-2">
 				<div class="well sidebar-nav">
 					<ul class="nav">
-						<li class="nav-header active"><a><i
-								class="glyphicon glyphicon-book"></i> Qur'an</a></li>
+						<li class="nav-header active"><a href="<?php echo site_url();?>quran"><i
+								class="glyphicon glyphicon-book"></i>Qur'an</a></li>
 						<li class="divider"></li>
 						<li class="nav-header active"><a><i
 								class="glyphicon glyphicon-book"></i> Hadits</a></li>

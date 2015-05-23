@@ -15,14 +15,13 @@ class MSaves extends CI_Model {
 		parent::__construct();
 	}
 	
-    function __construct() {
-        parent::__construct();
-//         $db = $this->
-		$this->DBUSE = DBUSE;
-// 		$this->had_table = TABLEUSE;
-        $this->sqlite = $this->load->database('sqlite', TRUE);
-		$lite = $this->load->database('sqlite', TRUE);
-    }
+    // function __construct() {
+        // parent::__construct();
+		// $this->DBUSE = DBUSE;
+		// $this->had_table = TABLEUSE;
+        // $this->sqlite = $this->load->database('sqlite', TRUE);
+		// $lite = $this->load->database('sqlite', TRUE);
+    // }
 	
 	function listNotes(){
 		return $query = $this->db->get('notes');

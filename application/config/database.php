@@ -66,7 +66,6 @@ $active_record = TRUE;
 $db['mysql']['hostname'] = 'localhost';
 $db['mysql']['username'] = 'root';
 $db['mysql']['password'] = 'root';
-// $db['mysql']['password'] = 'bippo';
 $db['mysql']['database'] = 'hadits';
 $db['mysql']['dbdriver'] = 'mysql';
 $db['mysql']['dbprefix'] = '';
@@ -92,12 +91,26 @@ $db['sqlite']['cachedir'] = '';
 $db['sqlite']['char_set'] = 'utf8';
 $db['sqlite']['dbcollat'] = 'utf8_general_ci';
 $db['sqlite']['swap_pre'] = '';
+
+$db['sqlite_quran']['hostname'] = 'sqlite:'.APPPATH.'db/quran_indo.sqlite';
+$db['sqlite_quran']['username'] = '';
+$db['sqlite_quran']['password'] = '';
+$db['sqlite_quran']['database'] = '';
+$db['sqlite_quran']['dbdriver'] = 'pdo';
+$db['sqlite_quran']['dbprefix'] = '';
+$db['sqlite_quran']['pconnect'] = TRUE;
+$db['sqlite_quran']['db_debug'] = TRUE;
+$db['sqlite_quran']['cache_on'] = FALSE;
+$db['sqlite_quran']['cachedir'] = '';
+$db['sqlite_quran']['char_set'] = 'utf8';
+$db['sqlite_quran']['dbcollat'] = 'utf8_general_ci';
+$db['sqlite_quran']['swap_pre'] = '';
 // $db['sqlite']['autoinit'] = TRUE;
 // $db['sqlite']['stricton'] = FALSE;
 
 //set the default db
 // $using_db = 'mysql';
-$using_db = 'sqlite';
+$using_db = 'sqlite_quran';
 
 $active_group = $using_db;
 $db[$using_db]['active_group'] = $active_group;
