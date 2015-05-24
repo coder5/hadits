@@ -1,10 +1,8 @@
-/* 
- * Saleem Quran Naskh (Arabic) http://www.google.com/webfonts/earlyaccess
- */
-@font-face {
-  font-family: 'Saleem Quran';
-  font-style: normal;
-  font-weight: 100;
-  src:  url(../font/Saleem_QuranFont.ttf) format('truetype');
-}
 
+@font-face {
+    font-family: "quran";
+    src: url("../font/quran/p88.eot?#iefix") format("embedded-opentype"), url("../font/quran/p88.woff") format("woff"), url("../font/quran/p88.ttf") format("truetype"), url("../font/quran/p88.svg#p88") format("svg");
+}
+.p88 {
+    font-family: "quran";
+}
