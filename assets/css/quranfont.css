@@ -1,8 +1,8 @@
-
 @font-face {
-    font-family: "quran";
-    src: url("../font/quran/p88.eot?#iefix") format("embedded-opentype"), url("../font/quran/p88.woff") format("woff"), url("../font/quran/p88.ttf") format("truetype"), url("../font/quran/p88.svg#p88") format("svg");
+	font-family: 'p88';
+	src: url("../font/PDMS_ISLAMICFONT.ttf") format("truetype");
 }
+
 .p88 {
-    font-family: "quran";
+	font-family: 'p88';
 }

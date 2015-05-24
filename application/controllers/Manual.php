@@ -18,9 +18,7 @@ class Manual extends CI_Controller {
 	public function kitab($imam){
 		$data['imam'] = $imam;
 		$data['kitab'] = $this->mhadits->getAllKitab($imam);
-		$this->load->view("header");
-		$this->load->view('kitab_view',$data);
-		$this->load->view("footer");
+		$this->load->template('hadits/kitab_view',$data);
 	}
 
 	public function bab($imam,$id_kitab){
@@ -28,9 +26,7 @@ class Manual extends CI_Controller {
 		$data['kitab'] = $this->mhadits->getIdKitab($imam, $id_kitab);
 		$data['last_kitab'] = last_kitab($data['kitab']->kitab_indonesia);
 		$data['bab'] = $this->mhadits->getAllBab($imam, $id_kitab);
-		$this->load->view("header");
-		$this->load->view('bab_view',$data);
-		$this->load->view("footer");
+		$this->load->template('hadits/bab_view',$data);
 	}
 
 	public function tema($imam,$id_bab){
@@ -40,9 +36,7 @@ class Manual extends CI_Controller {
 		$data['last_kitab'] =  $data['bab']->kitab_indonesia;
 		$data['last_bab'] = $data['bab']->bab_indonesia;
 		$data['hadits'] = $this->mhadits->getTemaIdBab($imam, $id_bab);
-		$this->load->view("header");
-		$this->load->view('tema_view',$data);
-		$this->load->view("footer");
+		$this->load->template('hadits/tema_view',$data);
 	}
 
 	public function hadits($imam,$id_hadits){
@@ -51,9 +45,7 @@ class Manual extends CI_Controller {
 		//$data['kitab'] = $this->mhadits->getIdKitab($imam, $id_kitab);
 		//$data['bab'] = $this->mhadits->getIdBab($imam, $id_hadits);
 		$data['hadits'] = $this->mhadits->getHaditsIdHdt($imam, $id_hadits);
-		$this->load->view("header");
-		$this->load->view('hadits_view', $data);
-		$this->load->view("footer");
+		$this->load->template('hadits/hadits_view', $data);
 	}
 }
 

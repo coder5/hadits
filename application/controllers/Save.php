@@ -19,9 +19,7 @@ class Save extends CI_Controller {
 		if ($post) {
 			$data['category'] = $this->msaves->saveCategory($post);
 		} else {
-			$this->load->view("header", $data);
-			$this->load->view("notes/new_category", $data);
-			$this->load->view("footer", $data);
+			$this->load->template("hadits/notes/new_category", $data);
 		}
 		//return $data;
 	}
@@ -35,17 +33,12 @@ class Save extends CI_Controller {
 	public function view_note($note_id){
 		table_use2('fts');
 		$data['note'] = $this->msaves->viewNote($note_id);
-		$this->load->view("header", $data);
-		$this->load->view("notes/view_note", $data);
-		$this->load->view("footer", $data);
+		$this->load->template("hadits/notes/view_note", $data);
 	}
 	
 	public function list_notes(){
 		$data['lists'] = $this->msaves->listNotes();
-		$this->load->view("header", $data);
-		//print_r($data['lists']->result());
-		$this->load->view("notes/list_notes", $data);
-		$this->load->view("footer", $data);
+		$this->load->template("hadits/notes/list_notes", $data);
 	}
 	
 	function get_version() {

@@ -15,6 +15,8 @@ $uri = $this->uri->segment ( 2 );
 	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/quranfont.css"
 	rel="stylesheet">
+<link href="<?php echo base_url(); ?>assets/css/salemfont.css"
+	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/offcanvas.css"
 	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/docs.css"
@@ -45,7 +47,7 @@ body {
 	font-weight: bold;
 }
 
-.white,.white a {
+.white, .white a {
 	color: #fff;
 }
 
@@ -64,7 +66,7 @@ body {
 	color: #cdbfe3;
 }
 
-.navbar .navbar-nav>.active>a,.navbar .navbar-nav>.active>a:hover {
+.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:hover {
 	color: #fff;
 	background-color: #463265;
 }
@@ -86,8 +88,16 @@ padding-left: 10px;
 padding-right: 10px;
 }*/
 .arabic {
-	font-family: 'Saleem Quran', serif;
-	font-size: 40px;
+	font-family: 'p88';     
+	font-size: 30px;
+    line-height: 2;
+    padding: 0.25em 1em;
+    text-align: justify;
+	border-color: transparent;
+	border-style: dashed;
+	border-width: 1px 0;
+	display: inline-block;
+	font-weight: normal;
 }
 
 .label-kitab {
@@ -157,8 +167,8 @@ padding-right: 10px;
 							class="glyphicon glyphicon-envelope white"></i> Contact</a></li>
 				</ul>
 				<p class="navbar-text pull-right">
-					<i class="glyphicon glyphicon-user white"></i> <a
-						href="#" class="navbar-link">Username</a>
+					<i class="glyphicon glyphicon-user white"></i> <a href="#"
+						class="navbar-link">Username</a>
 				</p>
 				<form class="navbar-form pull-left"
 					action="<?php echo site_url();?>search/result/" method="POST">
@@ -179,7 +189,8 @@ padding-right: 10px;
 			<div class="col-md-2">
 				<div class="well sidebar-nav">
 					<ul class="nav">
-						<li class="nav-header active"><a href="<?php echo site_url();?>quran"><i
+						<li class="nav-header active"><a
+							href="<?php echo site_url();?>quran"><i
 								class="glyphicon glyphicon-book"></i>Qur'an</a></li>
 						<li class="divider"></li>
 						<li class="nav-header active"><a><i

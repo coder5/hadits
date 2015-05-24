@@ -22,7 +22,7 @@ class Quran extends CI_Controller {
 	
 	public function surah($sura_id,$aya_id = FALSE) {
 		$data['sura'] = $this->mquran->get_surah($sura_id,$aya_id);
-		$this->load->template('quran_sura_view',$data);
+		$this->load->template('quran/quran_sura_view',$data);
 	}
 	
 	public function search_terms() {

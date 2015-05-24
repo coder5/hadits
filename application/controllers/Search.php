@@ -21,10 +21,9 @@ class Search extends CI_Controller {
 		phpinfo();
 	}
 	public function search_terms() {
-		$this->load->view("header");
-		$this->load->view('search_view');
-		$this->load->view("footer");
+		$this->load->template('hadits/search_view');
 	}
+	
 	public function result() {
 		$search_bool = $this->input->post('search_bool');
 		$search_bool_arab = $this->input->post('search_bool_arab');
@@ -168,13 +167,11 @@ class Search extends CI_Controller {
 		}
 		// exit;
 		// $search = $data['search'];
-		$this->load->view("header", $data);
-		$this->load->view('search_result', $data);
-		$this->load->view("footer", $data);
+		$this->load->template('hadits/search_result', $data);
 	}
 	public function hadits_details($doic) {
 		$data['docid'] = $doic;
-		$this->load->view("hadits_details", $data);
+		$this->load->template("hadits_details", $data);
 	}
 	public function test() {
 		$string = "matahari barat";
