@@ -4,3 +4,6 @@
 [Sat May 23 23:05:59.882415 2015] [:error] [pid 479] [client 127.0.0.1:34115] PHP Parse error:  syntax error, unexpected '$query' (T_VARIABLE) in /home/haidar/public_html/hadits/application/models/Mquran.php on line 22, referer: http://hadits.dev/quran
 [Sat May 23 23:31:15.929662 2015] [:error] [pid 16274] [client 127.0.0.1:36355] PHP Fatal error:  Unsupported operand types in /home/haidar/public_html/hadits/application/models/Mquran.php on line 32
 [Sun May 24 23:45:53.304358 2015] [:error] [pid 1791] [client 127.0.0.1:54463] PHP Fatal error:  Call to a member function num_rows() on null in /home/haidar/public_html/hadits/application/views/hadits/search_result.php on line 7
+[Mon May 25 00:24:48.988003 2015] [:error] [pid 1791] [client 127.0.0.1:59335] PHP Fatal error:  Call to a member function num_rows() on null in /home/haidar/public_html/hadits/application/views/quran/search_quran_result.php on line 7
+[Mon May 25 00:26:33.698937 2015] [:error] [pid 480] [client 127.0.0.1:59554] PHP Fatal error:  Call to a member function num_rows() on null in /home/haidar/public_html/hadits/application/views/hadits/search_result.php on line 7
+[Mon May 25 00:27:46.212322 2015] [:error] [pid 2336] [client 127.0.0.1:59702] PHP Fatal error:  Call to a member function num_rows() on null in /home/haidar/public_html/hadits/application/views/hadits/search_result.php on line 7

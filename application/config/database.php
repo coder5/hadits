@@ -78,11 +78,11 @@ $db['mysql']['dbcollat'] = 'utf8_general_ci';
 $db['mysql']['swap_pre'] = '';
 
 
-$db['sqlite']['hostname'] = 'sqlite:'.APPPATH.'db/hadits1.db';
+$db['sqlite']['hostname'] = '';
 $db['sqlite']['username'] = '';
 $db['sqlite']['password'] = '';
-$db['sqlite']['database'] = '';
-$db['sqlite']['dbdriver'] = 'pdo';
+$db['sqlite']['database'] = './application/db/hadits1.db';
+$db['sqlite']['dbdriver'] = 'sqlite3';
 $db['sqlite']['dbprefix'] = '';
 $db['sqlite']['pconnect'] = TRUE;
 $db['sqlite']['db_debug'] = TRUE;
@@ -92,11 +92,11 @@ $db['sqlite']['char_set'] = 'utf8';
 $db['sqlite']['dbcollat'] = 'utf8_general_ci';
 $db['sqlite']['swap_pre'] = '';
 
-$db['sqlite_quran']['hostname'] = 'sqlite:'.APPPATH.'db/quran_indo.sqlite';
+$db['sqlite_quran']['hostname'] = '';
 $db['sqlite_quran']['username'] = '';
 $db['sqlite_quran']['password'] = '';
-$db['sqlite_quran']['database'] = '';
-$db['sqlite_quran']['dbdriver'] = 'pdo';
+$db['sqlite_quran']['database'] = './application/db/quran_indo.sqlite';
+$db['sqlite_quran']['dbdriver'] = 'sqlite3';
 $db['sqlite_quran']['dbprefix'] = '';
 $db['sqlite_quran']['pconnect'] = TRUE;
 $db['sqlite_quran']['db_debug'] = TRUE;

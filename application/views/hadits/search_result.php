@@ -29,7 +29,7 @@
 					</div>
 					<div class="panel-body">
 						<div>
-							<?php echo '<p class="arabic"><b>' . highlightTerms($had[field("isi_arab")], $terms) . '</b><br/>'; ?>
+							<?php echo '<p class="arabic-hadits">' . highlightTerms($had[field("isi_arab")], $terms) . '<p>'; ?>
 						</div>
 				<?php
 			echo '<p>' . $highlite_string . '</p>  

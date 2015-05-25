@@ -5,7 +5,7 @@ $uri = $this->uri->segment ( 2 );
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Hadits 9 Imam</title>
+<title>Quran & Hadits 9 Imam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="Haidar Mar'ie">
@@ -13,110 +13,12 @@ $uri = $this->uri->segment ( 2 );
 <!-- Le styles -->
 <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/quranfont.css"
-	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/salemfont.css"
-	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/offcanvas.css"
-	rel="stylesheet">
-<link href="<?php echo base_url(); ?>assets/css/docs.css"
+<link href="<?php echo base_url(); ?>assets/css/main.css"
 	rel="stylesheet">
 <link href="<?php echo base_url(); ?>assets/css/keyboard-arabic.css"
 	rel="stylesheet">
 <style type="text/css">
-/* @import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css); */
-body {
-	padding-bottom: 40px;
-	padding-top: 80px;
-}
 
-.sidebar-nav {
-	padding: 9px 0;
-}
-
-@media ( max-width : 980px) {
-	/* Enable use of floated navbar text */
-	.navbar-text.pull-right {
-		float: none;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-}
-
-.highlight-terms {
-	font-weight: bold;
-}
-
-.white, .white a {
-	color: #fff;
-}
-
-.jumbotron hr {
-	border-bottom: 1px solid #666;
-}
-
-.navbar {
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
-	background-color: #563d7c;
-	border-color: #463265;
-	box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
-}
-
-.navbar .navbar-nav>li>a {
-	color: #cdbfe3;
-}
-
-.navbar .navbar-nav>.active>a, .navbar .navbar-nav>.active>a:hover {
-	color: #fff;
-	background-color: #463265;
-}
-
-.navbar-nav>li>a {
-	color: #999;
-}
-
-.navbar-nav>li>a {
-	color: #cdbfe3;
-}
-
-.navbar-inverse  .navbar-brand {
-	color: #fff;
-}
-/*
-.container .jumbotron {
-padding-left: 10px;
-padding-right: 10px;
-}*/
-.arabic {
-	font-family: 'p88';     
-	font-size: 30px;
-    line-height: 2;
-    padding: 0.25em 1em;
-    text-align: justify;
-	border-color: transparent;
-	border-style: dashed;
-	border-width: 1px 0;
-	display: inline-block;
-	font-weight: normal;
-}
-
-.label-kitab {
-	max-width: 300px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.label-bab {
-	max-width: 300px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.perawi-color {
-	color: #448bf4;
-}
 </style>
 
 <script type="text/javascript">

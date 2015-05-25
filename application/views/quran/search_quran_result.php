@@ -26,7 +26,7 @@
 					</div>
 					<div class="panel-body">
 						<div>
-							<?php echo '<p class="arabic"><b>' . highlightTerms($quran["arab_text"], $terms) . '</b><br/>'; ?>
+							<?php echo '<p class="arabic">' . highlightTerms($quran["arab_text"], $terms) . '</p><br/>'; ?>
 						</div>
 				<?php
 			
